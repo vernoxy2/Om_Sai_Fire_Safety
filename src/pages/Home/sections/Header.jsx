@@ -9,14 +9,14 @@ const Header = () => {
       style={{ backgroundImage: `url(${Hero})` }}
     >
       <div className="container text-start">
-        <div className="w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-7 border-l-[3px] border-primary mr-auto space-y-5">
+        <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-7 border-l-[3px] border-primary mr-auto md:space-y-5">
           <div>
-            <h1 className="text-7xl font-semibold">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold">
               <GradientText>Protecting </GradientText>Lives.
             </h1>
-            <h1 className="text-6xl font-light">Securing Property</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light">Securing Property</h1>
           </div>
-          <h1 className="text-4xl pt-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl pt-4">
             Trusted Fire Safety Solutions <br className="hidden lg:block" />
             for Every Space
           </h1>
