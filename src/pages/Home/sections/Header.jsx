@@ -5,7 +5,7 @@ import Hero from "../../../assets/HomePageAssets/HomeHero.webp";
 const Header = () => {
   return (
     <section
-      className="h-[80vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+      className="lg:h-[80vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
       style={{ backgroundImage: `url(${Hero})` }}
     >
       <div className="container text-start">
