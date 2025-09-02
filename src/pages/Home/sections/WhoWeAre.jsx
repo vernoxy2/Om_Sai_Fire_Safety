@@ -25,8 +25,8 @@ const WhoWeAre = () => {
             standards.
           </p>
         </div>
-        <div className="w-[90%] mx-auto">
-          <img src={Img} alt="" className="w-full"/>
+        <div className="w-[90%] mx-aut my-auto">
+          <img src={Img} alt="" className="w-full "/>
         </div>
       </div>
     </section>
