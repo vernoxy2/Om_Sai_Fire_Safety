@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OutValue = () => {
+const  OutValue = () => {
   return (
     <div>
       OutValue Section of Home

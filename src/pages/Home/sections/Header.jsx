@@ -20,7 +20,7 @@ const Header = () => {
             Trusted Fire Safety Solutions <br className="hidden lg:block" />
             for Every Space
           </h1>
-          <button className="px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm">
+          <button className="px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out ">
             Get Free Consultation
           </button>
         </div>

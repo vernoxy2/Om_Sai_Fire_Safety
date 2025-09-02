@@ -9,9 +9,19 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinkClass = ({ isActive }) =>
-    `hover:text-white transition duration-300  ${
-      isActive ? "text-white font-black" : "text-gray-200"
+    `hover:text-white transition duration-300 ${
+      isActive ? "text-white font-bold" : "text-gray-200"
     }`;
+
+  // 🔹 Menu items array
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Products", path: "/products" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact Us", path: "/contact" },
+  ];
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent font-alumni">
@@ -22,25 +32,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex w-full gap-10 text-xl bg-[#D9D9D9]/40 py-2 px-8 border border-white rounded-sm">
-          <NavLink to="/" className={navLinkClass}>
-            Home
-          </NavLink>
-          <NavLink to="/about" className={navLinkClass}>
-            About
-          </NavLink>
-          <NavLink to="/services" className={navLinkClass}>
-            Services
-          </NavLink>
-          <NavLink to="/products" className={navLinkClass}>
-            Products
-          </NavLink>
-          <NavLink to="/projects" className={navLinkClass}>
-            Projects
-          </NavLink>
-          <NavLink to="/contact" className={navLinkClass}>
-            Contact Us
-          </NavLink>
+        <div className="hidden lg:flex w-full gap-10 text-2xl bg-[#D9D9D9]/40 py-2 px-8 border border-white rounded-sm">
+          {menuItems.map((item) => (
+            <NavLink key={item.path} to={item.path} className={navLinkClass}>
+              {item.name}
+            </NavLink>
+          ))}
         </div>
 
         {/* Mobile Hamburger */}
@@ -62,7 +59,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Slide In) */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-screen w-3/4 bg-black/90 text-white flex flex-col items-start gap-6 p-8 pt-20 z-50 transform transition-transform duration-300 ${
+        className={`lg:hidden fixed top-0 right-0 h-screen w-3/4 bg-black/90 text-white text-xl md:text-2xl flex flex-col items-start gap-6 p-8 pt-20 z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -75,24 +72,16 @@ const Navbar = () => {
         </button>
 
         {/* Links */}
-        <NavLink to="/" onClick={closeMenu} className={navLinkClass}>
-          Home
-        </NavLink>
-        <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>
-          About
-        </NavLink>
-        <NavLink to="/services" onClick={closeMenu} className={navLinkClass}>
-          Services
-        </NavLink>
-        <NavLink to="/products" onClick={closeMenu} className={navLinkClass}>
-          Products
-        </NavLink>
-        <NavLink to="/projects" onClick={closeMenu} className={navLinkClass}>
-          Projects
-        </NavLink>
-        <NavLink to="/contact" onClick={closeMenu} className={navLinkClass}>
-          Contact Us
-        </NavLink>
+        {menuItems.map((item) => (
+          <NavLink
+            key={item.path}
+            to={item.path}
+            onClick={closeMenu}
+            className={navLinkClass}
+          >
+            {item.name}
+          </NavLink>
+        ))}
       </div>
     </nav>
   );
