@@ -7,6 +7,7 @@ import FireAlarmSystems from "../../../assets/HomePageAssets/Products/FireAlarmS
 import FireHydrantSprinklerSystems from "../../../assets/HomePageAssets/Products/FireHydrantSprinklerSystems.webp";
 import FireDoor from "../../../assets/HomePageAssets/Products/FireDoor.webp";
 import SafetyAccessories from "../../../assets/HomePageAssets/Products/SafetyAccessories.webp";
+import IndustriesWeServe from "./IndustriesWeServe";
 
 const Style = {
   backgroundImage: `url(${ProductsBg})`,
@@ -86,32 +87,33 @@ const OurProducts = () => {
 
       {/* Products */}
       <div className="container z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 gap-y-20 mt-12 md:mt-16 lg:mt-24 lg:pb-24">
-  {AllProducts.map((product) => (
-    <div
-      key={product.id}
-      className="group flex flex-col justify-top items-center gap-4 relative "
-    >
-      {/* Product Image */}
-      <img
-        src={product.image}
-        alt={product.title}
-        className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"
-      />
+        {AllProducts.map((product) => (
+          <div
+            key={product.id}
+            className="group flex flex-col justify-top items-center gap-4 relative "
+          >
+            {/* Product Image */}
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+            />
 
-      {/* Info Card */}
-      <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-150 group-hover:-translate-y-5 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
-          {product.title}
-        </h1>
-        <p className="text-base md:text-lg lg:text-xl">
-          {product.description}
-        </p>
+            {/* Info Card */}
+            <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-150 group-hover:-translate-y-5 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
+              <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+                {product.title}
+              </h1>
+              <p className="text-base md:text-lg lg:text-xl">
+                {product.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
-
+      {/* Industries We Serve */}
+      <IndustriesWeServe />
     </section>
   );
 };

@@ -94,13 +94,16 @@ const OurService = () => {
         {AllServices.map((item, index) => (
           <div
             key={item.id}
-            className={`flex flex-col items-center justify-center gap-4 
+            className={`flex flex-col items-start justify-start gap-4 
         ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
           >
-            <img src={item.image} alt="" className="w-full" />
+            <div className="w-full h-full flex items-center justify-center">
+              <img src={item.image} alt="" className="object-cover h-full" />
+            </div>
           </div>
         ))}
       </div>
+      
     </section>
   );
 };
