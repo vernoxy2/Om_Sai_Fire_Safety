@@ -1,7 +1,7 @@
 import React from "react";
 import Headers from "../../pages/Home/sections/Header";
 import WhoWeAre from "./sections/WhoWeAre";
-import OutValue from "./sections/OutValue";
+import OurValue from "./sections/OurValue";
 import OurService from "./sections/OurService";
 import OurProducts from "./sections/OurProducts";
 import WhyChooes from "./sections/WhyChooes";
@@ -13,7 +13,7 @@ const Home = () => {
     <div className="">
       <Headers />
       <WhoWeAre />
-      <OutValue />
+      <OurValue />
       <OurService />  
       <OurProducts />
       <WhyChooes />    

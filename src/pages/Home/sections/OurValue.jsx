@@ -1,5 +1,5 @@
 import React from "react";
-import value from "../../../assets/HomePageAssets/value.webp";
+import value from "../../../assets/HomePageAssets/Value.webp";
 import GradientText from "../../../components/GradientText";
 
 const OutValue = () => {
