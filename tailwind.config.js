@@ -24,6 +24,8 @@ export default {
         },
         secondary: "#F38624",
         accent: "#10B981",
+          Border: "#EB3636"
+
       },
     },
   },

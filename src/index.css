@@ -11,7 +11,7 @@
   }
 
   section {
-    @apply py-8 md:py-16; /* Container + vertical padding */
+    @apply py-8 md:py-24; /* Container + vertical padding */
   }
 
   p {
