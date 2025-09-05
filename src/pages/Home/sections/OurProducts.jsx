@@ -64,7 +64,7 @@ const OurProducts = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Header Content */}
-      <div className="relative  w-full container xl:px-24 flex flex-col gap-y-6 xl:flex-row gap-x-24 z-10 text-center text-white">
+      <div className="relative  w-full container xl:px-24 flex flex-col-reverse gap-y-6 xl:flex-row gap-x-24 z-10 text-center text-white">
         {/* Right Section */}
         <div className="xl:w-8/12 flex flex-col items-start md:text-right">
           <p className="text-xl md:text-3xl">
