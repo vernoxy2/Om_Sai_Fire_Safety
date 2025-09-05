@@ -1,9 +1,9 @@
 import React from "react";
 import GradientText from "../../../components/GradientText";
 import testBg from "../../../assets/HomePageAssets/Testimonials/TestBg.webp";
-/* import person from "../../../assets/HomePageAssets/Testimonials/Person.png";
+import person from "../../../assets/HomePageAssets/Testimonials/Person.png";
 import coma from "../../../assets/HomePageAssets/Testimonials/BigComa.png";
-import smallComa from "../../../assets/HomePageAssets/Testimonials/SmallComa.png"; */
+import smallComa from "../../../assets/HomePageAssets/Testimonials/SmallComa.png";
 import PrimaryTitle from "../../../components/PrimaryTitle";
 import { LuSettings } from "react-icons/lu";
 
@@ -15,14 +15,27 @@ const Style = {
 const TestData = [
   {
     id: 1,
-    title: "Certified ISI/BIS Products",
-    img: <LuSettings />,
+    title:
+      "A gravida ante efficitur pretium facilisi praesent ultrices ornare conubia feugiat. Nulla tortor lobortis imperdiet laoreet pretium pharetra. Curae semper adipiscing iaculis conubia massa inceptos a non lobortis praesent dignissim.",
+    img: person,
+  },
+  {
+    id: 2,
+    title:
+      "A gravida ante efficitur pretium facilisi praesent ultrices ornare conubia feugiat. Nulla tortor lobortis imperdiet laoreet pretium pharetra. Curae semper adipiscing iaculis conubia massa inceptos a non lobortis praesent dignissim.",
+    img: person,
+  },
+  {
+    id: 3,
+    title:
+      "A gravida ante efficitur pretium facilisi praesent ultrices ornare conubia feugiat. Nulla tortor lobortis imperdiet laoreet pretium pharetra. Curae semper adipiscing iaculis conubia massa inceptos a non lobortis praesent dignissim.",
+    img: person,
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section style={Style}>
+    <section style={Style} className="">
       {/* Container */}
       <div className="container">
         <div className=" w-5/12">
@@ -35,17 +48,24 @@ const Testimonials = () => {
             builds social proof.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
           {TestData.map((item) => (
             <div
+              className="bg-white rounded-xl p-8 space-y-3"
               key={item.id}
-              className="p-[2px] rounded-lg bg-gradient-to-r from-primary/60 to-primary-start/60 transform transition duration-300 hover:scale-105"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-once="true"
             >
-              <div className="border border-transparent bg-black/40 rounded-lg flex flex-col items-center justify-center text-center gap-4 px- xl:px-3 2xl:px-4 py-2">
-                <div className="text-3xl text-white">{item.icon}</div>
-                <h1 className=" text-xl md:text-2xl font-bold text-white leading-7">
-                  {item.title}
-                </h1>
+              <div className="grid grid-cols-2 gap-4 relative">
+                <img src={coma} alt="" className="" />
+                <img src={smallComa} alt="" className="top-0 left-0 absolute" />
+                <div className="rounded-full border-2 mx-auto">
+                  <img src={item.img} alt="" className="rounded-full" />
+                </div>
+              </div>
+              <div>
+                <p className="text-black text-2xl">{item.title}</p>
               </div>
             </div>
           ))}
