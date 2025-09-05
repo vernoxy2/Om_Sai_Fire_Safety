@@ -42,7 +42,7 @@ const Data = [
 const WhyChooes = () => {
   return (
     <section style={Style}>
-      <h1 className="text-7xl md:text-9xl lg:text-9xl font-bold text-center">
+      <h1 className="text-7xl md:text-9xl lg:text-9xl text-center">
         <GradientText>Why Choose </GradientText>Us
       </h1>
       <img src={ChooseImg} alt="" className="mx-auto -mt-12 md:-mt-20 w-[80%] md:w-auto" />
@@ -51,7 +51,7 @@ const WhyChooes = () => {
         {Data.map((item) => (
           <div
             key={item.id}
-            className="p-[2px] rounded-lg bg-gradient-to-r from-primary/60 to-primary-start/60 transform transition duration-300 hover:scale-105 w-full sm:w-[45%] lg:w-[18%]"
+            className="p-[2px] rounded-lg bg-gradient-to-r from-primary/60 to-primary-start/60 transform transition duration-300 hover:scale-110 w-full sm:w-[45%] lg:w-[18%]"
           >
             <div className="border border-transparent bg-black/40 rounded-lg flex flex-col items-center justify-center text-center gap-4 px- xl:px-3 2xl:px-4 py-2">
               <div className="text-3xl text-white">{item.icon}</div>

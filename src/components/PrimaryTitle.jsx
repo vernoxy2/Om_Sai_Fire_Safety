@@ -21,7 +21,7 @@ const PrimaryTitle = ({
       )}
 
       {(gradientText || normalText) && (
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white uppercase">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl text-white uppercase">
           {gradientText && <GradientText>{gradientText}</GradientText>}{" "}
           {normalText}
         </h2>
