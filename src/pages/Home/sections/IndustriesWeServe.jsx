@@ -111,7 +111,7 @@ const IndustriesWeServe = () => {
     <section className="z-10 py-12 md:py-20">
       {/* Section Title */}
       <div className="container">
-        <div className="mb-12 text-center w-5/12">
+        <div className="mb-12 text-center lg:w-5/12">
         <PrimaryTitle gradientText="Industries" normalText="We Serve" />
       </div>
 

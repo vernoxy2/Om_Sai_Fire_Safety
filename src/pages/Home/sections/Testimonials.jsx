@@ -38,7 +38,7 @@ const Testimonials = () => {
     <section style={Style} className="">
       {/* Container */}
       <div className="container">
-        <div className=" w-5/12">
+        <div className=" lg:w-5/12">
           <PrimaryTitle
             gradientText="Clients"
             normalText="Testimonials"

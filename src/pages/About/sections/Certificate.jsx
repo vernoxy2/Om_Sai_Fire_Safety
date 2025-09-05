@@ -56,7 +56,7 @@ const Certificate = () => {
             key={item.id}
             className="border-l-[3px] border-Border duration-300 hover:scale-105"
           >
-            <div className="bg-gradient-to-r from-primary-   to-transparent flex items-center gap-4 px-4 py-6">
+            <div className="bg-gradient-to-r from-primary-start   to-transparent flex items-center gap-4 px-4 py-6">
               <div className="text-3xl text-white">{item.icon}</div>
               <div className="text-start">
                 <h3 className="text-xl md:text-2xl font-bold text-white leading-snug">
