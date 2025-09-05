@@ -15,6 +15,6 @@
   }
 
   p {
-    @apply text-white font-alumni;
+    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl;
   }
 }

@@ -10,7 +10,7 @@ const PrimaryTitle = ({
 }) => {
   return (
     <div
-      className={`flex flex-col gap-3 items-center md:items-start ${className}`}
+      className={`flex flex-col gap-3 items-center justify-center ${className}`}
     >
       {preImg && (
         <img
