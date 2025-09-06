@@ -8,29 +8,37 @@ import GradientText from "./GradientText";
 const Style = {
   backgroundImage: `url(${Bg})`,
   backgroundSize: "cover",
+  backgroundPosition: "center",
 };
 
 const SafetySolution = () => {
   return (
-    <section style={Style}>
+    <section style={Style} className="py-12 md:py-20">
       <div className="container relative">
-        <div className="absolute top-0 left-0 z-10 translate-x-28 translate-y-10 ">
-          <img src={SafetySolutionImg} alt="" className="relative" />
-          <div className="w-full p-3 px-6 bg-black/40 absolute bottom-0">
-            <h1 className="text-[88px] leading-[88px]">
-              <GradientText>get the right Fire </GradientText>safety solution
+        {/* Left Image with Title Overlay */}
+        <div className="relative z-10  md:absolute md:top-0 md:left-0 md:translate-x-20 md:-translate-y-8">
+          <img
+            src={SafetySolutionImg}
+            alt="Fire Safety"
+            className="w-full h-auto"
+          />
+          <div className="w-full p-3 md:px-6 bg-black/40 absolute bottom-0">
+            <h1 className="text-4xl md:text-6xl lg:text-[88px] leading-tight md:leading-[88px]">
+              <GradientText>get the right Fire </GradientText>
+              safety solution
             </h1>
           </div>
         </div>
 
-        <div className="w-10/12 ml-auto py-14  bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
+        {/* Right Content Box */}
+        <div className="w-full md:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
           <img
             src={UnderLineWhite}
-            alt=""
-            className="absolute bottom-7 right-0 w-1/2"
+            alt="underline"
+            className="absolute bottom-5 right-0 w-1/2 opacity-70"
           />
-          <div className="w-7/12 ml-auto pr-48 space-y-6">
-            <p className="text-3xl">
+          <div className="w-full md:w-7/12 ml-auto px-6 md:pr-20 space-y-6">
+            <p className="text-lg md:text-2xl lg:text-3xl leading-relaxed">
               Every space has unique needs — whether it’s a{" "}
               <span className="font-semibold">
                 home, office, factory, or commercial complex.
@@ -41,22 +49,26 @@ const SafetySolution = () => {
               </span>{" "}
               systems to keep you safe and compliant.
             </p>
-            <div className="w-1/2 h-1 bg-white/60"></div>
-            <p className=" font-semibold">
+
+            <div className="w-1/3 h-1 bg-white/60"></div>
+
+            <p className="font-semibold text-base md:text-lg lg:text-xl">
               Don’t wait until it’s too late — choose the right solution today!
-            </p>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between">
-              {/* Top Row */}
-              <PrimaryButton to="/contact" className="text-2xl">
+            </p>
+
+            {/* Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <PrimaryButton to="/contact" className="text-base md:text-xl">
                 Request a Free Audit
               </PrimaryButton>
-              <PrimaryButton to="/contact" className="text-2xl">
+              <PrimaryButton to="/contact" className="text-base md:text-xl">
                 Get Free Consultation
               </PrimaryButton>
 
-              {/* Bottom Row - spans full width but centered */}
-              <div className="col-span-1 md:col-span-2 flex justify-center">
-                <PrimaryButton to="/contact" className="text-2xl" >Contact Now</PrimaryButton>
+              <div className="col-span-1 sm:col-span-2 flex justify-center">
+                <PrimaryButton to="/contact" className="text-base md:text-xl">
+                  Contact Now
+                </PrimaryButton>
               </div>
             </div>
           </div>
