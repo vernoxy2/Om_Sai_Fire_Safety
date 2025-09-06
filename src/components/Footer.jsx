@@ -36,7 +36,7 @@ const Footer = () => {
       className="text-white font-alumni bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${Bg})` }}
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 py-10 px-5">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 ">
         {/* Logo & About */}
         <div>
           <div className="rounded-[4px] p-2 lg:p-3 pr-6 bg-gradient-to-l from-[#d6d6d6] to-transparent inline-block">
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="md:mx-auto">
+        <div className="lg:mx-auto">
           <h3 className="text-orange-500 font-semibold text-2xl mb-3 border-b border-orange-500 inline-block">
             Quick Links
           </h3>
@@ -97,7 +97,7 @@ const Footer = () => {
       </div>
 
       {/* Contact Info */}
-      <div className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-gray-700 pt-6 px-5">
+      <div className="container mx-auto mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-primary-start pt-6 ">
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl uppercase">

@@ -4,7 +4,7 @@ import GradientText from "../../../components/GradientText";
 
 const OurValue = () => {
   return (
-    <div className="container mx-auto flex flex-col lg:flex-row px-0">
+    <div className="container mx-auto flex flex-col lg:flex-row px-0 bg-white">
       {/* Left Section */}
       <div className="w-full lg:w-4/12 flex flex-col items-center lg:items-start justify-center text-center lg:text-left p-6 lg:pl-24">
         <h2 className="text-2xl md:text-3xl xl:text-3xl font-bold text-black">Our Value</h2>

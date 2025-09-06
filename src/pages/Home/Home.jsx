@@ -6,7 +6,7 @@ import OurService from "./sections/OurService";
 import OurProducts from "./sections/OurProducts";
 import WhyChooes from "./sections/WhyChooes";
 import Testimonials from "./sections/Testimonials";
-import SafetySolution from "./sections/SafetySolution";
+import SafetySolution from "../../components/SafetySolution";
 
 const Home = () => {
   return (

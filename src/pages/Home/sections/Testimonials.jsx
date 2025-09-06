@@ -60,7 +60,7 @@ const Testimonials = () => {
               <div className="grid grid-cols-2 gap-4 relative">
                 <img src={coma} alt="" className="" />
                 <img src={smallComa} alt="" className="top-0 left-0 absolute" />
-                <div className="rounded-full border-2 mx-auto">
+                <div className="rounded-full border-2 ml-auto">
                   <img src={item.img} alt="" className="rounded-full" />
                 </div>
               </div>
