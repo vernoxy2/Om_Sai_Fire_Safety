@@ -48,7 +48,7 @@ const Knowledge = () => {
   };
   return (
     <section style={Style}>
-      <div className="container flex flex-col-reverse md:flex-row gap-12">
+      <div className="container flex flex-col-reverse md:flex-row gap-12 items-start">
         {/* Left Side: FAQ Accordions */}
         <div className="flex-1 flex flex-col gap-4">
           {faqs.map((faq, idx) => (
@@ -89,16 +89,19 @@ const Knowledge = () => {
 
         {/* Right Side: FAQ Intro + Card */}
         <div className="flex-1 flex flex-col gap-8">
-          <div>
+          <div className="text-center md:text-right">
+            {/* Title */}
             <PrimaryTitle
-              gradientText={"Knowledge"}
-              normalText={"Centre"}
-              titleClassName="text-end justify-end"
-            ></PrimaryTitle>
-            <p className=" max-w-md text-end ml-auto">
+              gradientText="Knowledge"
+              normalText="Centre"
+              className="justify-center md:justify-end items-center md:items-end"
+            />
+
+            {/* Paragraph */}
+            <p className="max-w-lg mx-auto md:ml-auto md:mr-0 mt-4 ">
               Stay informed and prepared with our expert fire safety resources.
               The Knowledge Centre helps businesses and homeowners understand
-              fire risks, prevention measures, and safety best practices
+              fire risks, prevention measures, and safety best practices.
             </p>
           </div>
         </div>
