@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import Head from "../../../assets/AboutPageAssets/AboutHead.webp";
-import GradientText from '../../../components/GradientText';
+import GradientText from "../../../components/GradientText";
 
 const Style = {
   backgroundImage: `url(${Head})`,
   backgroundSize: "cover",
-  backgroundposition : "center,bottom"
+  backgroundPosition: "center center", // ✅ fixed
 };
 
 const AboutHeadar = () => {
   return (
-    <section style={Style}>
+    <section style={Style} className="py-32">
       <div className="container text-start">
         <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-7 border-l-[3px] border-Border mt-20 mr-auto md:space-y-5">
           <div>
@@ -21,7 +21,7 @@ const AboutHeadar = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutHeadar
+export default AboutHeadar;
