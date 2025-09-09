@@ -7,6 +7,7 @@ const PrimaryTitle = ({
   gradientText,
   normalText,
   className = "",
+  titleClassName = "", // ✅ extra class for <h2>
 }) => {
   return (
     <div
@@ -21,7 +22,9 @@ const PrimaryTitle = ({
       )}
 
       {(gradientText || normalText) && (
-        <h2 className="text-5xl md:text-6xl lg:text-7xl text-white uppercase">
+        <h2
+          className={`text-5xl md:text-6xl lg:text-7xl text-white uppercase ${titleClassName}`}
+        >
           {gradientText && <GradientText>{gradientText}</GradientText>}{" "}
           {normalText}
         </h2>

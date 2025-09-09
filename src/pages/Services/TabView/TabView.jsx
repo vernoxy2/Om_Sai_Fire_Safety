@@ -1,10 +1,10 @@
 import React from "react";
-import FireExtinguishers from "./FireExtinguishers/FireExtinguishers";
+import FireExtinguishers from "./FireExtinguishers";
 import FireHydrant from "./FireHydrant";
 import FireAlarmDetection from "./FireAlarmDetection";
 import AutomaticSprinkler from "./AutomaticSprinkler";
 import FireSafetyAuditsTraining from "./FireSafetyAuditsTraining";
-import AnnualMaintenanceContracts from "./AnnualMaintenanceContracts/AnnualMaintenanceContracts";
+import AnnualMaintenanceContracts from "./AnnualMaintenanceContracts";
 
 const TabView = () => {
   const [activeTab, setActiveTab] = React.useState(0);
