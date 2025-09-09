@@ -1,8 +1,8 @@
 import React from "react";
 import ServicesBg from "../../../assets/HomePageAssets/Services/ServicesBg.webp";
-import GradientText from "../../../components/GradientText";
 import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryTitle from "../../../components/PrimaryTitle";
+
 import HydrantSystems from "../../../assets/HomePageAssets/Services/HydrantSystems.webp";
 import FireExtinguisherServices from "../../../assets/HomePageAssets/Services/FireExtinguisherServices.webp";
 import FireAlarmDetection from "../../../assets/HomePageAssets/Services/FireAlarmDetectionSystems.webp";
@@ -33,7 +33,7 @@ const AllServices = [
   {
     id: 4,
     title: "Water Sprinkler System",
-    description: "Hassle-free long-term protection for all fire systems..",
+    description: "Automatic water-based fire suppression for safety.",
     image: WatersprinklerSystem,
   },
   {
@@ -54,27 +54,27 @@ const AllServices = [
 const OurService = () => {
   return (
     <section
-      className="bg-cover bg-center relative flex items-center justify-center flex-col gap-y-6 md:gap-y-12 py-12 md:py-16 lg:py-24"
+      className="bg-cover bg-center relative flex flex-col gap-y-12 md:gap-y-16 py-12 md:py-20 lg:py-28"
       style={{ backgroundImage: `url(${ServicesBg})` }}
     >
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Header Content */}
-      <div className="relative  w-full container xl:px-24 flex flex-col gap-y-6 xl:flex-row gap-x-24 z-10 text-center text-white">
+      <div className="relative container xl:px-24 flex flex-col gap-y-6 xl:flex-row gap-x-12 z-10 text-white">
         {/* Left Section */}
-
         <PrimaryTitle
           preImg={HeadLine}
           gradientText="Our"
           normalText="Services"
-        ></PrimaryTitle>
+        />
+
         {/* Right Section */}
         <div className="xl:w-8/12 flex flex-col items-start md:text-left">
-          <p className="text-xl md:text-3xl">
+          <p className="text-lg md:text-2xl leading-relaxed">
             At{" "}
             <span className="font-semibold">Om Sai Fire Safety Solutions,</span>{" "}
-            we go beyond just supplying equipment we provide end-to-end{" "}
+            we go beyond just supplying equipment — we provide end-to-end{" "}
             <span className="font-semibold">fire safety services</span> that
             ensure your premises are{" "}
             <span className="font-semibold">always protected.</span> From system
@@ -82,28 +82,38 @@ const OurService = () => {
             <span className="font-semibold">our services are tailored</span> to
             keep you{" "}
             <span className="font-semibold">
-              compliant, prepared, and secure at all.
+              compliant, prepared, and secure.
             </span>
-            times.
           </p>
         </div>
       </div>
 
       {/* Cards Section */}
-      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-14 z-10">
+      <div className="relative container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
         {AllServices.map((item, index) => (
           <div
             key={item.id}
-            className={`flex flex-col items-start justify-start gap-4 
-        ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
+            className={`relative rounded-xl overflow-hidden shadow-lg group
+            ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
           >
-            <div className="w-full h-full flex items-center justify-center">
-              <img src={item.image} alt="" className="object-cover h-full" />
+            {/* Background Image */}
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute opacity-0 hover:opacity-100 inset-0 border-b-4 border-transparent group-hover:border-Border group-hover:bg-gradient-to-t from-primary/80 to-primary-transparent transition"></div>
+
+            {/* Text Content */}
+            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 text-white">
+              <h1 className="text-2xl md:text-7xl font-bold">{item.title}</h1>
+              <p className="mt-2">
+                {item.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
-      
     </section>
   );
 };

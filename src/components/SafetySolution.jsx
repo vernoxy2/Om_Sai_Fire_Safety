@@ -52,7 +52,7 @@ const SafetySolution = () => {
 
             <div className="w-1/3 h-1 bg-white/60"></div>
 
-            <p className="font-semibold text-base md:text-lg lg:text-xl">
+            <p className="font-semibold ">
               Don’t wait until it’s too late — choose the right solution today!
             </p>
 

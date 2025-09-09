@@ -85,10 +85,10 @@ const FAQ = () => {
               className="border-l-[3px] border-Border shadow p-4 bg-gradient-to-r from-primary-start/60 to-transparent"
             >
               <button
-                className="flex justify-between items-center w-full text-left font-bold text-white text-base md:text-lg focus:outline-none"
+                className="flex justify-between items-center w-full text-left font-bold text-white text-lg md:text-2xl lg:text-3xl focus:outline-none"
                 onClick={() => handleToggle(idx)}
               >
-                <span>{faq.question}</span>
+                <span className="">{faq.question}</span>
                 <IoMdArrowDropdown
                   className={`text-3xl text-primary-start transform transition-transform duration-300 ${
                     openIndex === idx ? "rotate-180" : ""
@@ -96,9 +96,9 @@ const FAQ = () => {
                 />
               </button>
               {openIndex === idx && (
-                <div className="mt-2 text-white text-sm md:text-base">
+                <p className="mt-2 text-white ">
                   {faq.answer}
-                </div>
+                </p>
               )}
             </div>
           ))}
