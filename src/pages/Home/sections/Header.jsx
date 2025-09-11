@@ -8,6 +8,7 @@ import Hero1 from "../../../assets/HomePageAssets/HeroImg/Hero1.webp";
 import Hero2 from "../../../assets/HomePageAssets/HeroImg/Hero2.webp";
 import Hero3 from "../../../assets/HomePageAssets/HeroImg/Hero3.webp";
 import Hero4 from "../../../assets/HomePageAssets/HeroImg/Hero4.webp";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -106,12 +107,12 @@ const Header = () => {
                 <h1 className="text-xl md:text-3xl lg:text-4xl pt-4 lg:max-w-sm">
                   {slide.desc}
                 </h1>
-                <a
-                  href={slide.buttonLink}
+                <Link
+                  to={slide.buttonLink}
                   className="inline-block px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"
                 >
                   {slide.buttonText}
-                </a>
+                </Link>
               </div>
             </div>
           </section>
