@@ -1,5 +1,7 @@
 import React from "react";
 import PrimaryTitle from "../../../components/PrimaryTitle";
+import HeadLine from "../../../assets/HeadLine.png";
+
 import Pro1 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro1.webp";
 import Pro2 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro2.webp";
 import Pro3 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro3.webp";
@@ -69,8 +71,9 @@ const ABCPowder = () => {
               className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden border-2 border-gray-200/10 bg-white/5 flex flex-col h-full"
             >
               <img src={item.Img} alt={item.title} className="h-[50%] z-0 mx-auto" />
-              <div className="bg-gradient-to-r from-primary-start to-primary z-10 w-full p-5 pb-12  flex flex-col justify-between items-start gap-3">
-                <p className=" font-bold">{item.title}</p>
+              <div className="bg-gradient-to-r from-primary-start to-primary z-10 w-full p-5 pb-12 h-full flex flex-col justify-between items-start gap-3">
+                <div className="flex flex-col gap-2 items-start">
+                  <p className=" font-bold">{item.title}</p>
                 <div className="bg-white w-[70%] rounded-[4px] p-1">
                   <p className="bg-gradient-to-r from-primary-start to-primary text-start px-1 uppercase font-semibold">
                     Capacity
@@ -83,6 +86,12 @@ const ABCPowder = () => {
                     ))}
                   </ul>
                 </div>
+                </div>
+                <img
+                                  src={HeadLine}
+                                  alt="Section divider"
+                                  className="ml-auto -mr-5 pt-14 w-[40%]"
+                                />
               </div>
             </div>
           ))}
