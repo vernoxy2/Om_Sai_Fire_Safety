@@ -16,19 +16,23 @@ const SafetySolution = () => {
     <section style={Style} className="py-12 md:py-20">
       <div className="container relative">
         {/* Left Image with Title Overlay */}
-        <div className="relative z-10  md:absolute md:top-0 md:left-0 md:translate-x-20 md:-translate-y-8">
-          <img
-            src={SafetySolutionImg}
-            alt="Fire Safety"
-            className="w-full h-auto"
-          />
-          <div className="w-full p-3 md:px-6 bg-black/40 absolute bottom-0">
-            <h1 className="text-4xl md:text-6xl lg:text-[88px] leading-tight md:leading-[88px]">
-              <GradientText>get the right Fire </GradientText>
-              safety solution
-            </h1>
-          </div>
-        </div>
+        <div className="relative z-10 lg:absolute top-1/2 -translate-y-1/2 w-full md:w-6/12 lg:w-5/12">
+  {/* Image */}
+  <img
+    src={SafetySolutionImg}
+    alt="Fire Safety"
+    className=" h-auto object-cover"
+  />
+
+  {/* Overlay Title */}
+  <div className="absolute bottom-0 2xl:max-w-[95%] bg-black/40 p-3 md:px-6">
+    <h1 className="text-4xl md:text-6xl lg:text-[88px] leading-tight md:leading-[88px]">
+      <GradientText>get the right Fire </GradientText>
+      safety solution
+    </h1>
+  </div>
+</div>
+
 
         {/* Right Content Box */}
         <div className="w-full md:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">

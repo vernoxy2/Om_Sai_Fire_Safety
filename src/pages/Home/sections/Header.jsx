@@ -22,7 +22,7 @@ const slides = [
     subtitle: "Securing Property",
     desc: "Trusted Fire Safety Solutions for Every Space",
     buttonText: "Get Free Consultation",
-    buttonLink: "/consultation",
+    buttonLink: "/contact",
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ const slides = [
     subtitle: "Empowering People",
     desc: "Professional fire safety training programs",
     buttonText: "Book Training",
-    buttonLink: "/training",
+    buttonLink: "/contact",
   },
 ];
 
