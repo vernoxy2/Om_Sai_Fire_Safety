@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MissionBg from "../../../assets/HomePageAssets/Services/ServicesBg.webp";
 import Vission from "../Mission-Vision/Vission";
@@ -24,6 +24,12 @@ const MissionVission = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  // ✅ Auto-scroll every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000); // 5s delay
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
   return (
     <section style={style} className="relative overflow-hidden">
       <div className="container text-white flex items-center justify-center min-h-[400px]">
@@ -42,7 +48,7 @@ const MissionVission = () => {
       </div>
 
       {/* Indicators + Arrows */}
-      <div className="flex items-center justify-center gap-4 mt-2 ">
+      <div className="flex items-center justify-center gap-4 mt-2">
         {/* Left Arrow */}
         <button
           onClick={prevSlide}
@@ -52,17 +58,17 @@ const MissionVission = () => {
         </button>
 
         {/* Dots */}
-            <div className="flex ">
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrent(idx)}
-                  className={`w-20 h-0.5  transition-all ${
-                    idx === current ? "bg-primary h-1 " : "bg-white "
-                  }`}
-                />
-              ))}
-            </div>
+        <div className="flex">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrent(idx)}
+              className={`w-20 h-0.5 transition-all ${
+                idx === current ? "bg-primary h-1" : "bg-white"
+              }`}
+            />
+          ))}
+        </div>
 
         {/* Right Arrow */}
         <button
