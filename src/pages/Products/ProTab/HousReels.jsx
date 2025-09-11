@@ -16,10 +16,10 @@ const data = [
     subtitle: "Single & Double Outlets",
     category: ["SS 202", "SS 304", "Gun Metal"],
     desc: "TECHNICAL SPECIFICATION",
-    Material: "Gun metal LTB-2 & Stainless steel",
-    Size: "63mm",
-    Specification: "Conforming to IS 5290 Performance Test",
-    HydraulicTest: "Tested at 21 Kg/cm²",
+    material: "Gun metal LTB-2 & Stainless steel",
+    size: "63mm",
+    specification: "Conforming to IS 5290 Performance Test",
+    hydraulicTest: "Tested at 21 Kg/cm²",
   },
   {
     id: 2,
@@ -28,53 +28,58 @@ const data = [
     subtitle: "Canvas & RRL",
     category: ["SS 202", "SS 304", "Gun Metal"],
     desc: "Binding Type, GI, Copper & SS Technical Specification",
-    Material: "Rubber Reinforced Lined (RRL) Hoses",
-    Size: "63mm",
-    HydraulicTest: "Tested at 13 Kg/cm² & 21 Kg/cm²",
-    Length: "As per Client Requirement (15m & 30m)",
-    BindingWin: "Copper or G.I Wire",
+    material: "Rubber Reinforced Lined (RRL) Hoses",
+    size: "63mm",
+    hydraulicTest: "Tested at 13 Kg/cm² & 21 Kg/cm²",
+    length: "As per Client Requirement (15m & 30m)",
+    bindingWire: "Copper or G.I Wire",
   },
   {
     id: 3,
     img: Pro3,
-    title: "HOSE BOX",
-    subtitle: "AVAILABLE IN MS & FRP",
-    category: ["SINGLE DOOR & DOUBLE DOOR"],
+    title: "Hose Box",
+    subtitle: "Available in MS & FRP",
+    category: ["Single Door & Double Door"],
     desc: "TECHNICAL SPECIFICATION",
-    Size: "All sizes of boxes/Frames fabricated as per standards & client’s specification",
+    size: "All sizes of boxes/Frames fabricated as per standards & client’s specification",
     type: "Single Door/Double Door type with locking arrangement, front glass and key",
   },
   {
     id: 4,
     img: Pro4,
-    title: "BRANCH PIPE",
-    subtitle: "AVAILABLE IN",
+    title: "Branch Pipe",
+    subtitle: "Available in",
     category: ["Aluminium", "SS 202 & SS 304", "Gun Metal"],
     desc: "TECHNICAL SPECIFICATION",
-    Material: "Gun metal LTB-2, SS & Aluminium",
-    Size: "63 mm",
-    Specification: "Conforming to IS 903",
-    HydraulicTest: "Tested at 21 Kgf/cm²",
+    material: "Gun metal LTB-2, SS & Aluminium",
+    size: "63 mm",
+    specification: "Conforming to IS 903",
+    hydraulicTest: "Tested at 21 Kgf/cm²",
   },
   {
     id: 5,
     img: Pro5,
     title: "Hose Reel Drum Set",
-    subtitle: "AVAILABLE IN MS & FRP",
+    subtitle: "Available in MS & FRP",
     category: ["19mm", "25mm", "Compact", "Malaysian"],
     desc: "Shut Off Nozzle PVC, Brass, SS Technical Specification",
     type: "Swinging Type, Wall Mounted",
-    Size: "Inlet 20 mm & 25 mm",
-    SIDWSHubWallBracket: "Grade LTB2 of IS 318",
+    size: "Inlet 20 mm & 25 mm",
+    hubWallBracket: "Grade LTB2 of IS 318",
+    pipeWithFittings:
+      "Rubber as per IS 444 or Thermoplastic as per IS 12585 Hose, Nozzle Performance IS 8090 Hydrostatic Pressures Test No Leakage at 21 Kg/cm² Range of Throw at 7 Kg/cm² Minimum 6 Meters Discharge at 7 Kg/cm² Minimum 24 LPM",
   },
   {
     id: 6,
     img: Pro6,
-    title: "Hose Reel",
-    subtitle: "AVAILABLE IN MS & FRP",
-    category: ["Single Door & Double Door"],
+    title: "Fire Brigade Inlet",
+    subtitle: "Two Way & Four Way",
+    category: ["SS", "Gun Metal"],
     desc: "TECHNICAL SPECIFICATION",
-    Size: "All sizes of boxes/Frames fabricated as per standards & client’s specification",
+    size: "63 mm Dia",
+    material: "Gun Metal/SS & Cast Iron Body",
+    performance: "Hydraulic",
+    test: "Tested at 21 Kg/cm²",
     type: "Single Door/Double Door type with locking arrangement, front glass and key",
   },
 ];
@@ -102,17 +107,17 @@ const HoseReels = () => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden border-2 border-gray-200/10 bg-white/5"
+              className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden border-2 border-gray-200/10 bg-white/5 flex flex-col h-full "
             >
               {/* Product Image */}
               <img
                 src={item.img}
                 alt={`${item.title} product image`}
-                className="w-[70%] z-0 mx-auto"
+                className="h-[50%] z-0 mx-auto"
               />
 
               {/* Content */}
-              <div className="bg-gradient-to-r from-primary-start to-primary p-5 pb-8 text-start text-white flex flex-col gap-2 justify-between">
+              <div className="bg-gradient-to-r from-primary-start to-primary p-5 pb-8 text-start text-white flex flex-col gap-2 h-full justify-between">
                 <div>
                   <p className="uppercase font-bold">{item.title}</p>
                   <p className="uppercase">{item.subtitle}</p>
@@ -126,7 +131,7 @@ const HoseReels = () => {
                       <ul className="flex flex-wrap justify-between gap-1 py-1">
                         {item.category.map((cap) => (
                           <li key={cap} className="text-start px-1">
-                            <p className="text-[#696969] font-semibold text-sm">
+                            <p className="text-[#696969] font-semibold ">
                               {cap}
                             </p>
                           </li>
@@ -137,46 +142,57 @@ const HoseReels = () => {
 
                   {/* Technical Specs */}
                   <p className="uppercase font-semibold">{item.desc}</p>
-                  {item.Material && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">MATERIAL:</span> {item.Material}
+                  {item.material && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Material:</span> {item.material}
                     </p>
                   )}
-                  {item.Size && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">SIZE:</span> {item.Size}
+                  {item.size && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Size:</span> {item.size}
                     </p>
                   )}
-                  {item.Specification && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">SPECIFICATION:</span> {item.Specification}
+                  {item.specification && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Specification:</span> {item.specification}
                     </p>
                   )}
-                  {item.HydraulicTest && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">HYDRAULIC TEST:</span> {item.HydraulicTest}
+                  {item.hydraulicTest && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Hydraulic Test:</span> {item.hydraulicTest}
                     </p>
                   )}
-                  {item.Length && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">LENGTH:</span> {item.Length}
+                  {item.length && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Length:</span> {item.length}
                     </p>
                   )}
-                  {item.BindingWin && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">BINDING WIRE:</span> {item.BindingWin}
+                  {item.bindingWire && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Binding Wire:</span> {item.bindingWire}
                     </p>
                   )}
                   {item.type && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">TYPE:</span> {item.type}
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Type:</span> {item.type}
                     </p>
                   )}
-                  {item.SIDWSHubWallBracket && (
-                    <p className="text-sm md:text-base break-words">
-                      <span className="font-semibold">SIDWS HUB WALL BRACKET:</span> {item.SIDWSHubWallBracket}
+                  {item.hubWallBracket && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">SIDWS, Hub, Wall Bracket:</span> {item.hubWallBracket}
                     </p>
                   )}
+                  {item.pipeWithFittings && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Pipe With Fittings:</span> {item.pipeWithFittings}
+                    </p>
+                  )}
+                  {item.test && (
+                    <p className="text-2xl break-words">
+                      <span className="font-semibold">Test:</span> {item.test}
+                    </p>
+                  )}
+                  
                 </div>
 
                 <img
