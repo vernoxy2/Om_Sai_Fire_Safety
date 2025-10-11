@@ -31,7 +31,7 @@ const TabView = () => {
     <section>
       <div className="">
         {/* Tabs */}
-        <div className="flex overflow-x-auto mb-6 container">
+        <div className="lg:flex overflow-x-auto mb-6 container">
           {Tabs.map((tab, index) => (
             <button
               key={index}

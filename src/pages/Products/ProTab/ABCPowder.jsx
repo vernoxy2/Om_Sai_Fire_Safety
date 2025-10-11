@@ -13,9 +13,17 @@ import ABC1kg from "../../../assets/ProductPageAssets/Tabview/Portable/ABC_Powde
 import ABC6kg from "../../../assets/ProductPageAssets/Tabview/Portable/ABC_Powder/ABC6kg.webp";
 import ABC50kg from "../../../assets/ProductPageAssets/Tabview/Portable/ABC_Powder/ABC50kg.webp";
 import ABC75kg from "../../../assets/ProductPageAssets/Tabview/Portable/ABC_Powder/ABC75kg.webp";
-import Pro2 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro2.webp";
-import Pro3 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro3.webp";
-import Pro4 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro4.webp";
+import Co2 from "../../../assets/ProductPageAssets/Tabview/Portable/CO2_Extinguishers/Co2.webp";
+import Co4_5 from "../../../assets/ProductPageAssets/Tabview/Portable/CO2_Extinguishers/Co45.webp";
+import Co6_8 from "../../../assets/ProductPageAssets/Tabview/Portable/CO2_Extinguishers/Co68.webp";
+import Co9 from "../../../assets/ProductPageAssets/Tabview/Portable/CO2_Extinguishers/Co9.webp";
+import Co22_5 from "../../../assets/ProductPageAssets/Tabview/Portable/CO2_Extinguishers/Co225.webp";
+import WaterCO29 from "../../../assets/ProductPageAssets/Tabview/Portable/Water_CO2/WaterCO29.webp";
+import WaterCO250 from "../../../assets/ProductPageAssets/Tabview/Portable/Water_CO2/WaterCO250.webp";
+import M_Foam9 from "../../../assets/ProductPageAssets/Tabview/Portable/M_Foam/M_Foam9.webp";
+import M_Foam50 from "../../../assets/ProductPageAssets/Tabview/Portable/M_Foam/M_Foam50.webp";
+import CleanAgent4 from "../../../assets/ProductPageAssets/Tabview/Portable/CleanAgent/CleanAgent4.webp";
+import CleanAgent6 from "../../../assets/ProductPageAssets/Tabview/Portable/CleanAgent/CleanAgent6.webp";
 import Pro5 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro5.webp";
 
 // Data for product cards
@@ -28,25 +36,25 @@ const data = [
   },
   {
     id: 2,
-    Img: [Pro2],
+    Img: [Co2, Co4_5, Co6_8, Co9, Co22_5],
     title: "CO2 Extinguishers",
     capacity: ["02kg", "4.5kg", "6.8kg", "09kg", "22.5kg"],
   },
   {
     id: 3,
-    Img: [Pro3],
+    Img: [WaterCO29, WaterCO250],
     title: "Water CO2 Extinguishers",
     capacity: ["09ltr", "50ltr"],
   },
   {
     id: 4,
-    Img: [Pro4],
+    Img: [M_Foam9, M_Foam50],
     title: "Am. Foam Extinguishers",
     capacity: ["09ltr", "50ltr"],
   },
   {
     id: 5,
-    Img: [Pro5],
+    Img: [CleanAgent4, CleanAgent6],
     title: "Clean Agent Extinguishers",
     capacity: ["04kg", "06kg"],
   },
@@ -74,7 +82,7 @@ const ABCPowder = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
           {data.map((item) => (
             <div
               key={item.id}

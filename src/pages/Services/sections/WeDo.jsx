@@ -12,9 +12,9 @@ const Style = {
 const WeDo = () => {
   return (
     <section style={Style} className=" ">
-      <div className="container flex-col w-1/2 justify-center items-center space-y-4">
+      <div className="container flex-col md:w-1/2 justify-center items-center space-y-4">
         {/* <img src={Img} alt="" className='' /> */}
-        <h1 className="text-9xl">
+        <h1 className="text-5xl md:text-7xl lg:text-9xl">
           <GradientText>what </GradientText> we do
         </h1>
         <p>

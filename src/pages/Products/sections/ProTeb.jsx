@@ -34,7 +34,7 @@ const ProTeb = () => {
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`whitespace-wrap px-4 py-2 mr-4 text-2xl font-bold transition-colors duration-300 border-b-[3px] border-primary-start
+              className={`whitespace-wrap px-4 py-2 mr-4 text-2xl font-bold transition-colors duration-300 border-b-[3px] border-primary-start uppercase
               ${
                 activeTab === index
                   ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white"
