@@ -2,20 +2,22 @@ import React from "react";
 import ServicesBg from "../../../assets/HomePageAssets/Services/ServicesBg.webp";
 import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryTitle from "../../../components/PrimaryTitle";
-
+// Image imports
 import HydrantSystems from "../../../assets/HomePageAssets/Services/HydrantSystems.webp";
 import FireExtinguisherServices from "../../../assets/HomePageAssets/Services/FireExtinguisherServices.webp";
 import FireAlarmDetection from "../../../assets/HomePageAssets/Services/FireAlarmDetectionSystems.webp";
 import WatersprinklerSystem from "../../../assets/HomePageAssets/Services/watersprinklerSystem.webp";
 import FireSafetyAudits from "../../../assets/HomePageAssets/Services/FireSafetyAuditsTraining.webp";
 import AnnualMaintenanceContracts from "../../../assets/HomePageAssets/Services/AnnualMaintenanceContracts.webp";
+import PrimaryButton from "../../../components/PrimaryButton";
 
 const AllServices = [
   {
     id: 1,
-    title: "Hydrant Systems",
+    title: "Pump House",
     description: "Robust firefighting infrastructure for large premises.",
     image: HydrantSystems,
+    link: "/services/hydrant-systems",
   },
   {
     id: 2,
@@ -61,7 +63,7 @@ const OurService = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Header Content */}
-      <div className="relative container xl:px-24 flex flex-col gap-y-6 xl:flex-row gap-x-12 z-10 text-white">
+      <div className="relative container xl:px-24 flex flex-col gap-y-6 xl:flex-row gap-x-16 z-10 text-white">
         {/* Left Section */}
         <PrimaryTitle
           preImg={HeadLine}
@@ -70,8 +72,8 @@ const OurService = () => {
         />
 
         {/* Right Section */}
-        <div className="xl:w-8/12 flex flex-col items-start md:text-left">
-          <p className="text-lg md:text-2xl leading-relaxed">
+        <div className="xl:w-8/12 flex flex-col items-start md:text-left ">
+          <p className="text-lg md:text-2xl lg:text-3xl leading-relaxed lg:w-[90%]">
             At{" "}
             <span className="font-semibold">Om Sai Fire Safety Solutions,</span>{" "}
             we go beyond just supplying equipment — we provide end-to-end{" "}
@@ -105,11 +107,10 @@ const OurService = () => {
             <div className="absolute opacity-0 hover:opacity-100 inset-0 border-b-4 border-transparent group-hover:border-Border group-hover:bg-gradient-to-t from-primary/80 to-primary-transparent transition"></div>
 
             {/* Text Content */}
-            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 text-white">
+            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 space-y-6 text-white">
               <h1 className="text-2xl md:text-7xl font-bold">{item.title}</h1>
-              <p className="mt-2">
-                {item.description}
-              </p>
+              <p className="">{item.description}</p>
+              <PrimaryButton to={item.link}>Learn More</PrimaryButton>
             </div>
           </div>
         ))}

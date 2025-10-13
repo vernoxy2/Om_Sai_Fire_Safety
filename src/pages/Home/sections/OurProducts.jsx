@@ -82,7 +82,7 @@ const OurProducts = () => {
         </div>
         {/* Left Section */}
 
-        <PrimaryTitle gradientText="Our" normalText="Products"></PrimaryTitle>
+        <PrimaryTitle gradientText="Our" normalText="Products" imgClassName="-scale-x-100 w-full"></PrimaryTitle>
       </div>
 
       {/* Products */}

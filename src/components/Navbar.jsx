@@ -9,8 +9,8 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinkClass = ({ isActive }) =>
-    `hover:text-white transition duration-300 ${
-      isActive ? "text-white font-bold" : "text-gray-200"
+    `hover:text-primary transition duration-300 ${
+      isActive ? "text-primary font-bold underline" : "text-[#696969]"
     }`;
 
   // 🔹 Menu items array
@@ -25,14 +25,14 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent font-alumni">
-      <div className="container mx-auto pl-0 flex items-center gap-10 py-4 px-6 lg:px-12">
+      <div className=" mx-auto pl-0 flex items-center justify-between  py-4 px-6 lg:ps-8 bg-white/95">
         {/* Logo */}
-        <div className="rounded-[4px] p-1 md:p-2 lg:p-3 px-4 md:px-12 lg:px-14 pr-2 md:pr-6 bg-gradient-to-l from-[#d6d6d6] to-transparent">
-          <img src={LogoName} alt="Logo" className="lg:scale-125" />
+        <div className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 ">
+          <img src={LogoName} alt="Logo" className="" />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex w-full gap-10 text-2xl bg-[#D9D9D9]/40 py-2 px-8 border border-white rounded-sm">
+        <div className="hidden lg:flex justify-between w-full  text-2xl px-8">
           {menuItems.map((item) => (
             <NavLink key={item.path} to={item.path} className={navLinkClass}>
               {item.name}
@@ -40,12 +40,15 @@ const Navbar = () => {
           ))}
         </div>
 
+        {/* Line */}
+        <div className="h-[2px] w-full bg-black"></div>
+
         {/* Mobile Hamburger */}
         <button
           className="lg:hidden p-2 text-white ml-auto"
           onClick={() => setIsOpen(true)}
         >
-          <Menu size={28} />
+          <Menu size={28} className="text-black" />
         </button>
       </div>
 
