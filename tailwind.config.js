@@ -3,8 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-       fontFamily: {
-        alumni: ["'Alumni Sans'", "sans-serif"], 
+      fontFamily: {
+        alumni: ["'Alumni Sans'", "sans-serif"],
       },
       container: {
         center: true,
@@ -18,14 +18,27 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#F38624",  
+          DEFAULT: "#F38624",
           start: "#CD512B",
           end: "#F38624",
         },
         secondary: "#F38624",
         accent: "#10B981",
-          Border: "#EB3636"
-
+        Border: "#EB3636",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }, // move half the width (since we duplicated items)
+        },
+        scrollReverse: {
+          "0%": { transform: "translateX(-50%)" }, // start from -50%
+          "100%": { transform: "translateX(0)" }, // move to 0
+        },
+      },
+      animation: {
+        scroll: "scroll 15s linear infinite", // normal scroll
+        scrollReverse: "scrollReverse 15s linear infinite", // reverse scroll
       },
     },
   },

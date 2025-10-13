@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 ">
         {/* Logo & About */}
         <div>
-          <div className="rounded-[4px] p-2 lg:p-3 pr-6 bg-gradient-to-l from-[#d6d6d6] to-transparent inline-block">
+          <div className="rounded-[4px] p-2 lg:p-3 pr-6  bg-gradient-to-r from-[#999999]/5 via-white to-white inline-block">
             <img
               src={LogoName}
               alt="Om Sai Fire Safety Logo"

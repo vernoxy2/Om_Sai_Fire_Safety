@@ -67,7 +67,7 @@ const OurProducts = () => {
       <div className="relative  w-full container xl:px-24 flex flex-col-reverse gap-y-6 xl:flex-row gap-x-24 z-10 text-center text-white">
         {/* Right Section */}
         <div className="xl:w-8/12 flex flex-col items-start md:text-right">
-          <p className="text-xl md:text-3xl">
+          <p className="text-xl md:text-3xl ">
             We supply a comprehensive range of{" "}
             <span className="font-semibold">ISI/BIS-certified fire safety</span>{" "}
             products designed for homes, businesses, and industries. Each
@@ -93,14 +93,16 @@ const OurProducts = () => {
             className="group flex flex-col justify-top items-center gap-4 relative "
           >
             {/* Product Image */}
-            <img
+            <div className="overflow-hidden rounded-lg">
+              <img
               src={product.image}
               alt={product.title}
               className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
+            </div>
 
             {/* Info Card */}
-            <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-150 group-hover:-translate-y-5 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
+            <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-75 group-hover:-translate-y-16 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                 {product.title}
               </h1>

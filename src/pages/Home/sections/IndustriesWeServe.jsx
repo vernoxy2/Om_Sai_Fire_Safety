@@ -111,10 +111,9 @@ const IndustriesWeServe = () => {
     <section className="z-10 py-12 md:py-20">
       {/* Section Title */}
       <div className="container">
-        <div className="mb-12 text-center lg:w-5/12">
-        <PrimaryTitle gradientText="Industries" normalText="We Serve" />
-      </div>
-
+        <div className="mb-12 flex justify-start">
+          <PrimaryTitle gradientText="Industries" normalText="We Serve" />
+        </div>
       </div>
 
       {/* Grid of Industries */}
@@ -124,11 +123,11 @@ const IndustriesWeServe = () => {
             key={item.id}
             className="bg-white group hover:bg-gradient-to-t from-primary to-primary-start rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 duration-500 transition transform dark:bg-gray-800 dark:border-gray-700"
           >
-            <div className="p-6">
+            <div className="p-5">
               <div className="mb-5 p-4 bg-primary/10 duration-500 group-hover:bg-white rounded-lg inline-flex items-center justify-center">
                 {item.icons}
               </div>
-              <h5 className="text-3xl font-bold text-gray-900 group-hover:text-white dark:text-white mb-3 tracking-tight">
+              <h5 className="text-3xl font-bold text-gray-900 group-hover:text-white dark:text-white mb-1 tracking-tight">
                 <GradientText>{item.title}</GradientText>
               </h5>
               <p className="text-gray-700 group-hover:text-white duration-500 dark:text-gray-400 text-2xl">
@@ -139,12 +138,12 @@ const IndustriesWeServe = () => {
             <img
               src={UnderLine}
               alt=""
-              className="ml-auto mb-6 my-auto block group-hover:hidden"
+              className="ml-auto mb-4 my-auto block group-hover:hidden duration-200"
             />
             <img
               src={UnderLineWhite}
               alt=""
-              className="ml-auto mb-6 my-auto hidden group-hover:block"
+              className="ml-auto mb-4 my-auto hidden group-hover:block duration-200"
             />
           </div>
         ))}

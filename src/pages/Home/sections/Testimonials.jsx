@@ -38,7 +38,7 @@ const Testimonials = () => {
     <section style={Style} className="">
       {/* Container */}
       <div className="container">
-        <div className=" lg:w-5/12">
+        <div className="flex flex-col justify-start items-start gap-y-3">
           <PrimaryTitle
             gradientText="Clients"
             normalText="Testimonials"
@@ -65,7 +65,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <div>
-                <p className="text-black text-2xl">{item.title}</p>
+                <p className="text-[#464646] text-2xl">{item.title}</p>
               </div>
             </div>
           ))}

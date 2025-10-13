@@ -14,16 +14,19 @@ const AboutText = () => {
       <div className="container pl-0 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div>
-          <img src={TextImg} alt="About Om Sai Fire Safety" className="w-full h-auto" />
+          <img src={TextImg} alt="About Om Sai Fire Safety" className="" />
         </div>
 
         {/* Right Text */}
         <div className="text-right space-y-6">
-          <PrimaryTitle
+          <div className="flex justify-end">
+            <PrimaryTitle
             className="text-right"
             gradientText="About"
             normalText="Us"
+            imgClassName="-scale-x-100"
           />
+          </div>
 
           <p className="text-lg md:text-3xl leading-relaxed">
             At{" "}

@@ -6,10 +6,7 @@ import GradientText from "../../../components/GradientText";
 import { LuSettings } from "react-icons/lu";
 import { FaHeadset, FaTags } from "react-icons/fa";
 
-const Style = {
-  backgroundImage: `url(${ChooseBg})`,
-  backgroundSize: "cover",
-};
+
 
 const Data = [
   {
@@ -41,7 +38,7 @@ const Data = [
 
 const WhyChooes = () => {
   return (
-    <section style={Style}>
+    <section >
       <h1 className="text-7xl md:text-9xl lg:text-9xl text-center">
         <GradientText>Why Choose </GradientText>Us
       </h1>
