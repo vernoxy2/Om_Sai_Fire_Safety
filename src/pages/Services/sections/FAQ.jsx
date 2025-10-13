@@ -53,10 +53,10 @@ const FAQ = () => {
 
   return (
     <section style={style} className="py-12">
-      <div className="container flex flex-col md:flex-row gap-8">
+      <div className="container flex flex-col lg:flex-row gap-8">
         {/* Left Side: FAQ Intro + Card */}
         <div className="flex-1 flex flex-col gap-8">
-          <div>
+          <div className="space-y-5">
             <PrimaryTitle
               gradientText={"Frequently Asked "}
               normalText={"Questions"}
@@ -66,7 +66,7 @@ const FAQ = () => {
               services, and compliance at Om Sai fire safety Solution
             </p>
           </div>
-          <div className=" px-5 py-5 max-w-md border-l-[3px] border-Border bg-gradient-to-r from-primary-start/60 to-transparent">
+          <div className=" px-5 py-5 lg:max-w-md border-l-[3px] border-Border bg-gradient-to-r from-primary-start/60 to-transparent">
             <h1 className="text-2xl md:text-6xl">
               Frequently Asked Questions?
             </h1>
