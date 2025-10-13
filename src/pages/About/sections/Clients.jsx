@@ -25,7 +25,7 @@ const ClientList = ({ data, reverse }) => (
     {[...data, ...data].map((item, index) => (
       <div
         key={index}
-        className="bg-white px-3 md:px-6 py-2 md:py-5 rounded-lg inline-block mr-4 hover:bg-primary group duration-300"
+        className="bg-white px-3 md:px-6 py-2 md:py-5 rounded-lg inline-block mr-4 hover:bg-gradient-to-l from-primary to-primary-start group duration-300"
       >
         <h1 className="text-xl md:text-2xl lg:text-3xl font-alumni font-bold text-black group-hover:text-white duration-300">
           {item}
@@ -36,7 +36,7 @@ const ClientList = ({ data, reverse }) => (
 );
 
 const Clients = () => (
-  <section style={style} className="space-y-10 py-12">
+  <section style={style} className="space-y-10 ">
     <div className="container flex items-start">
       <PrimaryTitle gradientText="Our" normalText=" Valued Clients" />
     </div>

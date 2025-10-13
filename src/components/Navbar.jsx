@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex justify-between w-full  text-2xl px-8">
+        <div className="hidden lg:flex justify-around w-full  text-2xl px-8">
           {menuItems.map((item) => (
             <NavLink key={item.path} to={item.path} className={navLinkClass}>
               {item.name}

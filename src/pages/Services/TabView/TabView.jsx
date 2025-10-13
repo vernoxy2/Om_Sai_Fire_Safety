@@ -10,21 +10,22 @@ const TabView = () => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   const Tabs = [
-    { title: "Fire Extinguishers Services", component: <FireExtinguishers /> },
     { title: "Fire Hydrant Service", component: <FireHydrant /> },
+    { title: "Fire Extinguishers Services", component: <FireExtinguishers /> },
     {
       title: "Fire Alarm & Detection Systems",
       component: <FireAlarmDetection />,
+    },
+    {
+      title: "Annual Maintenance Contracts (AMC)",
+      component: <AnnualMaintenanceContracts />,
     },
     { title: "Automatic Sprinkler System", component: <AutomaticSprinkler /> },
     {
       title: "Fire Safety Audits & Training",
       component: <FireSafetyAuditsTraining />,
     },
-    {
-      title: "Annual Maintenance Contracts (AMC)",
-      component: <AnnualMaintenanceContracts />,
-    },
+    
   ];
 
   return (
@@ -36,10 +37,10 @@ const TabView = () => {
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`whitespace-wrap px-4 py-2 mr-4 text-2xl font-bold transition-colors duration-300 border-b-[3px] border-primary-start
+              className={`whitespace-wrap px-4 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 border-b-[3px] border-primary-start
               ${
                 activeTab === index
-                  ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white"
+                  ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white "
                   : " text-white"
               }`}
             >

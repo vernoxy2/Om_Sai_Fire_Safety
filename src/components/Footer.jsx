@@ -12,14 +12,17 @@ const Links = [
   // { id: 5, title: "Project", link: "/projects" },
 ];
 
+// Services links
 const Services = [
-  { id: 1, title: "Hydrant Systems" },
-  { id: 2, title: "Fire Extinguisher Services" },
-  { id: 3, title: "Fire Alarm & Detection Systems" },
-  { id: 4, title: "Annual Maintenance Contracts (AMC)" },
-  { id: 5, title: "Water Sprinkler System" },
-  { id: 6, title: "Fire Safety Audits & Training" },
+  { id: 1, title: "Fire Extinguisher Services", link: "/services/fire-extinguisher-services" },
+  { id: 2, title: "Fire Hydrant Systems", link: "/services/fire-hydrant-systems" },
+  { id: 3, title: "Fire Alarm & Detection Systems", link: "/services/fire-alarm-detection-systems" },
+  { id: 4, title: "Annual Maintenance Contracts (AMC)", link: "/services/annual-maintenance-contracts-amc" },
+  { id: 5, title: "Water Sprinkler System", link: "/services/water-sprinkler-system" },
+  { id: 6, title: "Fire Safety Audits & Training", link: "/services/fire-safety-audits-training" },
 ];
+
+
 
 const Products = [
   { id: 1, title: "Fire Extinguishers" },
@@ -106,9 +109,9 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-start gap-3 md:mx-auto">
           <FaPhoneAlt className="text-orange-500 mt-1" />
-          <p className="text-lg md:text-xl">
+          <p className="text-lg md:text-xl ">
             +91 98278 00077 <br /> +91 93131 74925
           </p>
         </div>

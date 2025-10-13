@@ -29,16 +29,16 @@ export default {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" }, // move half the width (since we duplicated items)
+          "100%": { transform: "translateX(-100%)" }, // move half the width (since we duplicated items)
         },
         scrollReverse: {
-          "0%": { transform: "translateX(-50%)" }, // start from -50%
+          "0%": { transform: "translateX(-100%)" }, // start from -50%
           "100%": { transform: "translateX(0)" }, // move to 0
         },
       },
       animation: {
-        scroll: "scroll 15s linear infinite", // normal scroll
-        scrollReverse: "scrollReverse 15s linear infinite", // reverse scroll
+        scroll: "scroll 20s linear infinite", // normal scroll
+        scrollReverse: "scrollReverse 20s linear infinite", // reverse scroll
       },
     },
   },
