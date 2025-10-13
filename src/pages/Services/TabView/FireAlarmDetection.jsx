@@ -90,15 +90,15 @@ const FireAlarmDetection = () => {
           <img
             src={RightImg}
             alt=""
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-scale lg:object-cover lg:rounded-xl min-h-[600px] lg:h-auto"
           />
-          <div className="absolute bottom-0 right-0 h-full max-w-md bg-black/90 px-9 text-start flex flex-col gap-5 justify-center items-center">
-            <h1 className="text-6xl">
+          <div className="absolute bottom-0 lg:right-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">
                 conventional fire alarm system
               </GradientText>
             </h1>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-startl">
               A conventional fire alarm system is a reliable and cost-effective
               solution for small to medium-sized premises. It divides the
               protected area into zones, allowing the source of fire to be
@@ -116,15 +116,15 @@ const FireAlarmDetection = () => {
           <img
             src={LeftImg}
             alt=""
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-scale lg:object-cover lg:rounded-xl min-h-[600px] lg:h-auto"
           />
-          <div className="absolute bottom-0 left-0 h-full max-w-md bg-black/90 px-9 text-start flex flex-col gap-5 justify-center items-center">
-            <h1 className="text-6xl">
+          <div className="absolute bottom-0 lg:left-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">
                 addressable fire alarm system
               </GradientText>
             </h1>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-startl">
               An addressable fire alarm system offers advanced fire detection
               and pinpoint accuracy. Unlike conventional systems, it identifies
               the exact location of a triggered device, such as a smoke detector

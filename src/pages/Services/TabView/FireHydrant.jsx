@@ -91,14 +91,14 @@ const FireHydrant = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img src={RightImg} alt="" className="w-full h-full object-cover " />
-          <div className="absolute bottom-0 right-0 h-full max-w-md bg-black/90 px-9 text-start flex flex-col gap-5 justify-center items-center">
-            <h1 className="text-6xl">
+          <img src={RightImg} alt="" className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto" />
+          <div className="absolute bottom-0 lg:right-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">
                 Commercial Building Hydrant Systems
               </GradientText>
             </h1>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-start">
               Engineered for large complexes, offices, factories, and
               warehouses, these systems are designed to handle high-risk
               environments. They feature robust hydrant layouts, heavy-duty
@@ -110,14 +110,14 @@ const FireHydrant = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img src={LeftImg} alt="" className="h-full ml-auto" />
-          <div className="absolute bottom-0 left-0 h-full max-w-md bg-black/90 px-9 text-start flex flex-col gap-5 justify-center items-center">
-            <h1 className="text-6xl">
+          <img src={LeftImg} alt="" className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto" />
+          <div className="absolute bottom-0 lg:left-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">
                 Residential Fire Hydrant Systems
               </GradientText>
             </h1>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-startl">
               Specially designed for housing societies, apartments, and
               residential communities, these systems ensure quick water access,
               reliable coverage, and code compliance. They provide tailor-made

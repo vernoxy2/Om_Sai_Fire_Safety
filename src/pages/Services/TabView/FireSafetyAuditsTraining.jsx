@@ -80,29 +80,27 @@ const FireSafetyAuditsTraining = () => {
         </div>
 
         {/* Image With Text */}
-        <div className="container px-0 mt-24 relative">
-          <img
-            src={RightImg}
-            alt=""
-            className="w-full h-full object-cover rounded-xl"
-          />
-          <div className="absolute bottom-0 right-0 h-full max-w-md bg-black/90 px-9 text-start flex flex-col gap-5 justify-center items-center">
-            <h1 className="text-6xl">
-              <GradientText className="">
-                Right Extinguisher for Your Needs
-              </GradientText>
-            </h1>
-            <p className="text-2xl">
-              Choosing the correct fire extinguisher is crucial for effective
-              safety. We assess your space, potential fire hazards, and specific
-              requirements to recommend the most suitable extinguisher.{" "}
-            </p>
-            <p className="text-2xl">
-              Our expert guidance ensures you are fully prepared for any
-              emergency.
-            </p>
-          </div>
+      <div className="container px-0 mt-24 relative ">
+        <img
+          src={RightImg}
+          alt=""
+          className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto"
+        />
+        <div className="absolute bottom-0 lg:right-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl"><GradientText className="">
+            Right Extinguisher for Your Needs
+          </GradientText></h1>
+          <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-start">
+            Choosing the correct fire extinguisher is crucial for effective
+            safety. We assess your space, potential fire hazards, and specific
+            requirements to recommend the most suitable extinguisher.{" "}
+          </p>
+          <p className="text-lg md:text-xl lg:text-2xl text-center lg:text-start">
+            Our expert guidance ensures you are fully prepared for any
+            emergency.
+          </p>
         </div>
+      </div>
       </section>
     </div>
   );
