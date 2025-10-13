@@ -9,6 +9,7 @@ import Products from "./pages/Products/Products";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop.JSX";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
 
       <div className=" font-alumni"> 
         {/* pt-16 pushes content down so it doesn’t hide behind fixed navbar */}
+        {/* <ScrollToTop /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
