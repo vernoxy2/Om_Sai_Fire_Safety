@@ -104,14 +104,14 @@ const OurService = () => {
               alt={item.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute opacity-0 hover:opacity-100 inset-0 border-b-4 border-transparent group-hover:border-Border group-hover:bg-gradient-to-t from-primary/80 to-primary-transparent transition"></div>
 
             {/* Text Content */}
-            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 space-y-6 text-white">
-              <h1 className="text-2xl md:text-7xl font-bold">{item.title}</h1>
+            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 space-y-6 text-white z-10">
+              <h1 className="text-2xl md:text-3xl font-bold">{item.title}</h1>
               <p className="">{item.description}</p>
               <PrimaryButton to={item.link}>Learn More</PrimaryButton>
             </div>
+            <div className="absolute opacity-0 hover:opacity-100 inset-0 border-b-4 border-transparent group-hover:border-Border group-hover:bg-gradient-to-t from-primary/80 to-primary-transparent transition z-0"></div>
           </div>
         ))}
       </div>

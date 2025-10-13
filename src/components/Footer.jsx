@@ -14,15 +14,37 @@ const Links = [
 
 // Services links
 const Services = [
-  { id: 1, title: "Fire Extinguisher Services", link: "/services/fire-extinguisher-services" },
-  { id: 2, title: "Fire Hydrant Systems", link: "/services/fire-hydrant-systems" },
-  { id: 3, title: "Fire Alarm & Detection Systems", link: "/services/fire-alarm-detection-systems" },
-  { id: 4, title: "Annual Maintenance Contracts (AMC)", link: "/services/annual-maintenance-contracts-amc" },
-  { id: 5, title: "Water Sprinkler System", link: "/services/water-sprinkler-system" },
-  { id: 6, title: "Fire Safety Audits & Training", link: "/services/fire-safety-audits-training" },
+  {
+    id: 1,
+    title: "Fire Extinguisher Services",
+    link: "/services/fire-extinguisher-services",
+  },
+  {
+    id: 2,
+    title: "Fire Hydrant Systems",
+    link: "/services/fire-hydrant-systems",
+  },
+  {
+    id: 3,
+    title: "Fire Alarm & Detection Systems",
+    link: "/services/fire-alarm-detection-systems",
+  },
+  {
+    id: 4,
+    title: "Annual Maintenance Contracts (AMC)",
+    link: "/services/annual-maintenance-contracts-amc",
+  },
+  {
+    id: 5,
+    title: "Water Sprinkler System",
+    link: "/services/water-sprinkler-system",
+  },
+  {
+    id: 6,
+    title: "Fire Safety Audits & Training",
+    link: "/services/fire-safety-audits-training",
+  },
 ];
-
-
 
 const Products = [
   { id: 1, title: "Fire Extinguishers" },
@@ -81,7 +103,9 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Services.map((item) => (
-              <li key={item.id}>{item.title}</li>
+              <li key={item.id}>
+                <Link to={item.link}>{item.title}</Link>
+              </li>
             ))}
           </ul>
         </div>
