@@ -3,6 +3,8 @@ import ABCPowder from '../ProTab/ABCPowder';
 import HousReels from '../ProTab/HousReels';
 import Detectors from '../ProTab/Detectors';
 import Accessories from '../ProTab/Accessories';
+import FireDoors from '../ProTab/FireDoors';
+import HVWS from '../ProTab/HVWS';
 
 const ProTeb = () => {
     const [activeTab, setActiveTab] = React.useState(0);
@@ -21,6 +23,14 @@ const ProTeb = () => {
             component: <Detectors/>
         },
         {
+          title: "fire doors",
+          component: <FireDoors/>
+        },
+        {
+          title: "HVWS systems",
+          component: <HVWS/>
+        },
+        {
             title: "safety signages & Accessories",
             component: <Accessories/>
         },
@@ -29,12 +39,12 @@ const ProTeb = () => {
     <section>
       <div className="">
         {/* Tabs */}
-        <div className="flex overflow-x-auto mb-6 container justify-center">
+        <div className="lg:flex flex-nowrap gap-6 overflow-x-auto mb-6 container justify-center">
           {Tabs.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`whitespace-wrap px-4 py-2 mr-4 text-2xl font-bold transition-colors duration-300 border-b-[3px] border-primary-start uppercase
+              className={`whitespace-wrap lg:px-10 py-2 mr-4 text-2xl font-bold transition-colors duration-300 border-b-[3px] border-primary-start uppercase
               ${
                 activeTab === index
                   ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white"
