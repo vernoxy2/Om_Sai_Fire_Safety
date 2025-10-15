@@ -11,9 +11,9 @@ const Style = {
 
 const WeDo = () => {
   return (
-    <section style={Style} className=" ">
-      <div className="container flex-col md:w-1/2 justify-center items-center space-y-4">
-        {/* <img src={Img} alt="" className='' /> */}
+    <section style={Style} className="py-0 ">
+      <div className="container flex-col md:w-1/2 justify-center items-center space-y-4 relative">
+        {/* <img src={Img} alt="" className='absolute border-' /> */}
         <h1 className="text-5xl md:text-7xl lg:text-9xl">
           <GradientText>what </GradientText> we do
         </h1>

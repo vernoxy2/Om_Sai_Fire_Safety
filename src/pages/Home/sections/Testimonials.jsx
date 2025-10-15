@@ -5,7 +5,6 @@ import person from "../../../assets/HomePageAssets/Testimonials/Person.png";
 import coma from "../../../assets/HomePageAssets/Testimonials/BigComa.png";
 import smallComa from "../../../assets/HomePageAssets/Testimonials/SmallComa.png";
 import PrimaryTitle from "../../../components/PrimaryTitle";
-import { LuSettings } from "react-icons/lu";
 
 const Style = {
   backgroundImage: `url(${testBg})`,
@@ -60,12 +59,12 @@ const Testimonials = () => {
               <div className="grid grid-cols-2 gap-4 relative">
                 <img src={coma} alt="" className="" />
                 <img src={smallComa} alt="" className="top-0 left-0 absolute" />
-                <div className="rounded-full border-2 ml-auto">
+                <div className="rounded-full border-2 ml-auto ">
                   <img src={item.img} alt="" className="rounded-full" />
                 </div>
               </div>
               <div>
-                <p className="text-[#464646] text-2xl">{item.title}</p>
+                <p className="text-[#464646] text-xl md:text-2xl">{item.title}</p>
               </div>
             </div>
           ))}

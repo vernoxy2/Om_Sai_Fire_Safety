@@ -18,7 +18,7 @@ const OurValue = () => {
         style={{ backgroundImage: `url(${value})` }}
       >
         <p className="text-2xl leading-tight md:text-4xl lg:text-3xl 2xl:text-4xl">We protect lives and property by reducing risks, ensuring compliance, and delivering expert fire safety solutions</p>
-        <PrimaryButton to="/contact">Discover More</PrimaryButton>
+        <PrimaryButton to="/contact" className="md:text-3xl">Discover More</PrimaryButton>
         
       </div>
     </div>

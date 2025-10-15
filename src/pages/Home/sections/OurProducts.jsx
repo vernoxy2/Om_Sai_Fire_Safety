@@ -8,6 +8,7 @@ import FireHydrantSprinklerSystems from "../../../assets/HomePageAssets/Products
 import FireDoor from "../../../assets/HomePageAssets/Products/FireDoor.webp";
 import SafetyAccessories from "../../../assets/HomePageAssets/Products/SafetyAccessories.webp";
 import IndustriesWeServe from "./IndustriesWeServe";
+import PrimaryButton from "../../../components/PrimaryButton";
 
 const Style = {
   backgroundImage: `url(${ProductsBg})`,
@@ -36,7 +37,7 @@ const AllProducts = [
   },
   {
     id: 4,
-    title: "Fire Hydrant & SprinklerSystems",
+    title: "Fire Hydrant & Sprinkler Systems",
     description: "ABC, CO₂, Foam, Water, and Clean Agent types.",
     image: FireHydrantSprinklerSystems,
   },
@@ -82,7 +83,11 @@ const OurProducts = () => {
         </div>
         {/* Left Section */}
 
-        <PrimaryTitle gradientText="Our" normalText="Products" imgClassName="-scale-x-100 w-full"></PrimaryTitle>
+        <PrimaryTitle
+          gradientText="Our"
+          normalText="Products"
+          imgClassName="-scale-x-100 w-full"
+        ></PrimaryTitle>
       </div>
 
       {/* Products */}
@@ -95,17 +100,20 @@ const OurProducts = () => {
             {/* Product Image */}
             <div className="overflow-hidden rounded-lg">
               <img
-              src={product.image}
-              alt={product.title}
-              className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
+                src={product.image}
+                alt={product.title}
+                className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              />
             </div>
 
             {/* Info Card */}
             <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-75 group-hover:-translate-y-16 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
-              <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
-                {product.title}
-              </h1>
+              <div className="flex justify-between w-full">
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold ">
+                  {product.title}
+                </h1>
+                <PrimaryButton linkClassName="text-2xl" divClassName="-translate-y-10 translate-x-5">Learn More</PrimaryButton>
+              </div>
               <p className="text-base md:text-lg lg:text-xl">
                 {product.description}
               </p>

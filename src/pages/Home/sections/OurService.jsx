@@ -35,19 +35,19 @@ const AllServices = [
   {
     id: 4,
     title: "Water Sprinkler System",
-    description: "Automatic water-based fire suppression for safety.",
+    description: "Hassle-free long-term protection for all fire systems.",
     image: WatersprinklerSystem,
   },
   {
     id: 5,
-    title: "Fire Safety Audits & Training",
+    title: "Hydrant Systems",
     description:
       "Compliance checks, evacuation drills, and awareness programs.",
     image: FireSafetyAudits,
   },
   {
     id: 6,
-    title: "Annual Maintenance Contracts (AMC)",
+    title: "Safety Training & (AMC)",
     description: "Hassle-free long-term protection for all fire systems.",
     image: AnnualMaintenanceContracts,
   },
@@ -105,13 +105,34 @@ const OurService = () => {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
 
-            {/* Text Content */}
-            <div className="absolute opacity-0 group-hover:opacity-100 bottom-0 p-6 space-y-6 text-white z-10">
-              <h1 className="text-2xl md:text-3xl font-bold">{item.title}</h1>
-              <p className="">{item.description}</p>
-              <PrimaryButton to={item.link}>Learn More</PrimaryButton>
+            {/* Overlay */}
+            <div className="absolute  inset-0  group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/60 to-primary-transparent transition z-0 duration-300">
+              {/* Text Content */}
+              <div className="absolute  bottom-0 p-6 space-y-2 text-white z-10">
+                <h1
+                  className={`text-2xl md:text-3xl font-bold ${
+                    index === 0 ? "xl:text-7xl" : ""
+                  }`}
+                >
+                  {item.title}
+                </h1>
+                <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-2">
+                  <p
+                    className={`text-xl md:text-2xl ${
+                      index === 0 ? "xl:text-3xl" : ""
+                    }`}
+                  >
+                    {item.description}
+                  </p>
+                  <PrimaryButton
+                    to={item.link}
+                    className={`text-lg md:text-2xl ${index === 0 ? "xl:text-3xl" : ""}`}
+                  >
+                    Learn More
+                  </PrimaryButton>
+                </div>
+              </div>
             </div>
-            <div className="absolute opacity-0 hover:opacity-100 inset-0 border-b-4 border-transparent group-hover:border-Border group-hover:bg-gradient-to-t from-primary/80 to-primary-transparent transition z-0"></div>
           </div>
         ))}
       </div>
