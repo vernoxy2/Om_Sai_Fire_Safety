@@ -7,6 +7,7 @@ import Detector4 from "../../../assets/ProductPageAssets/Tabview/detectors/detec
 import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
+import BaseLine from "../../../components/BaseLine";
 
 const Data = [
   {
@@ -89,10 +90,11 @@ const Detectors = () => {
               titleClassName="text-start lg:max-w-lg"
             />
           </div>
-          <div className="flex justify-center items-center text-start lg:max-w-sm mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-sm mx-auto">
             <p>
               Early detection saves lives. Our smoke and heat detectors include
             </p>
+            <BaseLine/>
           </div>
         </div>
 

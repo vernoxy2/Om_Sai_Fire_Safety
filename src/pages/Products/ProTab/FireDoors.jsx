@@ -5,6 +5,7 @@ import DoubleDoor from "../../../assets/ProductPageAssets/Tabview/Doors/DoubleDo
 import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
+import BaseLine from "../../../components/BaseLine";
 
 const HVWSData = [
   {
@@ -45,7 +46,7 @@ const FireDoors = () => {
               titleClassName="text-start lg:max-w-lg "
             />
           </div>
-          <div className="flex justify-center items-center text-start lg:max-w-sm mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-sm mx-auto">
             <p>
               Fire doors block{" "}
               <span className="font-bold">
@@ -53,6 +54,7 @@ const FireDoors = () => {
               </span>{" "}
               effectively.
             </p>
+            <BaseLine/>
             {/* <RiCloseFill/> */}
           </div>
         </div>

@@ -9,6 +9,7 @@ import Pro5 from "../../../assets/ProductPageAssets/Tabview/Hydrant/Pro5.png";
 import Pro6 from "../../../assets/ProductPageAssets/Tabview/Hydrant/Pro6.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
+import BaseLine from "../../../components/BaseLine";
 
 const data = [
   {
@@ -110,8 +111,9 @@ const HoseReels = () => {
               titleClassName="text-start lg:max-w-lg"
             />
           </div>
-          <div className="flex justify-center items-center text-start lg:max-w-sm mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-sm mx-auto">
             <p>We provide complete fire hydrant solutions including</p>
+            <BaseLine/>
           </div>
         </div>
 

@@ -6,6 +6,7 @@ import Img3 from "../../../assets/ServicesPageAssets/TebView/Hydrant/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/Hydrant/Right.webp";
 import LeftImg from "../../../assets/ServicesPageAssets/TebView/Hydrant/Left.webp";
 import GradientText from "../../../components/GradientText";
+import BaseLine from "../../../components/BaseLine";
 
 const data = [
   {
@@ -44,7 +45,7 @@ const FireHydrant = () => {
                 titleClassName="text-start lg:pe-12"
               />
             </div>
-            <div className="w-7/12 flex justify-center items-center text-start lg:pe-32">
+            <div className="w-7/12 flex flex-col justify-center text-start lg:pe-32">
               <p>
                 We design and install custom{" "}
                 <span className="font-semibold">
@@ -58,35 +59,38 @@ const FireHydrant = () => {
                 reliability and rapid{" "}
                 <span className="font-semibold">emergency response.</span>
               </p>
+            <BaseLine/>
+
             </div>
           </div>
 
           {/* Cards Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.map((item) => (
-              <div
-                key={item.id}
-                className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden"
-              >
-                {/* Image */}
-                <img
-                  src={item.img}
-                  alt=""
-                  className="w-full h-full object-cover rounded-xl"
-                />
+  {data.map((item) => (
+    <div
+      key={item.id}
+      className="relative overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-5"
+    >
+      {/* Image */}
+      <img
+        src={item.img}
+        alt={item.title}
+        className="w-full h-full object-cover rounded-xl"
+      />
 
-                {/* Bottom Text */}
-                <div className="absolute bottom-0 left-0 w-full bg-black/90 px-5 py-9 text-start">
-                  <p className="text-2xl">{item.desc}</p>
-                </div>
+      {/* Bottom Text */}
+      <div className="absolute bottom-0 left-0 w-full bg-black/90 px-5 py-9 text-start">
+        <p className="text-2xl text-white">{item.desc}</p>
+      </div>
 
-                {/* Title ABOVE the black box */}
-                <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
-                  <h1 className="text-3xl font-bold">{item.title}</h1>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Title ABOVE the black box */}
+      <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
+        <h1 className="text-3xl font-bold text-white">{item.title}</h1>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
 
         {/* Image With Text */}

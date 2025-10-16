@@ -27,6 +27,7 @@ import CleanAgent6 from "../../../assets/ProductPageAssets/Tabview/Portable/Clea
 import Pro5 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro5.webp";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
+import BaseLine from "../../../components/BaseLine";
 
 // Data for product cards
 const data = [
@@ -86,11 +87,12 @@ const ABCPowder = () => {
               titleClassName="text-start lg:max-w-lg"
             />
           </div>
-          <div className="flex justify-center items-center text-start lg:max-w-md mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-md mx-auto">
             <p>
               We offer a range of portable and automatic extinguishers for
               different fire types.
             </p>
+            <BaseLine/>
           </div>
         </div>
 

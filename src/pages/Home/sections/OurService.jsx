@@ -10,6 +10,7 @@ import WatersprinklerSystem from "../../../assets/HomePageAssets/Services/waters
 import FireSafetyAudits from "../../../assets/HomePageAssets/Services/FireSafetyAuditsTraining.webp";
 import AnnualMaintenanceContracts from "../../../assets/HomePageAssets/Services/AnnualMaintenanceContracts.webp";
 import PrimaryButton from "../../../components/PrimaryButton";
+import BaseLine from "../../../components/BaseLine";
 
 const AllServices = [
   {
@@ -87,6 +88,7 @@ const OurService = () => {
               compliant, prepared, and secure.
             </span>
           </p>
+          <BaseLine />
         </div>
       </div>
 
@@ -106,7 +108,7 @@ const OurService = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute  inset-0  group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/60 to-primary-transparent transition z-0 duration-300">
+            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/60 to-primary-transparent transition z-0 duration-300">
               {/* Text Content */}
               <div className="absolute  bottom-0 p-6 space-y-2 text-white z-10">
                 <h1
@@ -126,7 +128,9 @@ const OurService = () => {
                   </p>
                   <PrimaryButton
                     to={item.link}
-                    className={`text-lg md:text-2xl ${index === 0 ? "xl:text-3xl" : ""}`}
+                    className={`text-lg md:text-2xl ${
+                      index === 0 ? "xl:text-3xl" : ""
+                    }`}
                   >
                     Learn More
                   </PrimaryButton>

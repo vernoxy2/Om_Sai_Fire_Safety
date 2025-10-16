@@ -6,6 +6,7 @@ import Img3 from "../../../assets/ServicesPageAssets/TebView/Alarm/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/Alarm/Right.webp";
 import LeftImg from "../../../assets/ServicesPageAssets/TebView/Alarm/Left.webp";
 import GradientText from "../../../components/GradientText";
+import BaseLine from "../../../components/BaseLine";
 
 const data = [
   {
@@ -41,10 +42,10 @@ const FireAlarmDetection = () => {
               <PrimaryTitle
                 gradientText={"FIRE ALARM &   "}
                 normalText={"DETECTION SYSTEMS"}
-                titleClassName="text-start lg:pe-52"
+                titleClassName="text-start w-[80%]"
               />
             </div>
-            <div className="flex justify-center items-center text-start lg:pe-32">
+            <div className="flex flex-col justify-center  text-start lg:pe-32">
               <p>
                 Our{" "}
                 <span className="font-semibold">
@@ -54,6 +55,8 @@ const FireAlarmDetection = () => {
                 and ensure quick emergency response—protecting lives and
                 property in homes, offices, and industries.
               </p>
+            <BaseLine/>
+
             </div>
           </div>
 

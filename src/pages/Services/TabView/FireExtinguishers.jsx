@@ -5,6 +5,7 @@ import Img2 from "../../../assets/ServicesPageAssets/TebView/FE/Img2.webp";
 import Img3 from "../../../assets/ServicesPageAssets/TebView/FE/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/FE/Right.webp";
 import GradientText from "../../../components/GradientText";
+import BaseLine from '../../../components/BaseLine';
 
 const data = [
   {
@@ -42,11 +43,12 @@ const FireExtinguishers = () => {
               titleClassName="text-start"
             />
           </div>
-          <div className="flex justify-center items-center text-start lg:pe-32">
+          <div className="flex flex-col justify-center text-start lg:pe-32">
             <p>
               We supply certified fire extinguishers suitable for homes,
               offices, and industries. Our team also provides
             </p>
+            <BaseLine/>
           </div>
         </div>
 

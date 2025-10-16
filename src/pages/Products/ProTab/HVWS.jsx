@@ -5,6 +5,7 @@ import HVWS2 from "../../../assets/ProductPageAssets/Tabview/HVWS/HVWS2.webp";
 import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
+import BaseLine from "../../../components/BaseLine";
 
 const HVWSData = [
   {
@@ -43,13 +44,14 @@ const HVWS = () => {
             normalText={"system"}
             titleClassName="text-start lg:max-w-lg"
           />
-          <div className="flex justify-center items-center text-start lg:max-w-sm mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-sm mx-auto">
             <p>
               High Velocity Water{" "}
               <span className="font-bold">Spray systems rapidly cool</span>{" "}
               surfaces, suppress flames, ensuring reliable, efficient fire
               control in industries.
             </p>
+            <BaseLine/>
           </div>
         </div>
 

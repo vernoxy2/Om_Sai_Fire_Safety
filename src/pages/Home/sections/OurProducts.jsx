@@ -9,6 +9,8 @@ import FireDoor from "../../../assets/HomePageAssets/Products/FireDoor.webp";
 import SafetyAccessories from "../../../assets/HomePageAssets/Products/SafetyAccessories.webp";
 import IndustriesWeServe from "./IndustriesWeServe";
 import PrimaryButton from "../../../components/PrimaryButton";
+import { Link } from "react-router-dom";
+import BaseLine from "../../../components/BaseLine";
 
 const Style = {
   backgroundImage: `url(${ProductsBg})`,
@@ -22,12 +24,14 @@ const AllProducts = [
     title: "Fire Extinguishers",
     description: "ABC, CO₂, Foam, Water, and Clean Agent types.",
     image: FireExtinguishers,
+    Link: "/products/abc-powder",
   },
   {
     id: 2,
     title: "HVWs Systems",
     description: "Heavy-duty firefighting infrastructure.",
     image: HVWsSystems,
+    Link: "/products/hvws-systems",
   },
   {
     id: 3,
@@ -80,6 +84,7 @@ const OurProducts = () => {
             </span>{" "}
             systems.
           </p>
+          <BaseLine className="ml-auto"/>
         </div>
         {/* Left Section */}
 
@@ -112,7 +117,7 @@ const OurProducts = () => {
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold ">
                   {product.title}
                 </h1>
-                <PrimaryButton linkClassName="text-2xl" divClassName="-translate-y-10 translate-x-5">Learn More</PrimaryButton>
+                <PrimaryButton to={product.Link} linkClassName="text-2xl" divClassName="-translate-y-10 translate-x-5">Learn More</PrimaryButton>
               </div>
               <p className="text-base md:text-lg lg:text-xl">
                 {product.description}

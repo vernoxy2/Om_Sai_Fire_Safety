@@ -5,6 +5,7 @@ import Img2 from "../../../assets/ServicesPageAssets/TebView/Sprinkler/Img2.webp
 import Img3 from "../../../assets/ServicesPageAssets/TebView/Sprinkler/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/FE/Right.webp";
 import GradientText from "../../../components/GradientText";
+import BaseLine from "../../../components/BaseLine";
 
 const data = [
   {
@@ -43,10 +44,11 @@ const AutomaticSprinkler = () => {
                 titleClassName="text-start"
               />
             </div>
-            <div className="flex justify-center items-center text-start lg:pe-32">
+            <div className="flex justify-center flex-col text-start lg:pe-32">
               <p>
                 We provide automatic sprinkler solutions designed to contain fires instantly
               </p>
+              <BaseLine/>
             </div>
           </div>
 

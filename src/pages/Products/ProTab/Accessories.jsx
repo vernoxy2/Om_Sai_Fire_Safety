@@ -7,6 +7,7 @@ import Safety3 from "../../../assets/ProductPageAssets/Tabview/Accessories/Safet
 import Safety4 from "../../../assets/ProductPageAssets/Tabview/Accessories/Safety4.svg";
 import PrimaryButton from "../../../components/PrimaryButton";
 import HeadLine from "../../../assets/HeadLine.png";
+import BaseLine from "../../../components/BaseLine";
 
 const AccessoriesData = [
   {
@@ -56,7 +57,7 @@ const Accessories = () => {
             normalText="Accessories"
             titleClassName="text-start lg:max-w-lg"
           />
-          <div className="flex justify-center items-center text-start lg:max-w-md mx-auto">
+          <div className="flex justify-center flex-col text-start lg:max-w-md mx-auto">
             <p>
               Essential for{" "}
               <span className="font-bold">
@@ -65,6 +66,7 @@ const Accessories = () => {
               safety, our safety accessories enhance protection, guidance, and
               emergency readiness.
             </p>
+            <BaseLine/>
           </div>
         </div>
 

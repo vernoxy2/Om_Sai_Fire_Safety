@@ -6,6 +6,7 @@ import Img2 from "../../../assets/ServicesPageAssets/TebView/Training/Img2.webp"
 import Img3 from "../../../assets/ServicesPageAssets/TebView/Training/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/FE/Right.webp";
 import GradientText from "../../../components/GradientText";
+import BaseLine from "../../../components/BaseLine";
 
 const data = [
   {
@@ -44,10 +45,11 @@ const FireSafetyAuditsTraining = () => {
                 titleClassName="text-start"
               />
             </div>
-            <div className="flex justify-center items-center text-start lg:pe-32">
+            <div className="flex justify-center flex-col text-start lg:pe-32">
               <p>
                 Our team conducts on-site audits and training programs to improve fire readiness
               </p>
+              <BaseLine/>
             </div>
           </div>
 
