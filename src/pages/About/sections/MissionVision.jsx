@@ -11,7 +11,8 @@ const style = {
   backgroundPosition: "center",
 };
 
-const slides = [<Mission />, <Vission />, <Values />];
+// ✅ Store component references instead of JSX
+const slides = [Mission, Vission, Values];
 
 const MissionVission = () => {
   const [current, setCurrent] = useState(0);
@@ -24,11 +25,13 @@ const MissionVission = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // ✅ Auto-scroll every 5 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000); // 5s delay
-    return () => clearInterval(interval); // cleanup on unmount
+    const interval = setInterval(nextSlide, 4000); // 4s auto-scroll
+    return () => clearInterval(interval);
   }, []);
+
+  // ✅ Get the current component dynamically
+  const CurrentSlide = slides[current];
 
   return (
     <section style={style} className="relative overflow-hidden">
@@ -42,7 +45,7 @@ const MissionVission = () => {
             transition={{ duration: 0.5 }}
             className="w-full"
           >
-            {slides[current]}
+            <CurrentSlide />
           </motion.div>
         </AnimatePresence>
       </div>
