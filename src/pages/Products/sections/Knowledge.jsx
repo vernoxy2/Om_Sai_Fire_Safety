@@ -48,9 +48,9 @@ const Knowledge = () => {
   };
   return (
     <section style={Style}>
-      <div className="container flex flex-col-reverse md:flex-row gap-12 items-start">
+      <div className="container flex flex-col-reverse lg:flex-row gap-12 items-start">
         {/* Left Side: FAQ Accordions */}
-        <div className="flex-1 flex flex-col gap-4">
+        <div className="lg:flex-1 flex flex-col gap-4 w-full">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
@@ -88,7 +88,7 @@ const Knowledge = () => {
         </div>
 
         {/* Right Side: FAQ Intro + Card */}
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col gap-8 w-full">
           <div className="text-center md:text-right">
             {/* Title */}
             <PrimaryTitle
