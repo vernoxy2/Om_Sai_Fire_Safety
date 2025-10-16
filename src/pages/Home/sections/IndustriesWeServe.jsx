@@ -121,7 +121,7 @@ const IndustriesWeServe = () => {
         {IndustriesList.map((item) => (
           <div
             key={item.id}
-            className="bg-white group hover:bg-gradient-to-t from-primary to-primary-start rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 duration-500 transition transform dark:bg-gray-800 dark:border-gray-700"
+            className="bg-white group hover:bg-gradient-to-t from-primary to-primary-start rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 duration-500 transition transform "
           >
             <div className="p-5">
               <div className="mb-5 p-4 bg-primary/10 duration-500 group-hover:bg-white rounded-lg inline-flex items-center justify-center">
