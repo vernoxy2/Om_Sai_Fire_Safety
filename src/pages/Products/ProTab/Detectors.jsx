@@ -54,6 +54,15 @@ const Data = [
     consumption: "220 mA",
     Construction: "ABS Housing",
   },
+  {
+    id: 4,
+    img: Detector4,
+    title: "FIRE ALARM PANEL",
+    subtitle: "TECHNICAL SPECIFICATIONS",
+    category: ["2 zone", "4 zone", "etc"],
+    features:
+      "Operating Voltage AC 220v 50Hz ±10%, DC 24v 1 AMPOperating Temperature 0°C to 50°COperating Humidity 95% (non-condensing).Hooter Output -1 A (24v DC)EOL 4k7 ohm, 1 per zoneWeight-4.5 Kg Construction 1.8 mm CRCA sheet duly power coatedDimension H 272mm W 346mm D 96mmColour Caramel White/Red",
+  },
 ];
 
 const Detectors = () => {
@@ -118,7 +127,7 @@ const Detectors = () => {
       {/* Pop up */}
       {showModal && (
         <div
-          className="fixed inset-0 bg-black/80 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 overflow-scroll py-20"
           onClick={handleClose}
         >
           <div
@@ -151,7 +160,8 @@ const Detectors = () => {
                       <p className="text-3xl ">{showModal.subtitle}</p>
                     )}
                   </div>
-                  <div className="bg-white w-1/4 rounded-[4px] p-1">
+                  {/* Category Box */}
+                  <div className="bg-white w-1/3 rounded-[4px] p-1">
                     <p className="bg-gradient-to-r from-primary-start to-primary text-start px-1 uppercase font-semibold">
                       category
                     </p>
@@ -169,7 +179,17 @@ const Detectors = () => {
                 {showModal.description && (
                   <div>
                     <p className="font-semibold">SPECIFICATION</p>
-                    <p className="text-2xl mt-1">{showModal.description}</p>
+                    <p className="text-2xl mt-1 w-2/3 leading-6">
+                      {showModal.description}
+                    </p>
+                  </div>
+                )}
+                {showModal.features && (
+                  <div>
+                    <p className="font-semibold">FEATURES</p>
+                    <p className="text-2xl mt-1 w-2/3 leading-6">
+                      {showModal.features}
+                    </p>
                   </div>
                 )}
 
@@ -223,16 +243,6 @@ const Detectors = () => {
                   {showModal.speaker && (
                     <li>
                       <strong>Speaker:</strong> {showModal.speaker}
-                    </li>
-                  )}
-                  {showModal.features && (
-                    <li>
-                      <strong>Features:</strong> {showModal.features}
-                    </li>
-                  )}
-                  {showModal.category && (
-                    <li>
-                      <strong>Category:</strong> {showModal.category.join(", ")}
                     </li>
                   )}
                 </ul>

@@ -111,14 +111,14 @@ const ABCPowder = () => {
                     duration: 4000,
                   }}
                   loop={true}
-                  className="bg-white/10 w-full rounded-t-xl flex flex-col h-96"
+                  className="bg-white/10 w-full rounded-t-xl flex flex-col h-96 "
                 >
                   {item.Img.map((img, i) => (
                     <SwiperSlide key={i}>
                       <img
                         src={img}
                         alt={`${item.title} ${i + 1}`}
-                        className="h-full object-contain mx-auto"
+                        className=" object-contain mx-auto "
                       />
                     </SwiperSlide>
                   ))}
