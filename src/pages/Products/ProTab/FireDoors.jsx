@@ -88,7 +88,7 @@ const FireDoors = () => {
         >
           {/* Modal Content */}
           <div
-            className="bg-gradient-to-b from-primary-start to-primary-end rounded-xl p-16 w-11/12 max-w-2xl max-h-2/4 overflow-y-auto relative"
+            className="bg-gradient-to-b from-primary-start to-primary-end rounded-xl p-8 md:p-16 w-11/12 max-w-2xl max-h-2/4 overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
           >
             <button
@@ -100,7 +100,7 @@ const FireDoors = () => {
             {/* Content */}
             <div className="flex flex-col md:flex-row items-center md:gap-14">
               {/* Image */}
-              <div className=" w-full flex flex-col h-72 ">
+              <div className=" w-full flex flex-col h-56 md:h-72 ">
                 <img
                   src={showModal.img}
                   alt={showModal.title}
@@ -108,10 +108,10 @@ const FireDoors = () => {
                 />
               </div>
               <div className="py-10 w-full text-start ">
-                <h3 className="font-bold text-white text-5xl">
+                <h3 className="font-bold text-white text-4xl md:text-5xl">
                   {showModal.title}
                 </h3>
-                <p className="text-white text-2xl leading-6 mt-2">
+                <p className="text-white text-xl md:text-2xl leading-6 mt-2">
                   {showModal.desc}
                 </p>
                 

@@ -161,7 +161,7 @@ const HoseReels = () => {
 
             <div className="flex flex-col items-center pt-8">
               {/* Image */}
-              <div className="w-full flex flex-col h-56">
+              <div className="w-full flex flex-col h-40 md:h-56">
                 <img
                   src={showModal.img}
                   alt={showModal.title}
@@ -172,14 +172,14 @@ const HoseReels = () => {
               {/* Details */}
               <div className="py-8 w-full text-start text-white">
                 <div className="flex justify-between">
-                  <div className="flex flex-col -space-y-2">
-                    <h3 className="font-bold text-5xl">{showModal.title}</h3>
+                  <div className="flex flex-col md:-space-y-2">
+                    <h3 className="font-bold text-4xl md:text-5xl leading-7">{showModal.title}</h3>
                     {showModal.subtitle && (
-                      <p className="text-3xl uppercase">{showModal.subtitle}</p>
+                      <p className=" text-2xl md:text-3xl uppercase">{showModal.subtitle}</p>
                     )}
                   </div>
                   {/* Category Box */}
-                  <div className="bg-white w-60 rounded-[4px] p-1">
+                  <div className="bg-white w-60 rounded-[4px] p-1 ">
                     <p className="bg-gradient-to-r from-primary-start to-primary text-start px-1 uppercase font-semibold">
                       category
                     </p>
@@ -198,7 +198,7 @@ const HoseReels = () => {
                 {showModal.desc && (
                   <div>
                     {/* <p className="font-semibold">SPECIFICATION</p> */}
-                    <p className="text-3xl font-semibold mt-1 uppercase">
+                    <p className="text-2xl md:text-3xl font-semibold mt-1 uppercase leading-6">
                       {showModal.desc}
                     </p>
                   </div>
@@ -214,7 +214,7 @@ const HoseReels = () => {
                 )}
                 {showModal.text && (
                   <div>
-                    <p className="text-2xl mt-1 w-2/3 leading-6">{showModal.text}</p>
+                    <p className="text-xl md:text-2xl mt-1 w-2/3 leading-6">{showModal.text}</p>
                   </div>
                 )}
 

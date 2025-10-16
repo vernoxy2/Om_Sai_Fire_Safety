@@ -95,7 +95,7 @@ const ABCPowder = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-8">
           {data.map((item) => (
             <div
               key={item.id}
@@ -174,7 +174,7 @@ const ABCPowder = () => {
                   duration: 4000,
                 }}
                 loop={true}
-                className=" w-full rounded-t-xl flex flex-col h-96"
+                className=" w-full rounded-t-xl flex flex-col h-52 md:h-96"
               >
                 {showModal.Img.map((img, i) => (
                   <SwiperSlide key={i}>
@@ -187,7 +187,7 @@ const ABCPowder = () => {
                 ))}
               </Swiper>
               <div className="py-10 w-full text-start ">
-                <h3 className="font-bold text-white text-5xl">
+                <h3 className="font-bold text-white text-4xl md:text-5xl">
                   {showModal.title}
                 </h3>
                 <div className="bg-white w-[80%] rounded-[4px] p-1">

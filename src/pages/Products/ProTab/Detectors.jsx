@@ -97,13 +97,13 @@ const Detectors = () => {
         </div>
 
         {/* Cards Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:px-10">
           {Data.map((item) => (
             <div
               key={item.id}
               className="flex flex-col items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
             >
-              <div className="bg-white/10 w-full rounded-t-xl flex flex-col h-80">
+              <div className="bg-white/10 w-full rounded-t-xl flex flex-col h-52 md:h-80">
                 <img
                   src={item.img}
                   alt={item.title}
@@ -143,7 +143,7 @@ const Detectors = () => {
 
             <div className="flex flex-col items-center pt-8">
               {/* Image */}
-              <div className="w-full flex flex-col h-56">
+              <div className="w-full flex flex-col h-40 md:h-56">
                 <img
                   src={showModal.img}
                   alt={showModal.title}
@@ -155,9 +155,9 @@ const Detectors = () => {
               <div className="py-8 w-full text-start text-white">
                 <div className="flex justify-between">
                   <div className="flex flex-col -space-y-3">
-                    <h3 className="font-bold text-5xl">{showModal.title}</h3>
+                    <h3 className="font-bold text-4xl md:text-5xl">{showModal.title}</h3>
                     {showModal.subtitle && (
-                      <p className="text-3xl ">{showModal.subtitle}</p>
+                      <p className="text-2xl md:text-3xl ">{showModal.subtitle}</p>
                     )}
                   </div>
                   {/* Category Box */}
@@ -179,7 +179,7 @@ const Detectors = () => {
                 {showModal.description && (
                   <div>
                     <p className="font-semibold">SPECIFICATION</p>
-                    <p className="text-2xl mt-1 w-2/3 leading-6">
+                    <p className="text-lg md:text-2xl mt-1 md:w-2/3 leading-6">
                       {showModal.description}
                     </p>
                   </div>
@@ -187,7 +187,7 @@ const Detectors = () => {
                 {showModal.features && (
                   <div>
                     <p className="font-semibold">FEATURES</p>
-                    <p className="text-2xl mt-1 w-2/3 leading-6">
+                    <p className="text-lg md:text-2xl mt-1 md:w-2/3 leading-6">
                       {showModal.features}
                     </p>
                   </div>
