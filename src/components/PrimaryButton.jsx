@@ -5,8 +5,8 @@ const PrimaryButton = ({
   children,
   to = null,
   onClick = null,
-  LinkclassName = "",
-  divClassname = "",
+  className = "",
+  // divClassname = "",
 }) => {
   const navigate = useNavigate();
 
@@ -20,14 +20,12 @@ const PrimaryButton = ({
   };
 
   return (
-    <div className={`inline-block rounded-[3px] ${divClassname}`}>
       <button
         onClick={handleClick}
-        className={`block px-4 py-2 font-semibold uppercase text-primary bg-[#F9F9F9] rounded-[3px] text-center transition-transform duration-200 ease-in-out hover:scale-95 ${LinkclassName}`}
+        className={` bg-[#f9f9f9] py-2 px-4 rounded-sm text-primary font-semibold text-xl ${className}`}
       >
         {children}
       </button>
-    </div>
   );
 };
 
