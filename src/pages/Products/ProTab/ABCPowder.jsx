@@ -25,6 +25,8 @@ import M_Foam50 from "../../../assets/ProductPageAssets/Tabview/Portable/M_Foam/
 import CleanAgent4 from "../../../assets/ProductPageAssets/Tabview/Portable/CleanAgent/CleanAgent4.webp";
 import CleanAgent6 from "../../../assets/ProductPageAssets/Tabview/Portable/CleanAgent/CleanAgent6.webp";
 import Pro5 from "../../../assets/ProductPageAssets/Tabview/Portable/Pro5.webp";
+import PrimaryButton from "../../../components/PrimaryButton";
+import { RiCloseFill } from "react-icons/ri";
 
 // Data for product cards
 const data = [
@@ -61,8 +63,19 @@ const data = [
 ];
 
 const ABCPowder = () => {
+  const [showModal, setShowModal] = React.useState(false);
+
+  const handleShow = (item) => {
+    setShowModal(item);
+  };
+
+  const handleClose = () => {
+    setShowModal(null);
+  };
   return (
+    // ABC Powder
     <section>
+      {/* Container */}
       <div className="container space-y-16">
         {/* Section Heading */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -82,19 +95,23 @@ const ABCPowder = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
           {data.map((item) => (
             <div
               key={item.id}
-              className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden border-2 border-gray-200/10 bg-white/5 flex flex-col h-full"
+              className="relflex flex-col items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
             >
               {/* If multiple images -> use Swiper */}
               {item.Img.length > 1 ? (
                 <Swiper
-                  modules={[ Autoplay]}
-                  autoplay={{ delay: 2000, disableOnInteraction: false , duration: 4000 }}
+                  modules={[Autoplay]}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    duration: 4000,
+                  }}
                   loop={true}
-                  className="h-[100%] w-full"
+                  className="bg-white/10 w-full rounded-t-xl flex flex-col h-96"
                 >
                   {item.Img.map((img, i) => (
                     <SwiperSlide key={i}>
@@ -115,37 +132,86 @@ const ABCPowder = () => {
               )}
 
               {/* Product Content */}
-              <div className="bg-gradient-to-r from-primary-start to-primary z-10 w-full p-5 pb-12 h-full flex flex-col justify-between items-start gap-3">
-                <div className="flex flex-col gap-2 items-start">
-                  <p className="font-bold">{item.title}</p>
-
-                  <div className="bg-white w-[70%] rounded-[4px] p-1">
-                    <p className="bg-gradient-to-r from-primary-start to-primary text-start px-1 uppercase font-semibold">
-                      Capacity
-                    </p>
-                    <ul className="flex flex-wrap gap-1">
-                      {item.capacity.map((cap) => (
-                        <li key={cap} className="text-start px-1">
-                          <p className="text-[#696969] font-semibold uppercase">
-                            {cap}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Decorative divider */}
-                <img
-                  src={HeadLine}
-                  alt="Section divider graphic"
-                  className="ml-auto -mr-5 pt-14 w-[40%]"
-                />
+              <div className="bg-gradient-to-r from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
+                <h3 className="font-bold text-white text-3xl ">{item.title}</h3>
+                <PrimaryButton className="" onClick={() => handleShow(item)}>
+                  View Details
+                </PrimaryButton>
+              </div>
+              <div className="absolute bottom-7 right-0">
+                <img src={HeadLine} alt="" className="ml-auto w-2/3" />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Pop Up  */}
+      {showModal && (
+        <div
+          className="fixed inset-0 bg-black/80 flex justify-center items-center z-50"
+          onClick={handleClose}
+        >
+          {/* Modal Content */}
+          <div
+            className="bg-gradient-to-b from-primary-start to-primary-end rounded-xl p-8 w-11/12 max-w-2xl max-h-2/4 overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+          >
+            <button
+              className="absolute top-2 right-2 text-white text-3xl font-bold "
+              onClick={handleClose}
+            >
+              <RiCloseFill className="text-whitetext-3xl md:text-4xl font-bold " />
+            </button>
+            {/* Content */}
+            <div className="flex flex-col md:flex-row items-center md:gap-14">
+              {/* Image */}
+              <Swiper
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                  duration: 4000,
+                }}
+                loop={true}
+                className=" w-full rounded-t-xl flex flex-col h-96"
+              >
+                {showModal.Img.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <img
+                      src={img}
+                      alt={`${showModal.title} ${i + 1}`}
+                      className="h-full object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="py-10 w-full text-start ">
+                <h3 className="font-bold text-white text-5xl">
+                  {showModal.title}
+                </h3>
+                <div className="bg-white w-[80%] rounded-[4px] p-1">
+                  <p className="bg-gradient-to-r from-primary-start to-primary text-start px-1 uppercase font-semibold">
+                    category
+                  </p>
+                  <ul className="flex flex-wrap gap-1">
+                    {showModal.capacity.map((cap) => (
+                      <li key={cap} className="text-start px-1">
+                        <p className="text-[#696969] font-semibold uppercase">
+                          {cap}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-8 right-0">
+              <img src={HeadLine} alt="" className="ml-auto w-2/3" />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

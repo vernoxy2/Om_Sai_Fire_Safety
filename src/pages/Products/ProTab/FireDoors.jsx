@@ -114,9 +114,7 @@ const FireDoors = () => {
                 <p className="text-white text-2xl leading-6 mt-2">
                   {showModal.desc}
                 </p>
-                {/* <PrimaryButton onClick={() => handleClose()}>
-                              Back
-                            </PrimaryButton> */}
+                
               </div>
             </div>
             <div className="absolute bottom-8 right-0">
