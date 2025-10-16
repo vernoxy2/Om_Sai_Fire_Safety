@@ -16,13 +16,13 @@ const Links = [
 const Services = [
   {
     id: 1,
-    title: "Fire Extinguisher Services",
-    link: "/services/fire-extinguisher-services",
-  },
-  {
-    id: 2,
     title: "Fire Hydrant Systems",
     link: "/services/fire-hydrant-systems",
+  },
+  {
+    id: 2 ,
+    title: "Fire Extinguisher Services",
+    link: "/services/fire-extinguisher-services",
   },
   {
     id: 3,
@@ -46,13 +46,14 @@ const Services = [
   },
 ];
 
+// Product links mirror the Product Tabs order and slugs
 const Products = [
-  { id: 1, title: "Fire Extinguishers" },
-  { id: 2, title: "HVWs Systems" },
-  { id: 3, title: "Fire Alarm Systems" },
-  { id: 4, title: "Fire Hydrant & Sprinkler Systems" },
-  { id: 5, title: "Fire Door" },
-  { id: 6, title: "Safety Accessories" },
+  { id: 1, title: "ABC Powder Extinguishers", slug: "abc-powder" },
+  { id: 2, title: "Fire Hydrant Systems & Hose Reels", slug: "hydrant-and-hose-reels" },
+  { id: 3, title: "Smoke & Heat Detectors", slug: "detectors" },
+  { id: 4, title: "Fire Doors", slug: "fire-doors" },
+  { id: 5, title: "HVWS Systems", slug: "hvws-systems" },
+  { id: 6, title: "Safety Signages & Accessories", slug: "safety-accessories" },
 ];
 
 const Footer = () => {
@@ -117,7 +118,9 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Products.map((item) => (
-              <li key={item.id}>{item.title}</li>
+              <li key={item.id}>
+                <Link to={`/products/${item.slug}`}>{item.title}</Link>
+              </li>
             ))}
           </ul>
         </div>

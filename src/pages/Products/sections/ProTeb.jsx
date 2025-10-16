@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import ABCPowder from '../ProTab/ABCPowder';
 import HousReels from '../ProTab/HousReels';
 import Detectors from '../ProTab/Detectors';
@@ -7,16 +9,41 @@ import FireDoors from '../ProTab/FireDoors';
 import HVWS from '../ProTab/HVWS';
 
 const ProTeb = () => {
+  const navigate = useNavigate();
+  const { tabSlug } = useParams();
   const [activeTab, setActiveTab] = React.useState(0);
 
   const Tabs = [
-    { title: "abc powder extinguishers", component: <ABCPowder /> },
-    { title: "fire hydrant systems & Hous reels", component: <HousReels /> },
-    { title: "smock & heat Detectors", component: <Detectors /> },
-    { title: "fire doors", component: <FireDoors /> },
-    { title: "HVWS systems", component: <HVWS /> },
-    { title: "safety signages & Accessories", component: <Accessories /> },
+    { title: "abc powder extinguishers", slug: 'abc-powder', component: <ABCPowder /> },
+    { title: "fire hydrant systems & Hous reels", slug: 'hydrant-and-hose-reels', component: <HousReels /> },
+    { title: "smock & heat Detectors", slug: 'detectors', component: <Detectors /> },
+    { title: "fire doors", slug: 'fire-doors', component: <FireDoors /> },
+    { title: "HVWS systems", slug: 'hvws-systems', component: <HVWS /> },
+    { title: "safety signages & Accessories", slug: 'safety-accessories', component: <Accessories /> },
   ];
+
+  // Whenever the route includes a tab slug, set the active tab accordingly
+  useEffect(() => {
+    if (!tabSlug) return;
+    const indexFromSlug = Tabs.findIndex(t => t.slug === tabSlug);
+    if (indexFromSlug !== -1 && indexFromSlug !== activeTab) {
+      setActiveTab(indexFromSlug);
+    }
+  }, [tabSlug]);
+
+  // When the active tab changes (via click), push the slug to the URL
+  useEffect(() => {
+    const desiredSlug = Tabs[activeTab]?.slug;
+    if (!desiredSlug) return;
+    // Only navigate if current slug differs to avoid history spam
+    if (tabSlug !== desiredSlug) {
+      navigate(`/products/${desiredSlug}`, { replace: true });
+    }
+  }, [activeTab]);
+
+  
+
+  
 
   return (
     <section>
