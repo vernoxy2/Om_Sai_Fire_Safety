@@ -67,7 +67,7 @@ const AutomaticSprinkler = () => {
                 />
 
                 {/* Bottom Text */}
-                <div className="absolute bottom-0 left-0 w-full bg-black/90 px-5 py-9 text-start">
+                <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px] px-5 py-9 text-start">
                   <p className="text-2xl">{item.desc}</p>
                 </div>
 

@@ -142,8 +142,8 @@ const OurService = () => {
                 </div>
               </div>
             </div> */}
-            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/40 via-transparent hover:from-primary/80 to-primary-transparent transition z-0 duration-300">
-              <div className="absolute  bottom-0 p-6 space-y-2 text-white z-10">
+            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/50 via-transparent hover:from-primary/80 to-primary-transparent transition z-0 duration-300 hover:backdrop-blur-[2px]">
+              <div className="absolute bottom-0 p-6  text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${
                     index === 0 ? "xl:text-7xl" : ""
@@ -151,7 +151,7 @@ const OurService = () => {
                 >
                   {item.title}
                 </h1>
-                <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-2">
+                <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-1">
                   <p
                     className={`text-xl md:text-2xl ${
                       index === 0 ? "xl:text-3xl" : ""
@@ -161,7 +161,7 @@ const OurService = () => {
                   </p>
                   <PrimaryButton
                     to={item.link}
-                    className={`text-lg md:text-2xl ${
+                    className={` lg:text-lg ${
                       index === 0 ? "xl:text-3xl" : ""
                     }`}
                   >

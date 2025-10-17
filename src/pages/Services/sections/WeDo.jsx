@@ -17,7 +17,7 @@ const WeDo = () => {
       <img
         src={Img}
         alt=""
-        className="absolute inset-0 h-full object-cover z-0"
+        className="absolute inset-0 h-full object-cover z-0 hidden xl:block"
       />
 
       {/* Content */}

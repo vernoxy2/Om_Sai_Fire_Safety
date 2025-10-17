@@ -9,12 +9,17 @@
   h1 {
     @apply uppercase font-alumni text-white; /* Uppercase + Alumni Sans font */
   }
+  
+  /* Specific line-height for hero headings */
+  h1.hero-title {
+    @apply leading-none;
+  }
 
   section {
     @apply py-8 md:py-24; /* Container + vertical padding */
   }
 
   p {
-    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl;
+    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl ;
   }
 }
