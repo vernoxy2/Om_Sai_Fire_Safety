@@ -25,14 +25,14 @@ const Navbar = () => {
 
   return (
     <nav className=" top-0 left-0 w-full z-50 bg-transparent font-alumni sticky">
-      <div className=" mx-auto pl-0 flex items-center justify-between  py-4 px-6 lg:ps-8 bg-white/95">
+      <div className=" mx-auto pl-0 flex items-center justify-between  py-3 px-6 lg:ps-8 bg-white/95">
         {/* Logo */}
-        <div className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 ">
+        <div className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 w-1/2 ">
           <img src={LogoName} alt="Logo" className="" />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex justify-around w-full  text-2xl px-8">
+        <div className="hidden lg:flex justify-between w-full  text-2xl ">
           {menuItems.map((item) => (
             <NavLink key={item.path} to={item.path} className={navLinkClass}>
               {item.name}
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {/* Line */}
-        <div className="h-[2px] w-full bg-black"></div>
+        <div className="h-[2px] w-2/3 bg-black hidden lg:block ml-9"></div>
 
         {/* Mobile Hamburger */}
         <button
