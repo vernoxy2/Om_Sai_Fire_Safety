@@ -1,7 +1,9 @@
 import React from "react";
-import TextBg from "../../../assets/AboutPageAssets/AboutTextBg.webp";
+import TextBg from "../../../assets/BgLeft.webp";
 import TextImg from "../../../assets/AboutPageAssets/AboutTextImg.webp";
 import PrimaryTitle from "../../../components/PrimaryTitle";
+import Director from "./Director";
+import BaseLine from "../../../components/BaseLine";
 
 const Style = {
   backgroundImage: `url(${TextBg})`,
@@ -10,7 +12,7 @@ const Style = {
 
 const AboutText = () => {
   return (
-    <section style={Style}>
+    <><section style={Style} className="space-y-20">
       <div className="container pl-0 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div>
@@ -50,9 +52,12 @@ const AboutText = () => {
             <span className="font-semibold">fire prevention and protection</span> —
             all under one roof.
           </p>
+          <BaseLine className="mx-auto lg:ml-auto"/>
         </div>
       </div>
+      <Director/>
     </section>
+    </>
   );
 };
 

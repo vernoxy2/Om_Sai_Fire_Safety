@@ -9,6 +9,7 @@ const PrimaryTitle = ({
   className = "",
   titleClassName = "",
   imgClassName = "",
+  spanText = "",
 }) => {
   const titleRef = useRef(null);
   const [textWidth, setTextWidth] = useState(0);
@@ -21,7 +22,7 @@ const PrimaryTitle = ({
 
   return (
     <div
-      className={`flex flex-col gap-3 items-center justify-center ${className}`}
+      className={`flex flex-col gap-3  ${className}`}
     >
       {(gradientText || normalText) && (
         <>
@@ -30,7 +31,7 @@ const PrimaryTitle = ({
               src={preImg}
               alt="headline"
               style={{ width: `${textWidth}px` }}
-              className={`transition-all duration-300 ${imgClassName}`}
+              className={` ${imgClassName}`}
             />
           )}
           <h2
@@ -40,6 +41,7 @@ const PrimaryTitle = ({
             {gradientText && <GradientText>{gradientText}</GradientText>}{" "}
             {normalText}
           </h2>
+          <p className="-mt-5 text-white text-start">{spanText}</p>
         </>
       )}
     </div>
