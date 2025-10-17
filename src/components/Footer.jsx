@@ -3,6 +3,8 @@ import Bg from "../assets/HomePageAssets/Services/ServicesBg.webp";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import LogoName from "../assets/LogoName.svg";
 import { Link } from "react-router-dom";
+import BottomLine from "../assets/HeadLine.svg";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const Links = [
   { id: 1, title: "Home", link: "/" },
@@ -20,7 +22,7 @@ const Services = [
     link: "/services/fire-hydrant-systems",
   },
   {
-    id: 2 ,
+    id: 2,
     title: "Fire Extinguisher Services",
     link: "/services/fire-extinguisher-services",
   },
@@ -49,7 +51,11 @@ const Services = [
 // Product links mirror the Product Tabs order and slugs
 const Products = [
   { id: 1, title: "ABC Powder Extinguishers", slug: "abc-powder" },
-  { id: 2, title: "Fire Hydrant Systems & Hose Reels", slug: "hydrant-and-hose-reels" },
+  {
+    id: 2,
+    title: "Fire Hydrant Systems & Hose Reels",
+    slug: "hydrant-and-hose-reels",
+  },
   { id: 3, title: "Smoke & Heat Detectors", slug: "detectors" },
   { id: 4, title: "Fire Doors", slug: "fire-doors" },
   { id: 5, title: "HVWS Systems", slug: "hvws-systems" },
@@ -57,6 +63,15 @@ const Products = [
 ];
 
 const Footer = () => {
+  const textRef = React.useRef(null);
+  const [textWidth, setTextWidth] = React.useState(0);
+  const extrapx = 10;
+
+  React.useEffect(() => {
+    if (textRef.current) {
+      setTextWidth(textRef.current.offsetWidth + extrapx);
+    }
+  }, []);
   return (
     <section
       className="text-white font-alumni bg-cover bg-no-repeat bg-center"
@@ -80,16 +95,25 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="lg:mx-auto">
-          <h3 className="text-orange-500 font-semibold text-2xl mb-3 border-b border-orange-500 inline-block">
-            Quick Links
+          <h3 className="text-orange-500 font-semibold text-2xl mb-3 inline-block uppercase">
+            <span ref={textRef}>Quick Links</span>
+            <img
+              src={BottomLine}
+              alt=""
+              style={{ width: textWidth + 30 + "px" }}
+              className="block -mt-1"
+            />
           </h3>
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Links.map((item) => (
               <li key={item.id}>
                 <Link
                   to={item.link}
-                  className="hover:text-orange-400 transition-colors"
+                  className="flex gap-1 hover:text-primary-end duration-200 transition-colors"
                 >
+                  <span>
+                    <IoMdArrowDropright className="text-3xl text-primary" />
+                  </span>
                   {item.title}
                 </Link>
               </li>
@@ -99,13 +123,21 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-orange-500 font-semibold text-2xl mb-3 border-b border-orange-500 inline-block">
-            Services
+          <h3 className="text-orange-500 font-semibold text-2xl mb-3 inline-block uppercase">
+            <span ref={textRef}>Services</span>
+            <img
+              src={BottomLine}
+              alt=""
+              style={{ width: textWidth + 30 + "px" }}
+              className="block -mt-1"
+            />
           </h3>
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Services.map((item) => (
               <li key={item.id}>
-                <Link to={item.link}>{item.title}</Link>
+                <Link className="flex hover:text-primary-end duration-200 transition-colors" to={item.link}><span>
+                    <IoMdArrowDropright className="text-3xl text-primary" />
+                  </span>{item.title}</Link>
               </li>
             ))}
           </ul>
@@ -113,13 +145,27 @@ const Footer = () => {
 
         {/* Products */}
         <div>
-          <h3 className="text-orange-500 font-semibold text-2xl mb-3 border-b border-orange-500 inline-block">
-            Products
+          <h3 className="text-orange-500 font-semibold text-2xl mb-3 inline-block uppercase">
+            <span ref={textRef}>Products</span>
+            <img
+              src={BottomLine}
+              alt=""
+              style={{ width: textWidth + 30 + "px" }}
+              className="block -mt-1"
+            />
           </h3>
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Products.map((item) => (
               <li key={item.id}>
-                <Link to={`/products/${item.slug}`}>{item.title}</Link>
+                <Link
+                  className="flex hover:text-primary-end duration-200"
+                  to={`/products/${item.slug}`}
+                >
+                  <span>
+                    <IoMdArrowDropright className="text-3xl text-primary" />
+                  </span>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>
