@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent font-alumni">
+    <nav className=" top-0 left-0 w-full z-50 bg-transparent font-alumni sticky">
       <div className=" mx-auto pl-0 flex items-center justify-between  py-4 px-6 lg:ps-8 bg-white/95">
         {/* Logo */}
         <div className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 ">

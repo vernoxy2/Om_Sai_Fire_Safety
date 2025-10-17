@@ -12,9 +12,9 @@ const TABS = [
   { slug: "fire-hydrant-systems", title: "Fire Hydrant Service", Component: FireHydrant },
   { slug: "fire-extinguisher-services", title: "Fire Extinguishers Services", Component: FireExtinguishers },
   { slug: "fire-alarm-detection-systems", title: "Fire Alarm & Detection Systems", Component: FireAlarmDetection },
-  { slug: "annual-maintenance-contracts-amc", title: "Annual Maintenance Contracts (AMC)", Component: AnnualMaintenanceContracts },
   { slug: "water-sprinkler-system", title: "Automatic Sprinkler System", Component: AutomaticSprinkler },
   { slug: "fire-safety-audits-training", title: "Fire Safety Audits & Training", Component: FireSafetyAuditsTraining },
+  { slug: "annual-maintenance-contracts-amc", title: "Annual Maintenance Contracts (AMC)", Component: AnnualMaintenanceContracts },
 ];
 
 const TabView = () => {

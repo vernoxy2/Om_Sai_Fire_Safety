@@ -38,14 +38,14 @@ const FireHydrant = () => {
         <div className="container space-y-16">
           {/* Headline Content */}
           <div className="flex flex-col lg:flex-row gap-20">
-            <div className="w-5/12">
+            <div className="lg:w-5/12">
               <PrimaryTitle
                 gradientText={"Fire Hydrant "}
                 normalText={"Systems"}
                 titleClassName="text-start lg:pe-12"
               />
             </div>
-            <div className="w-7/12 flex flex-col justify-center text-start lg:pe-32">
+            <div className="lg:w-7/12 flex flex-col justify-center text-start lg:pe-32">
               <p>
                 We design and install custom{" "}
                 <span className="font-semibold">
@@ -59,43 +59,47 @@ const FireHydrant = () => {
                 reliability and rapid{" "}
                 <span className="font-semibold">emergency response.</span>
               </p>
-            <BaseLine/>
-
+              <BaseLine />
             </div>
           </div>
 
           {/* Cards Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {data.map((item) => (
-    <div
-      key={item.id}
-      className="relative overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-5"
-    >
-      {/* Image */}
-      <img
-        src={item.img}
-        alt={item.title}
-        className="w-full h-full object-cover rounded-xl"
-      />
+            {data.map((item) => (
+              <div
+                key={item.id}
+                className="relative overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-5"
+              >
+                {/* Image */}
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover rounded-xl"
+                />
 
-      {/* Bottom Text */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/90 px-5 py-9 text-start">
-        <p className="text-2xl text-white">{item.desc}</p>
-      </div>
+                {/* Bottom Text */}
+                <div className="absolute bottom-0 left-0 w-full bg-black/90 px-5 py-9 text-start">
+                  <p className="text-2xl text-white">{item.desc}</p>
+                </div>
 
-      {/* Title ABOVE the black box */}
-      <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
-        <h1 className="text-3xl font-bold text-white">{item.title}</h1>
-      </div>
-    </div>
-  ))}
-</div>
-
+                {/* Title ABOVE the black box */}
+                <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
+                  <h1 className="text-3xl font-bold text-white">
+                    {item.title}
+                  </h1>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img src={RightImg} alt="" className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto" />
+          <img
+            src={RightImg}
+            alt=""
+            className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto"
+          />
           <div className="absolute bottom-0 lg:right-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">
@@ -114,7 +118,11 @@ const FireHydrant = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img src={LeftImg} alt="" className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto" />
+          <img
+            src={LeftImg}
+            alt=""
+            className="w-full h-full object-cover lg:rounded-xl min-h-[600px] lg:h-auto"
+          />
           <div className="absolute bottom-0 lg:left-0 lg:h-full lg:max-w-md bg-black/90 px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl">
               <GradientText className="">

@@ -11,6 +11,7 @@ import FireSafetyAudits from "../../../assets/HomePageAssets/Services/FireSafety
 import AnnualMaintenanceContracts from "../../../assets/HomePageAssets/Services/AnnualMaintenanceContracts.webp";
 import PrimaryButton from "../../../components/PrimaryButton";
 import BaseLine from "../../../components/BaseLine";
+import { link } from "framer-motion/client";
 
 const AllServices = [
   {
@@ -25,6 +26,7 @@ const AllServices = [
     title: "Fire Extinguisher Services",
     description: "Installation, refilling, and periodic servicing.",
     image: FireExtinguisherServices,
+    link: "/services/fire-extinguisher-services",
   },
   {
     id: 3,
@@ -32,12 +34,14 @@ const AllServices = [
     description:
       "From Conventional to Advanced System Design, installation, and maintenance.",
     image: FireAlarmDetection,
+    link: "/services/fire-alarm-detection-systems",
   },
   {
     id: 4,
     title: "Water Sprinkler System",
     description: "Hassle-free long-term protection for all fire systems.",
     image: WatersprinklerSystem,
+    link: "/services/water-sprinkler-system",
   },
   {
     id: 5,
@@ -45,12 +49,14 @@ const AllServices = [
     description:
       "Compliance checks, evacuation drills, and awareness programs.",
     image: FireSafetyAudits,
+    link: "/services/fire-safety-audits-training",
   },
   {
     id: 6,
     title: "Safety Training & (AMC)",
     description: "Hassle-free long-term protection for all fire systems.",
     image: AnnualMaintenanceContracts,
+    link: "/services/annual-maintenance-contracts-amc",
   },
 ];
 
@@ -93,23 +99,50 @@ const OurService = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="relative container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
+      <div className=" container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
         {AllServices.map((item, index) => (
           <div
             key={item.id}
-            className={`relative rounded-xl overflow-hidden shadow-lg group
+            className={`relative h-full w-full rounded-xl overflow-hidden shadow-lg group bg-white
             ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
           >
             {/* Background Image */}
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative"
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/60 to-primary-transparent transition z-0 duration-300">
-              {/* Text Content */}
+            {/* <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t hover:from-primary/60 to-primary-transparent transition z-0 duration-300">
+              <div className="absolute  bottom-0 p-6 space-y-2 text-white z-10">
+                <h1
+                  className={`text-2xl md:text-3xl font-bold ${
+                    index === 0 ? "xl:text-7xl" : ""
+                  }`}
+                >
+                  {item.title}
+                </h1>
+                <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-2">
+                  <p
+                    className={`text-xl md:text-2xl ${
+                      index === 0 ? "xl:text-3xl" : ""
+                    }`}
+                  >
+                    {item.description}
+                  </p>
+                  <PrimaryButton
+                    to={item.link}
+                    className={`text-lg md:text-2xl ${
+                      index === 0 ? "xl:text-3xl" : ""
+                    }`}
+                  >
+                    Learn More
+                  </PrimaryButton>
+                </div>
+              </div>
+            </div> */}
+            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/40 via-transparent hover:from-primary/80 to-primary-transparent transition z-0 duration-300">
               <div className="absolute  bottom-0 p-6 space-y-2 text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${

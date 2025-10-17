@@ -39,11 +39,7 @@ const ProTeb = () => {
     if (tabSlug !== desiredSlug) {
       navigate(`/products/${desiredSlug}`, { replace: true });
     }
-  }, [activeTab]);
-
-  
-
-  
+  }, [activeTab]);  
 
   return (
     <section>

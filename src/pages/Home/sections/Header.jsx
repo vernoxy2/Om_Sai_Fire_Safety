@@ -109,7 +109,7 @@ const Header = () => {
                 </h1>
                 <Link
                   to={slide.buttonLink}
-                  className="inline-block px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"
+                  className="inline-block uppercase px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"
                 >
                   {slide.buttonText}
                 </Link>
