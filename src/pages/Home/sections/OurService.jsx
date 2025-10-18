@@ -11,7 +11,6 @@ import FireSafetyAudits from "../../../assets/HomePageAssets/Services/FireSafety
 import AnnualMaintenanceContracts from "../../../assets/HomePageAssets/Services/AnnualMaintenanceContracts.webp";
 import PrimaryButton from "../../../components/PrimaryButton";
 import BaseLine from "../../../components/BaseLine";
-import { link } from "framer-motion/client";
 
 const AllServices = [
   {
@@ -24,7 +23,7 @@ const AllServices = [
   {
     id: 2,
     title: "Fire Extinguisher Services",
-    description: "Installation, refilling, and periodic servicing.",
+    description: "Installation, refilling, and periodic serv     icing.",
     image: FireExtinguisherServices,
     link: "/services/fire-extinguisher-services",
   },
@@ -142,7 +141,7 @@ const OurService = () => {
                 </div>
               </div>
             </div> */}
-            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/50 via-transparent hover:from-primary/80 to-primary-transparent transition z-0 duration-300 hover:backdrop-blur-[2px]">
+            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/70 via-transparent hover:from-primary to-primary-transparent transition z-0 duration-300 hover:backdrop-blur-[1px]">
               <div className="absolute bottom-0 p-6  text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${

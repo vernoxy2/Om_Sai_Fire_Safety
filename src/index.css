@@ -7,19 +7,19 @@
 /* Global Styles */
 @layer base {
   h1 {
-    @apply uppercase font-alumni text-white; /* Uppercase + Alumni Sans font */
+    @apply uppercase font-alumni text-white leading-none; /* Uppercase + Alumni Sans font */
   }
   
   /* Specific line-height for hero headings */
   h1.hero-title {
-    @apply leading-none;
+    @apply leading-10;
   }
 
   section {
-    @apply py-8 md:py-24; /* Container + vertical padding */
+    @apply py-8 md:py-24; /* vertical padding */
   }
 
   p {
-    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl ;
+    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl leading-7 md:leading-8 lg:leading-9;
   }
 }

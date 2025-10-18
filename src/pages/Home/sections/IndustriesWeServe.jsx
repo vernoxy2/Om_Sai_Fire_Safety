@@ -121,21 +121,22 @@ const IndustriesWeServe = () => {
         {IndustriesList.map((item) => (
           <div
             key={item.id}
-            className="bg-white group hover:bg-gradient-to-t from-primary to-primary-start rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 duration-500 transition transform "
+            className="bg-white group relative pb-5 hover:bg-gradient-to-t from-primary to-primary-start rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 duration-500 transition transform "
           >
             <div className="p-5">
               <div className="mb-5 p-4 bg-primary/10 duration-500 group-hover:bg-white rounded-lg inline-flex items-center justify-center">
                 {item.icons}
               </div>
-              <h5 className="text-3xl font-bold text-gray-900 group-hover:text-white dark:text-white mb-1 tracking-tight">
+              <h5 className="lading-4 text-3xl font-bold text-gray-900 group-hover:text-white dark:text-white mb-1 tracking-tight">
                 <GradientText>{item.title}</GradientText>
               </h5>
-              <p className="text-gray-700 group-hover:text-white duration-500 dark:text-gray-400 text-2xl">
+              <p className="text-gray-700 group-hover:text-white duration-500 dark:text-gray-400 text-2xl leading-6">
                 {item.description}
               </p>
             </div>
             {/* underline swap on hover */}
-            <img
+            <div className="absolute bottom-0 right-0">
+              <img
               src={UnderLine}
               alt=""
               className="ml-auto mb-4 my-auto block group-hover:hidden duration-200"
@@ -145,6 +146,7 @@ const IndustriesWeServe = () => {
               alt=""
               className="ml-auto mb-4 my-auto hidden group-hover:block duration-200"
             />
+            </div>
           </div>
         ))}
       </div>

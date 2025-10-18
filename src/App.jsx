@@ -19,7 +19,7 @@ const App = () => {
 
       <div className=" font-alumni"> 
         {/* pt-16 pushes content down so it doesn’t hide behind fixed navbar */}
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -64,7 +64,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <div>
-                <p className="text-[#464646] text-xl md:text-2xl">{item.title}</p>
+                <p className="text-[#464646] text-xl md:text-2xl leading-5">{item.title}</p>
               </div>
             </div>
           ))}

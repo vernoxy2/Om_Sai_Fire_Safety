@@ -4,17 +4,19 @@ import ChooseBg from "../../../assets/HomePageAssets/Chooes/ChooesBg.webp";
 import GradientText from "../../../components/GradientText";
 import { LuSettings } from "react-icons/lu";
 import { FaHeadset, FaTags } from "react-icons/fa";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { MdPerson2 } from "react-icons/md";
 
 const Data = [
   {
     id: 1,
     title: "Certified ISI/BIS Products",
-    icon: <LuSettings />,
+    icon: <LiaCertificateSolid />,
   },
   {
     id: 2,
     title: "Experienced Fire Safety Professionals",
-    icon: <LuSettings />,
+    icon: <MdPerson2 />,
   },
   {
     id: 3,

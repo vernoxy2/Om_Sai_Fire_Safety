@@ -86,27 +86,27 @@ const Header = () => {
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       speed={1500}
       loop
-      className="w-full h-[100vh]"
+      className="w-full h-[500px] xl:h-[90vh]"
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
           <section
-            className="h-[100vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+            className="h-full flex flex-col justify-center items-center text-center bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.bg})` }}
           >
             <div className="container text-start">
-              <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-7 border-l-[3px] border-Border mt-20 mr-auto md:space-y-5">
+              <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-4 md:p-7 border-l-[3px] border-Border  mr-auto spay md:space-y-5">
                 <div>
                   <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-semibold">
                     {slide.title}
                   </h1>
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-light">
+                  <h1 className="text-2xl md:text-5xl lg:text-6xl font-light">
                     {slide.subtitle}
                   </h1>
                 </div>
-                <h1 className="text-xl md:text-3xl lg:text-4xl pt-4 lg:max-w-sm">
+                <p className="text-xl md:text-3xl lg:text-4xl pt-4 lg:max-w-sm">
                   {slide.desc}
-                </h1>
+                </p>
                 <Link
                   to={slide.buttonLink}
                   className="inline-block uppercase px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"

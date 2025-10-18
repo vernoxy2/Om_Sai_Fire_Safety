@@ -100,7 +100,7 @@ const FireHydrant = () => {
             alt=""
             className="w-full h-full object-cover xl::rounded-xl min-h-[200px] lg:h-auto"
           />
-          <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl::max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+          <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start">
               <GradientText className="">
                 Commercial Building Hydrant Systems
