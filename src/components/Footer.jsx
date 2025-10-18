@@ -1,5 +1,5 @@
 import React from "react";
-import Bg from "../assets/HomePageAssets/Services/ServicesBg.webp";
+import Bg from "../assets/FooterBg.webp";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import LogoName from "../assets/LogoName.svg";
 import { Link } from "react-router-dom";
@@ -74,7 +74,7 @@ const Footer = () => {
   }, []);
   return (
     <section
-      className="text-white font-alumni bg-cover bg-no-repeat bg-center"
+      className="text-white bg-black font-alumni bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${Bg})` }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 ">
