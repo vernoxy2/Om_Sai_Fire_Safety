@@ -41,7 +41,11 @@ const AllProducts = [
   },
   {
     id: 4,
-    title: "Fire Hydrant & Sprinkler Systems",
+    title: (
+      <>
+        Fire Hydrant & <br /> Sprinkler Systems
+      </>
+    ),
     description: "ABC, CO₂, Foam, Water, and Clean Agent types.",
     image: FireHydrantSprinklerSystems,
   },
@@ -84,7 +88,7 @@ const OurProducts = () => {
             </span>{" "}
             systems.
           </p>
-          <BaseLine className="ml-auto"/>
+          <BaseLine className="ml-auto" />
         </div>
         {/* Left Section */}
 
@@ -112,12 +116,18 @@ const OurProducts = () => {
             </div>
 
             {/* Info Card */}
-            <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-75 group-hover:-translate-y-16 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border">
-              <div className="flex justify-between w-full">
+            <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-75 group-hover:-translate-y-16 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border backdrop-blur-sm">
+              <div className="flex justify-between items-start w-full">
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold ">
                   {product.title}
                 </h1>
-                <PrimaryButton to={product.Link} linkClassName="text-2xl" divClassName="-translate-y-10 translate-x-5">Learn More</PrimaryButton>
+                <PrimaryButton
+                  to={product.Link}
+                  linkClassName="text-2xl"
+                  className="-translate-y-8 translate-x-7"
+                >
+                  Learn More
+                </PrimaryButton>
               </div>
               <p className="text-base md:text-lg lg:text-xl">
                 {product.description}

@@ -60,7 +60,7 @@ const SafetySolution = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-10 w-full  justify-between">
+            <div className="flex flex-col lg:flex-row gap-y-6 gap-10 w-full  justify-between">
               <PrimaryButton
                 to="/contact"
                 className="text-base md:text-xl w-full"

@@ -54,7 +54,7 @@ const Info = () => {
         {/* Right column */}
         <div className="px-4 py-8 md:p-12">
           {/* Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
             <GradientText>Get in </GradientText> Touch
           </h1>
 
@@ -145,7 +145,7 @@ const Info = () => {
             {/* Button */}
             <button
               type="submit"
-              className="px-6 py-3 rounded-md bg-primary text-white font-semibold mt-4 hover:bg-primary/90 transition"
+              className="px-4 py-2 rounded-sm bg-primary text-white font-semibold mt-4 hover:bg-primary/90 transition text-xl md:text-2xl lg:text-3xl font-alumni"
             >
               Submit
             </button>
