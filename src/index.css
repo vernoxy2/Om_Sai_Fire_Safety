@@ -12,7 +12,7 @@
   
   /* Specific line-height for hero headings */
   h1.hero-title {
-    @apply leading-10;
+    @apply leading-6;
   }
 
   section {
@@ -20,6 +20,6 @@
   }
 
   p {
-    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl leading-7 md:leading-8 lg:leading-9;
+    @apply text-white font-alumni text-lg md:text-2xl lg:text-3xl ;
   }
 }

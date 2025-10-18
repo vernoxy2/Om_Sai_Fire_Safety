@@ -124,14 +124,14 @@ const OurService = () => {
                 <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-1">
                   <p
                     className={`text-xl md:text-2xl ${
-                      index === 0 ? "xl:text-3xl" : ""
+                      index === 0 ? "xl:text-3xl leading-2" : ""
                     }`}
                   >
                     {item.description}
                   </p>
                   <PrimaryButton
                     to={item.link}
-                    className={` lg:text-lg ${
+                    className={` lg:text-base ${
                       index === 0 ? "xl:text-3xl" : ""
                     }`}
                   >

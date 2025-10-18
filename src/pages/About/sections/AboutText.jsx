@@ -26,11 +26,11 @@ const AboutText = () => {
             className="text-right"
             gradientText="About"
             normalText="Us"
-            imgClassName="-scale-x-100"
+            imgClassName="-scale-x-100 ml-auto"
           />
           </div>
 
-          <p className="text-lg md:text-3xl leading-relaxed text-center lg:text-right">
+          <p className="text-lg md:text-3xl leading-relaxed text-right">
             At{" "}
             <span className="font-semibold">Om Sai Fire Safety Solution</span>, we are
             dedicated to fire safety and protection that goes beyond just supplying
@@ -42,7 +42,7 @@ const AboutText = () => {
             <span className="font-semibold">your premises safe and compliant.</span>
           </p>
 
-          <p className="text-lg md:text-3xl leading-relaxed text-center lg:text-right">
+          <p className="text-lg md:text-3xl leading-relaxed text-right">
             As a trusted{" "}
             <span className="font-semibold">fire safety company in India</span>, our
             goal is to deliver reliable fire safeguard solutions that protect lives,
@@ -52,7 +52,7 @@ const AboutText = () => {
             <span className="font-semibold">fire prevention and protection</span> —
             all under one roof.
           </p>
-          <BaseLine className="mx-auto lg:ml-auto"/>
+          <BaseLine className="ml-auto"/>
         </div>
       </div>
       <Director/>

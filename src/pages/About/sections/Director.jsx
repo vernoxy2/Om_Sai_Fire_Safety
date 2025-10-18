@@ -22,14 +22,14 @@ const Director = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Text */}
-          <div className="flex flex-col gap-y-6 justify-center items-start">
+          <div className="container flex flex-col gap-y-6 justify-center items-start">
             <PrimaryTitle 
               gradientText={"Mr. Miroz"}
               normalText={"Dawoodani"}
               spanText="Founder & Director, Om Sai Fire Safety Solutions"
               className="justify-start"
             ></PrimaryTitle>
-            <p className="text-center lg:text-left">
+            <p className="text-left">
               With over Decade of expertise in the fire safety industry,{" "}
               <spa className="font-semibold">Mr. Miroz Dawoodani</spa> has been
               the cornerstone of Om Sai Fire Safety Solutions’{" "}
@@ -37,7 +37,7 @@ const Director = () => {
               leadership is defined by a deep commitment to quality, innovation,
               and customer trust.
             </p>
-            <p className="text-center lg:text-left">
+            <p className="text-left">
               Through his vision,{" "}
               <span className="font-semibold">
                 the company has established itself
@@ -49,7 +49,7 @@ const Director = () => {
               ensuring every solution contributes to a safer and{" "}
               <span className="font-semibold">more secure environment.</span>
             </p>
-            <BaseLine className="mx-auto lg:ml-auto"/>
+            <BaseLine className="mr-auto"/>
           </div>
           {/* Image */}
           <div className="h-[90%]">

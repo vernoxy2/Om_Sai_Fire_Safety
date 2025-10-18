@@ -22,7 +22,7 @@ const PrimaryButton = ({
   return (
       <button
         onClick={handleClick}
-        className={` bg-[#f9f9f9] py-2 px-4 rounded-[3px] text-primary-start font-semibold text-xl uppercase hover:scale-95 duration-200 ease-in-out ${className}`}
+        className={` bg-[#f9f9f9] flex items-center py-1.5 px-4 rounded-[3px] text-primary-start font-semibold text-xl uppercase hover:scale-95 duration-200 ease-in-out ${className}`}
       >
         {children}
       </button>

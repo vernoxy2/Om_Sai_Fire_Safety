@@ -5,6 +5,7 @@ import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import GradientText from "../../../components/GradientText";
 import { Form } from "react-router-dom";
+import PrimaryButton from "../../../components/PrimaryButton";
 
 const style = {
   backgroundImage: `url(${BgLeftDown})`,
@@ -143,12 +144,13 @@ const Info = () => {
             </div>
 
             {/* Button */}
-            <button
+            {/* <button
               type="submit"
               className="px-4 py-2 rounded-sm bg-primary text-white font-semibold mt-4 hover:bg-primary/90 transition text-xl md:text-2xl lg:text-3xl font-alumni"
             >
               Submit
-            </button>
+            </button> */}
+            <PrimaryButton className="bg-primary text-white text-3xl">Submit</PrimaryButton>
           </form>
         </div>
       </div>

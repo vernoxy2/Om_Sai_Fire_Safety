@@ -16,16 +16,16 @@ const SafetySolution = () => {
     <section style={Style}>
       <div className="container relative">
         {/* Left Image with Title Overlay */}
-        <div className="relative z-10 lg:absolute top-1/2 -translate-y-1/2 w-full md:w-6/12 lg:w-5/12">
+        <div className="relative z-10 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-5/12">
           {/* Image */}
           <img
             src={SafetySolutionImg}
             alt="Fire Safety"
-            className=" h-auto object-cover"
+            className="w-full mx-auto h-auto object-cover"
           />
 
           {/* Overlay Title */}
-          <div className="absolute bottom-0 2xl:max-w-[95%] bg-black/40 p-3 md:px-6">
+          <div className="absolute bottom-0 bg-black/40 p-3 md:px-6">
             <h1 className="text-4xl md:text-6xl lg:text-[88px] leading-tight md:leading-[88px]">
               <GradientText>get the right Fire </GradientText>
               safety solution
@@ -34,13 +34,13 @@ const SafetySolution = () => {
         </div>
 
         {/* Right Content Box */}
-        <div className="w-full md:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
+        <div className="w-full lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
           <img
             src={UnderLineWhite}
             alt="underline"
             className="absolute bottom-5 right-0 w-1/2 opacity-70"
           />
-          <div className="w-full md:w-7/12 ml-auto px-6 md:pr-20 space-y-6">
+          <div className="w-full lg:w-7/12 ml-auto px-6 lg:pr-20 space-y-6">
             <p className="text-lg md:text-2xl lg:text-3xl leading-relaxed">
               Every space has unique needs — whether it’s a{" "}
               <span className="font-semibold">
@@ -60,7 +60,7 @@ const SafetySolution = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col lg:flex-row gap-y-6 gap-10 w-full  justify-between">
+            <div className="flex flex-col md:flex-row gap-y-6 gap-10 w-full  justify-between">
               <PrimaryButton
                 to="/contact"
                 className="text-base md:text-xl w-full"
@@ -75,7 +75,7 @@ const SafetySolution = () => {
               </PrimaryButton>
             </div>
             <div className="w-full flex justify-center">
-              <PrimaryButton to="/contact" className="text-base md:text-xl w-full">
+              <PrimaryButton to="/contact" className="text-base md:text-xl w-full text-center">
                 Contact Now
               </PrimaryButton>
             </div>
