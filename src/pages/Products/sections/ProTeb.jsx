@@ -51,12 +51,12 @@ const ProTeb = () => {
       <div>
         {/* Tabs */}
         
-        <ul className=" lg:flex flex-nowrap overflow-x-hidden mb-6 container text-left justify-between list-none  ">
+        <ul className=" lg:flex flex-nowrap overflow-x-auto mb-6 container justify-between list-none  text-left lg:text-center">
           {TABS.map((tab, index) => (
             <li
               key={index}
               onClick={() => handleTabClick(index)}
-              className={`cursor-pointer w-full whitespace-wrap lg:px-6 py-2 mr-4 text-2xl font-bold transition-colors duration-300 lg:border-b-[3px] border-primary-start uppercase text-white
+              className={`cursor-pointer lg:w-full whitespace-wrap px-5 lg:px-2 py-2 mr-4 text-2xl font-bold transition-colors duration-300 lg:border-b-[3px] border-primary-start uppercase text-white
                 ${
                   activeTab === index
                     ? "bg-gradient-to-t from-primary-start/60 to-transparent "

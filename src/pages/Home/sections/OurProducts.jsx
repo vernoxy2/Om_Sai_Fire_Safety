@@ -99,7 +99,7 @@ const OurProducts = () => {
         <PrimaryTitle
           gradientText="Our"
           normalText="Products"
-          imgClassName="-scale-x-100 w-full"
+          imgClassName="-scale-x-100 w-full flex justify-end"
         ></PrimaryTitle>
       </div>
 

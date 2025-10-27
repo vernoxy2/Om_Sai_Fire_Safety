@@ -61,7 +61,7 @@ const TabView = () => {
               aria-selected={activeTab === index}
               key={tab.slug}
               onClick={() => handleTabClick(index)}
-              className={`whitespace-wrap w-full justify-start text-left lg:text-center items-start px-1 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 lg:border-b-[3px] border-primary-start text-white
+              className={`whitespace-wrap w-full justify-start text-left lg:text-center items-start px-5 lg:px-1 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 lg:border-b-[3px] border-primary-start text-white
               ${
                 activeTab === index
                   ? "bg-gradient-to-t from-primary-start/60 to-transparent "
