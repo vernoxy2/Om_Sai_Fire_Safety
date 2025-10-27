@@ -30,8 +30,7 @@ const Info = () => {
             <div className="flex items-start gap-3 md:gap-6">
               <FaMapMarkerAlt className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold leading-relaxed">
-                B-7M CUBE BUSINESS HUB, OPP. VAPI TALUKA SEVA SADAN, N.H. NO. 8,
-                BALITHA, VAPI, DIST, VALSAD, GUJARAT. PIN - 396191
+                1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. PIN - 396191
               </p>
             </div>
 
@@ -39,8 +38,8 @@ const Info = () => {
             <div className="flex items-start gap-3 md:gap-6">
               <IoMdCall className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <div className="space-y-1">
-                <p className="font-semibold">+91 98278 00077</p>
-                <p className="font-semibold">+91 93131 74925</p>
+                <p className="font-semibold">+91 79845 50077</p>
+                <p className="font-semibold">+91 88495 92829</p>
               </div>
             </div>
 
