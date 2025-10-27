@@ -69,7 +69,7 @@ const AutomaticSprinkler = () => {
                 {/* Overlay (bottom text area) */}
                 <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px]  text-start">
                   <div className="flex items-center gap-3">
-                    <span className="bg-gradient-to-l from-primary to-primary-start/80 bg-primary px-4 py-2 -mt-5">
+                    <span className="bg-gradient-to-l from-primary to-primary-start/80 bg-primary px-4 py-2 -mt-6">
                       <h1 className="text-3xl font-bold text-white">
                         {item.title}
                       </h1>
