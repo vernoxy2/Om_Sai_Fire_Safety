@@ -101,7 +101,7 @@ const ABCPowder = () => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="relflex flex-col items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
+              className="relflex flex-col  items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
             >
               {/* If multiple images -> use Swiper */}
               {item.Img.length > 1 ? (
@@ -134,7 +134,7 @@ const ABCPowder = () => {
               )}
 
               {/* Product Content */}
-              <div className="bg-gradient-to-r from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
+              <div className="bg-gradient-to-r space-y-3 from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
                 <h3 className="font-bold text-white text-3xl ">{item.title}</h3>
                 <PrimaryButton className="" onClick={() => handleShow(item)}>
                   View Details
@@ -188,7 +188,7 @@ const ABCPowder = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="py-10 w-full text-start ">
+              <div className="py-10 space-y-3 w-full text-start ">
                 <h3 className="font-bold text-white text-4xl md:text-5xl">
                   {showModal.title}
                 </h3>

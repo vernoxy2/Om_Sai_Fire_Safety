@@ -112,7 +112,7 @@ const Detectors = () => {
                   className="m-auto h-full mt-14"
                 />
               </div>
-              <div className="bg-gradient-to-r from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
+              <div className="bg-gradient-to-r space-y-3 from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
                 <h3 className="font-bold text-white text-3xl ">{item.title}</h3>
                 <PrimaryButton className="" onClick={() => handleShow(item)}>
                   View Details

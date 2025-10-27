@@ -130,7 +130,7 @@ const HoseReels = () => {
                   className="m-auto h-full mt-16"
                 />
               </div>
-              <div className="bg-gradient-to-r from-primary-start to-primary-end w-full rounded-b-xl p-4 pb-16 text-start ">
+              <div className="bg-gradient-to-r from-primary-start to-primary-end space-y-3 w-full rounded-b-xl p-4 pb-16 text-start ">
                 <h3 className="font-bold text-white text-3xl ">{item.title}</h3>
                 <PrimaryButton className="" onClick={() => handleShow(item)}>
                   View Details
