@@ -22,7 +22,7 @@ const PrimaryTitle = ({
 
   return (
     <div
-      className={`flex flex-col gap-3  ${className}`}
+      className={`flex flex-col gap-3 items-center justify-start  ${className}`}
     >
       {(gradientText || normalText) && (
         <>

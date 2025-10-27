@@ -7,18 +7,19 @@ import Detectors from '../ProTab/Detectors';
 import Accessories from '../ProTab/Accessories';
 import FireDoors from '../ProTab/FireDoors';
 import HVWS from '../ProTab/HVWS';
+
 // Static tab configuration
 const TABS = [
-    { title: <>abc powder <br /> extinguishers</>, slug: 'abc-powder', component: <ABCPowder /> },
-    { title: <>fire hydrant systems & <br /> Hous reels</>, slug: 'hydrant-and-hose-reels', component: <HousReels /> },
-    { title: <>smock & heat <br /> Detectors</>, slug: 'detectors', component: <Detectors /> },
-    { title: <>fire <br /> doors</>, slug: 'fire-doors', component: <FireDoors /> },
-    { title: <>HVWS <br /> systems</>, slug: 'hvws-systems', component: <HVWS /> },
-    { title: <>safety signages & <br /> Accessories</>, slug: 'safety-accessories', component: <Accessories /> },
+    { title: <>abc powder <br className="hidden lg:block" /> extinguishers</>, slug: 'abc-powder', component: <ABCPowder /> },
+    { title: <>fire hydrant systems & <br className="hidden lg:block" /> Hous reels</>, slug: 'hydrant-and-hose-reels', component: <HousReels /> },
+    { title: <>smock & heat <br className="hidden lg:block" /> Detectors</>, slug: 'detectors', component: <Detectors /> },
+    { title: <>fire <br className="hidden lg:block" /> doors</>, slug: 'fire-doors', component: <FireDoors /> },
+    { title: <>HVWS <br className="hidden lg:block" /> systems</>, slug: 'hvws-systems', component: <HVWS /> },
+    { title: <>safety signages & <br className="hidden lg:block" /> Accessories</>, slug: 'safety-accessories', component: <Accessories /> },
   ];
 
 const ProTeb = () => {
-  
+  // logic of tabs
    const navigate = useNavigate();
     const { tabSlug } = useParams();
   
@@ -49,6 +50,7 @@ const ProTeb = () => {
     <section>
       <div>
         {/* Tabs */}
+        
         <ul className=" lg:flex flex-nowrap overflow-x-auto mb-6 container justify-between list-none  text-center">
           {TABS.map((tab, index) => (
             <li

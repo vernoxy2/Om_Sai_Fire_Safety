@@ -10,15 +10,16 @@ import AnnualMaintenanceContracts from "./AnnualMaintenanceContracts";
 
 // Static tab configuration
 const TABS = [
-  { slug: "fire-hydrant-systems", title: "Fire Hydrant Service", Component: FireHydrant },
+  { slug: "fire-hydrant-systems", title: <>Fire Hydrant <br className="hidden lg:block" /> Service</>, Component: FireHydrant },
   { slug: "fire-extinguisher-services", title: "Fire Extinguishers Services", Component: FireExtinguishers },
-  { slug: "fire-alarm-detection-systems", title: "Fire Alarm & Detection Systems", Component: FireAlarmDetection },
+  { slug: "fire-alarm-detection-systems", title: <>Fire Alarm & <br className="hidden lg:block" />   Detection Systems</>, Component: FireAlarmDetection },
   { slug: "water-sprinkler-system", title: "Automatic Sprinkler System", Component: AutomaticSprinkler },
   { slug: "fire-safety-audits-training", title: "Fire Safety Audits & Training", Component: FireSafetyAuditsTraining },
   { slug: "annual-maintenance-contracts-amc", title: "Annual Maintenance Contracts (AMC)", Component: AnnualMaintenanceContracts },
 ];
 
 const TabView = () => {
+  // logic of tabs
   const navigate = useNavigate();
   const { tabSlug } = useParams();
 
@@ -26,6 +27,8 @@ const TabView = () => {
   const slugToIndex = React.useMemo(() => {
     const map = new Map();
     TABS.forEach((t, i) => map.set(t.slug, i));
+    console.log(map.size);
+    
     return map;
   }, []);
 
@@ -35,6 +38,8 @@ const TabView = () => {
   // Update tab when slug changes
   React.useEffect(() => {
     const idx = slugToIndex.get(tabSlug || "");
+    console.log();
+    
     setActiveTab(typeof idx === "number" ? idx : 0);
   }, [tabSlug, slugToIndex]);
 
@@ -49,22 +54,24 @@ const TabView = () => {
     <section>
       <div>
         {/* Tabs */}
-        <div className="lg:flex flex-auto mb-6 container">
+        <ul role="tablist" className="lg:flex flex-auto mb-6 container">
           {TABS.map((tab, index) => (
             <button
+              role="tab"
+              aria-selected={activeTab === index}
               key={tab.slug}
               onClick={() => handleTabClick(index)}
-              className={`whitespace-wrap w-full justify-start text-left lg:text-center items-start px-1 py-2 mr-4   text-2xl font-bold uppercase transition-colors duration-300 md:border-b-[3px] border-primary-start text-white
+              className={`whitespace-wrap w-full justify-start text-left lg:text-center items-start px-1 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 lg:border-b-[3px] border-primary-start text-white
               ${
                 activeTab === index
                   ? "bg-gradient-to-t from-primary-start/60 to-transparent "
                   : ""
               }`}
-            >
+            > 
               {tab.title}
             </button>
           ))}
-        </div>
+        </ul>
 
         {/* Active Tab Content */}
         <div className="text-center text-primary text-8xl">

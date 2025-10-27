@@ -9,7 +9,7 @@ const AnnualMaintenanceContracts = () => {
       {/* Annual Maintenance Contracts */}
        <section className="space-y-16">
         {/* Headline Content */}
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
           <PrimaryTitle
             gradientText={"Annual Maintenance"}

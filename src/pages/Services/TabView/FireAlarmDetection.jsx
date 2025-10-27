@@ -83,7 +83,7 @@ const FireAlarmDetection = () => {
                       </h1>
                     </span>
                   </div>
-                  <p className="text-2xl text-white px-5 py-5">{item.desc}</p>
+                  <p className="text-2xl text-white px-5 py-5 leading-7">{item.desc}</p>
                 </div>
               </div>
             ))}
