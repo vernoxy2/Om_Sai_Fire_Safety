@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+// Components 
 import FireExtinguishers from "./FireExtinguishers";
 import FireHydrant from "./FireHydrant";
 import FireAlarmDetection from "./FireAlarmDetection";
@@ -21,38 +22,43 @@ const TabView = () => {
   const navigate = useNavigate();
   const { tabSlug } = useParams();
 
+  // Compute initial active tab index based on slug
   const slugToIndex = React.useMemo(() => {
     const map = new Map();
     TABS.forEach((t, i) => map.set(t.slug, i));
     return map;
   }, []);
 
-  const initialIndex = slugToIndex.get(tabSlug || "");
-  const [activeTab, setActiveTab] = React.useState(typeof initialIndex === "number" ? initialIndex : 0);
+  const initialIndex = slugToIndex.get(tabSlug || "") ?? 0;
+  const [activeTab, setActiveTab] = React.useState(initialIndex);
 
+  // Update tab when slug changes
   React.useEffect(() => {
     const idx = slugToIndex.get(tabSlug || "");
     setActiveTab(typeof idx === "number" ? idx : 0);
   }, [tabSlug, slugToIndex]);
 
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    navigate(`/services/${TABS[index].slug}`);
+  };
+
+  const ActiveComponent = TABS[activeTab].Component;
+
   return (
     <section>
-      <div className="">
+      <div>
         {/* Tabs */}
-        <div className="lg:flex flex-auto  mb-6 container">
+        <div className="lg:flex flex-auto mb-6 container">
           {TABS.map((tab, index) => (
             <button
-              key={index}
-              onClick={() => {
-                setActiveTab(index);
-                const next = TABS[index];
-                navigate(`/services/${next.slug}`);
-              }}
-              className={`whitespace-wrap w-full justify-start text-left items-start px-4 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 md:border-b-[3px] border-primary-start
+              key={tab.slug}
+              onClick={() => handleTabClick(index)}
+              className={`whitespace-wrap w-full justify-start text-left lg:text-center items-start px-1 py-2 mr-4   text-2xl font-bold uppercase transition-colors duration-300 md:border-b-[3px] border-primary-start text-white
               ${
                 activeTab === index
-                  ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white "
-                  : " text-white"
+                  ? "bg-gradient-to-t from-primary-start/60 to-transparent "
+                  : ""
               }`}
             >
               {tab.title}
@@ -62,10 +68,7 @@ const TabView = () => {
 
         {/* Active Tab Content */}
         <div className="text-center text-primary text-8xl">
-          {(() => {
-            const ActiveComponent = TABS[activeTab].Component;
-            return <ActiveComponent />;
-          })()}
+          <ActiveComponent />
         </div>
       </div>
     </section>

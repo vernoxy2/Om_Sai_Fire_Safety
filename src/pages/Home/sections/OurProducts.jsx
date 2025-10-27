@@ -38,6 +38,7 @@ const AllProducts = [
     title: "Fire Alarm Systems",
     description: "Smoke detectors, heat detectors, control panels, and sirens.",
     image: FireAlarmSystems,
+    Link: "/products/detectors",
   },
   {
     id: 4,
@@ -48,18 +49,21 @@ const AllProducts = [
     ),
     description: "ABC, CO₂, Foam, Water, and Clean Agent types.",
     image: FireHydrantSprinklerSystems,
+    Link: "/products/hydrant-and-hose-reels",
   },
   {
     id: 5,
     title: "Fire Door",
     description: "ABC, CO₂, Foam, Water, and Clean Agent types.",
     image: FireDoor,
+    Link: "/products/fire-doors",
   },
   {
     id: 6,
     title: "Safety Accessories",
     description: "Signages, exit lights, fire blankets, safety gear.",
     image: SafetyAccessories,
+    Link: "/products/safety-accessories",
   },
 ];
 

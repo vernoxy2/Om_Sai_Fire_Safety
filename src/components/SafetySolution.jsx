@@ -60,22 +60,26 @@ const SafetySolution = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col md:flex-row gap-y-6 gap-10 w-full  justify-between">
+            <div className="flex flex-col md:flex-row gap-y-6 gap-10 w-full justify-between">
               <PrimaryButton
                 to="/contact"
-                className="text-base md:text-xl w-full"
+                className="text-base md:text-xl w-full flex justify-center text-center"
               >
                 Request a Free Audit
               </PrimaryButton>
               <PrimaryButton
                 to="/contact"
-                className="text-base md:text-xl w-full"
+                className="text-base md:text-xl w-full flex justify-center text-center"
               >
                 Get Free Consultation
               </PrimaryButton>
             </div>
-            <div className="w-full flex justify-center">
-              <PrimaryButton to="/contact" className="text-base md:text-xl w-full text-center">
+
+            <div className="w-full flex justify-center items-center">
+              <PrimaryButton
+                to="/contact"
+                className="text-base md:text-xl w-full flex justify-center text-center"
+              >
                 Contact Now
               </PrimaryButton>
             </div>

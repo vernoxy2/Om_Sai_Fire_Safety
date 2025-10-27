@@ -75,7 +75,7 @@ const FireExtinguishers = () => {
                       </h1>
                     </span>
                   </div>
-                  <p className="text-2xl text-white px-5 py-5">{item.desc}</p>
+                  <p className="text-2xl text-white px-5 py-5 leading-3">{item.desc}</p>
                 </div>
             </div>
           ))}
@@ -90,7 +90,7 @@ const FireExtinguishers = () => {
           className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"
         />
         <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl"><GradientText className="">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start"><GradientText className="">
             Right Extinguisher for Your Needs
           </GradientText></h1>
           <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">

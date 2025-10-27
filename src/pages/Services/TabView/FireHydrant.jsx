@@ -106,7 +106,7 @@ const FireHydrant = () => {
                 Commercial Building Hydrant Systems
               </GradientText>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start leading-relaxed md:leading-loose">
+            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">
               Engineered for large complexes, offices, factories, and
               warehouses, these systems are designed to handle high-risk
               environments. They feature robust hydrant layouts, heavy-duty
