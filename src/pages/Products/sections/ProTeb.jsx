@@ -56,7 +56,7 @@ const ProTeb = () => {
             <li
               key={index}
               onClick={() => handleTabClick(index)}
-              className={`cursor-pointer whitespace-wrap lg:px-6 py-2 mr-4 text-2xl font-bold transition-colors duration-300 lg:border-b-[3px] border-primary-start uppercase text-white
+              className={`cursor-pointer w-full whitespace-wrap lg:px-6 py-2 mr-4 text-2xl font-bold transition-colors duration-300 lg:border-b-[3px] border-primary-start uppercase text-white
                 ${
                   activeTab === index
                     ? "bg-gradient-to-t from-primary-start/60 to-transparent "

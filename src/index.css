@@ -7,7 +7,7 @@
 /* Global Styles */
 @layer base {
   h1 {
-    @apply uppercase font-alumni text-white leading-none; /* Uppercase + Alumni Sans font */
+    @apply uppercase font-alumni text-white ; /* Uppercase + Alumni Sans font */
   }
   
   /* Specific line-height for hero headings */

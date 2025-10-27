@@ -121,19 +121,20 @@ const OurProducts = () => {
 
             {/* Info Card */}
             <div className="absolute -bottom-12 w-[90%] transform transition-transform duration-500 ease-in-out delay-75 group-hover:-translate-y-16 flex flex-col items-start justify-start p-4 bg-gradient-to-r from-primary-start/90 to-primary-start/40 border-l-[3px] border-Border backdrop-blur-sm">
-              <div className="flex justify-between items-start w-full">
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold ">
+              <div className="flex  justify-between items-start w-full ">
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug">
                   {product.title}
                 </h1>
                 <PrimaryButton
                   to={product.Link}
-                  linkClassName="text-2xl"
-                  className="-translate-y-8 translate-x-7"
+                  linkClassName="text-lg sm:text-xl md:text-2xl"
+                  className="-translate-y-4 sm:-translate-y-6 md:-translate-y-8 translate-x-3 sm:translate-x-5 md:translate-x-7"
                 >
                   Learn More
                 </PrimaryButton>
               </div>
-              <p className="text-base md:text-lg lg:text-xl">
+
+              <p className="text-base md:text-xl xl:text-lg 2xl:text-xl flex ">
                 {product.description}
               </p>
             </div>
