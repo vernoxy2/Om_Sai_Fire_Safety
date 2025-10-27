@@ -73,20 +73,20 @@ const FireHydrant = () => {
                 {/* Image */}
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt={item.title || "Gallery Image"}
                   className="w-full h-full object-cover rounded-xl"
                 />
 
-                {/* Bottom Text */}
-                <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px] px-5 py-9 text-start">
-                  <p className="text-2xl text-white">{item.desc}</p>
-                </div>
-
-                {/* Title ABOVE the black box */}
-                <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
-                  <h1 className="text-3xl font-bold text-white">
-                    {item.title}
-                  </h1>
+                {/* Overlay (bottom text area) */}
+                <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px]  text-start">
+                  <div className="flex items-center gap-3">
+                    <span className="bg-gradient-to-l from-primary to-primary-start/80 bg-primary px-4 py-2 -mt-5">
+                      <h1 className="text-3xl font-bold text-white">
+                        {item.title}
+                      </h1>
+                    </span>
+                  </div>
+                  <p className="text-2xl text-white px-5 py-5">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -124,7 +124,7 @@ const FireHydrant = () => {
             className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"
           />
           <div className="xl:absolute bottom-0 lg:left-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start hero-title">
               <GradientText className="">
                 Residential Fire Hydrant Systems
               </GradientText>

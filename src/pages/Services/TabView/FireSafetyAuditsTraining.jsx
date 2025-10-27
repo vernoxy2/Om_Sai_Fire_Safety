@@ -47,9 +47,10 @@ const FireSafetyAuditsTraining = () => {
             </div>
             <div className="flex justify-center flex-col text-start lg:pe-32">
               <p>
-                Our team conducts on-site audits and training programs to improve fire readiness
+                Our team conducts on-site audits and training programs to
+                improve fire readiness
               </p>
-              <BaseLine/>
+              <BaseLine />
             </div>
           </div>
 
@@ -67,14 +68,16 @@ const FireSafetyAuditsTraining = () => {
                   className="w-full h-full object-cover rounded-xl"
                 />
 
-                {/* Bottom Text */}
-                <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px] px-5 py-9 text-start">
-                  <p className="text-2xl">{item.desc}</p>
-                </div>
-
-                {/* Title ABOVE the black box */}
-                <div className="absolute bottom-[180px] left-0 px-3 py-1.5 bg-primary">
-                  <h1 className="text-3xl font-bold">{item.title}</h1>
+                {/* Overlay (bottom text area) */}
+                <div className="absolute bottom-0 left-0 w-full bg-[#565656]/70 backdrop-blur-[2px]  text-start">
+                  <div className="flex items-center gap-3">
+                    <span className="bg-gradient-to-l from-primary to-primary-start/80 bg-primary px-4 py-2 -mt-5">
+                      <h1 className="text-3xl font-bold text-white">
+                        {item.title}
+                      </h1>
+                    </span>
+                  </div>
+                  <p className="text-2xl text-white px-5 py-5">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -82,27 +85,29 @@ const FireSafetyAuditsTraining = () => {
         </div>
 
         {/* Image With Text */}
-      <div className="container px-0 mt-24 relative ">
-        <img
-          src={RightImg}
-          alt=""
-          className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"
-        />
-        <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start"><GradientText className="">
-            Right Extinguisher for Your Needs
-          </GradientText></h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">
-            Choosing the correct fire extinguisher is crucial for effective
-            safety. We assess your space, potential fire hazards, and specific
-            requirements to recommend the most suitable extinguisher.{" "}
-          </p>
-          <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">
-            Our expert guidance ensures you are fully prepared for any
-            emergency.
-          </p>
+        <div className="container px-0 mt-24 relative ">
+          <img
+            src={RightImg}
+            alt=""
+            className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"
+          />
+          <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start">
+              <GradientText className="">
+                Right Extinguisher for Your Needs
+              </GradientText>
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">
+              Choosing the correct fire extinguisher is crucial for effective
+              safety. We assess your space, potential fire hazards, and specific
+              requirements to recommend the most suitable extinguisher.{" "}
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start">
+              Our expert guidance ensures you are fully prepared for any
+              emergency.
+            </p>
+          </div>
         </div>
-      </div>
       </section>
     </div>
   );
