@@ -51,7 +51,7 @@ const ProTeb = () => {
       <div>
         {/* Tabs */}
         
-        <ul className=" lg:flex flex-nowrap overflow-x-auto mb-6 container justify-between list-none  text-center">
+        <ul className=" lg:flex flex-nowrap overflow-x-hidden mb-6 container text-left justify-between list-none  ">
           {TABS.map((tab, index) => (
             <li
               key={index}

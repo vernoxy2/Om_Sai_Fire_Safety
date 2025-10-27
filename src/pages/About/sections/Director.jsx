@@ -14,15 +14,15 @@ const Style = {
 
 const Director = () => {
   return (
-      <div className="container pr-0 space-y-7">
+      <div className=" pr-0 space-y-7">
         {/* Title */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-center">
           <GradientText>Our </GradientText> Director
         </h1>
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 container">
           {/* Text */}
-          <div className="container flex flex-col gap-y-6 justify-center items-start">
+          <div className=" flex flex-col gap-y-6 justify-center items-start">
             <PrimaryTitle 
               gradientText={"Mr. Miroz"}
               normalText={"Dawoodani"}
