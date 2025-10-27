@@ -178,7 +178,7 @@ const Footer = () => {
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-orange-500 mt-1 text-3xl" />
           <p className="text-lg md:text-xl uppercase">
-            1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. <br /> PIN - 396191
+            1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. <br className="hidden 2xl:block" /> PIN - 396191
 
           </p>
         </div>
@@ -186,7 +186,7 @@ const Footer = () => {
         <div className="flex items-start gap-3 md:mx-auto">
           <FaPhoneAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl ">
-            +91 79845 50077 <br /> +91 88495 92829
+            +91 79845 50077 <br  /> +91 88495 92829
           </p>
         </div>
 
