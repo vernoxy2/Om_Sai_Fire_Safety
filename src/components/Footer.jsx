@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import BottomLine from "../assets/HeadLine.svg";
 import { IoMdArrowDropright } from "react-icons/io";
 
+// Page Links
 const Links = [
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "About Us", link: "/about" },
@@ -77,10 +78,10 @@ const Footer = () => {
       className="text-white bg-black font-alumni bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${Bg})` }}
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 ">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 py-10 ">
         {/* Logo & About */}
         <div>
-          <div className="rounded-[4px] p-2 lg:p-3 pr-6  bg-gradient-to-r from-[#999999]/5 via-white to-white inline-block">
+          <div className="rounded-[4px] p-2 lg:p-3 pr-6  bg-white/60 inline-block">
             <img
               src={LogoName}
               alt="Om Sai Fire Safety Logo"
@@ -173,19 +174,19 @@ const Footer = () => {
       </div>
 
       {/* Contact Info */}
-      <div className="container mx-auto mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-primary-start pt-6 ">
+      <div className="container mx-auto mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 border-t border-primary-start pt-6 ">
         <div className="flex items-start gap-3">
-          <FaMapMarkerAlt className="text-orange-500 mt-1" />
+          <FaMapMarkerAlt className="text-orange-500 mt-1 text-3xl" />
           <p className="text-lg md:text-xl uppercase">
-            B-7M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8,
-            Balitha, Vapi, Dist Valsad, Gujarat. PIN - 396191
+            1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. <br /> PIN - 396191
+
           </p>
         </div>
 
         <div className="flex items-start gap-3 md:mx-auto">
           <FaPhoneAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl ">
-            +91 98278 00077 <br /> +91 93131 74925
+            +91 79845 50077 <br /> +91 88495 92829
           </p>
         </div>
 

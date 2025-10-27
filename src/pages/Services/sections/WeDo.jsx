@@ -12,7 +12,7 @@ const Style = {
 
 const WeDo = () => {
   return (
-    <section style={Style} className="relative py-0 ml-auto overflow-hidden">
+    <section style={Style} className=" relative py-0 ml-auto overflow-hidden">
       {/* Overlay */}
       <img
         src={Img}

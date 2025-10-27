@@ -104,7 +104,7 @@ const Header = () => {
                     {slide.subtitle}
                   </h1>
                 </div>
-                <p className="text-xl md:text-3xl lg:text-4xl pt-4 lg:max-w-sm">
+                <p className="text-xl md:text-3xl lg:text-4xl pt-3 lg:max-w-sm">
                   {slide.desc}
                 </p>
                 <Link

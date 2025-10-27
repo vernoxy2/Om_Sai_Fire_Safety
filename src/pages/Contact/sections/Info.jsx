@@ -27,8 +27,8 @@ const Info = () => {
           {/* Info Section */}
           <div className="flex flex-col items-start justify-start gap-10">
             {/* Address */}
-            <div className="flex items-start gap-6">
-              <FaMapMarkerAlt className="text-5xl text-primary flex-shrink-0" />
+            <div className="flex items-start gap-3 md:gap-6">
+              <FaMapMarkerAlt className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold leading-relaxed">
                 B-7M CUBE BUSINESS HUB, OPP. VAPI TALUKA SEVA SADAN, N.H. NO. 8,
                 BALITHA, VAPI, DIST, VALSAD, GUJARAT. PIN - 396191
@@ -36,8 +36,8 @@ const Info = () => {
             </div>
 
             {/* Phone Numbers */}
-            <div className="flex items-start gap-6">
-              <IoMdCall className="text-5xl text-primary flex-shrink-0" />
+            <div className="flex items-start gap-3 md:gap-6">
+              <IoMdCall className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <div className="space-y-1">
                 <p className="font-semibold">+91 98278 00077</p>
                 <p className="font-semibold">+91 93131 74925</p>
@@ -45,8 +45,8 @@ const Info = () => {
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-6">
-              <MdEmail className="text-5xl text-primary flex-shrink-0" />
+            <div className="flex items-start gap-3 md:gap-6">
+              <MdEmail className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold">omsaifiresafety77@gmail.com</p>
             </div>
           </div>

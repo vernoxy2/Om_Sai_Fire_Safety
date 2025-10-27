@@ -11,8 +11,8 @@ const WhoWeAre = () => {
         <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-6">
           <PrimaryTitle gradientText="Who We" normalText=" Are"></PrimaryTitle>
           <p className="text-xl md:text-2xl 2xl:text-3xl leading-6">
-            At Om Sai Fire Safety Solution, we believe that safety is not an
-            option it’s a necessity.We are a trusted provider of fire protection
+            At Om Sai Fire Safety Solutions, we believe that safety is not an
+            option it’s a necessity. We are a trusted provider of fire protection
             systems, certified equipment, and expert services, dedicated to
             safeguarding lives and property across residential, commercial, and
             industrial spaces.

@@ -36,7 +36,7 @@ const PrimaryTitle = ({
           )}
           <h2
             ref={titleRef}
-            className={`text-5xl md:text-6xl lg:text-7xl text-white uppercase inline-block hero-title *:${titleClassName}`}
+            className={`text-5xl md:text-6xl 2XL:text-7xl text-white uppercase inline-block hero-title *:${titleClassName}`}
           >
             {gradientText && <GradientText>{gradientText}</GradientText>}{" "}
             {normalText}
