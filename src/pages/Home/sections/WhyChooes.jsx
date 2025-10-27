@@ -1,6 +1,5 @@
 import React from "react";
 import ChooseBg from "../../../assets/HomePageAssets/Chooes/ChooesBg.webp";
-
 import GradientText from "../../../components/GradientText";
 import { LuSettings } from "react-icons/lu";
 import { FaHeadset, FaTags } from "react-icons/fa";
@@ -35,40 +34,51 @@ const Data = [
   },
 ];
 
-const WhyChooes = () => {
+const WhyChoose = () => {
   return (
-    <section className="bg-black space-y-20 lg:space-y-48 relative lg:pb-56">
-      <h1 className="container text-7xl md:text-9xl lg:text-9xl text-center z-10 relative">
-        <GradientText>Why Choose </GradientText>Us
-      </h1>
-      <div className="absolute -top-44 inset-0 -z-0">
+    <section className="relative bg-black overflow-hidden py-20 md:py-32">
+      {/* Background */}
+      <div className="absolute inset-0 -z-0 opacity-60">
         <img
           src={ChooseBg}
           alt="Background"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover md:object-contain"
         />
       </div>
 
-      <div className="container flex flex-col md:flex-row flex-wrap gap-4 md:gap-5 h-full items-start justify-center ">
+      {/* Heading */}
+      <div className="container relative z-10 text-center mb-12 md:mb-20">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold leading-tight text-white">
+          <GradientText>Why Choose </GradientText>Us
+        </h1>
+      </div>
+
+      {/* Feature Cards (Flex Layout) */}
+      <div className="container relative z-10 flex flex-wrap items-stretch justify-center gap-4 ">
         {Data.map((item) => (
-          // <div className="bg-primary h-full p-20 flex backdrop-blur">
-          //   assdfbr  <br />dfdf
-          // </div>
-            <div
-              key={item.id}
-              className=" rounded-lg backdrop-blur-sm transform transition duration-300 hover:scale-110 w-full h-full  border sm:w-[45%] lg:w-[17%]"
-            >
-              <div className="border border-transparent bg-white/40 rounded-lg flex flex-col h-full items-center justify-center text-center gap-4 px-4 py-2">
-                <div className="text-3xl text-white">{item.icon}</div>
-                <h1 className="text-xl md:text-2xl font-bold text-white leading-7">
-                  {item.title}
-                </h1>
-              </div>
+          <div
+            key={item.id}
+            className="
+              group 
+              flex flex-col items-center justify-center text-center
+              w-full sm:w-[48%] md:w-[30%] lg:w-[18%]
+              rounded-lg border border-white/30 
+              backdrop-blur-sm bg-white/30 
+              p-5 sm:px-7 
+              transition-transform duration-300 hover:scale-105 hover:bg-white/20
+            "
+          >
+            <div className="text-4xl md:text-5xl text-white mb-4 transition-transform duration-300 group-hover:scale-110">
+              {item.icon}
             </div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-snug">
+              {item.title}
+            </h2>
+          </div>
         ))}
       </div>
     </section>
   );
 };
 
-export default WhyChooes;
+export default WhyChoose;
