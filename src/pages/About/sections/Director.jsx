@@ -20,7 +20,7 @@ const Director = () => {
           <GradientText>Our </GradientText> Director
         </h1>
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Text */}
           <div className="container flex flex-col gap-y-6 justify-center items-start">
             <PrimaryTitle 

@@ -101,12 +101,12 @@ const FireHydrant = () => {
             className="w-full h-full object-cover xl::rounded-xl min-h-[200px] lg:h-auto"
           />
           <div className="xl:absolute bottom-0 lg:right-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start ">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start">
               <GradientText className="leading-6">
                 Commercial Building Hydrant Systems
               </GradientText>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start leading-5">
+            <p className="text-lg md:text-xl lg:text-2xl text-center xl:text-start leading-relaxed md:leading-loose">
               Engineered for large complexes, offices, factories, and
               warehouses, these systems are designed to handle high-risk
               environments. They feature robust hydrant layouts, heavy-duty
@@ -124,7 +124,7 @@ const FireHydrant = () => {
             className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"
           />
           <div className="xl:absolute bottom-0 lg:left-0 lg:h-full xl:max-w-md bg-[#2a2a2a]/80 backdrop-blur-[2px] px-8 text-start flex flex-col gap-3 lg:gap-5 justify-center items-center py-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start hero-title">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:text-start">
               <GradientText className="">
                 Residential Fire Hydrant Systems
               </GradientText>

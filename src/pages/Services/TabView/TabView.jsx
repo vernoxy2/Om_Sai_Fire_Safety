@@ -48,7 +48,7 @@ const TabView = () => {
                 const next = TABS[index];
                 navigate(`/services/${next.slug}`);
               }}
-              className={`whitespace-wrap w-full justify-start  items-start px-4 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 md:border-b-[3px] border-primary-start
+              className={`whitespace-wrap w-full justify-start text-left items-start px-4 py-2 mr-4 text-2xl font-bold uppercase transition-colors duration-300 md:border-b-[3px] border-primary-start
               ${
                 activeTab === index
                   ? "bg-gradient-to-t from-primary-start/60 to-transparent text-white "
