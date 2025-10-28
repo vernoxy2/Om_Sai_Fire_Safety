@@ -34,7 +34,7 @@ const SafetySolution = () => {
         </div>
 
         {/* Right Content Box */}
-        <div className="w-full pt-40 md:pt-80 lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
+        <div className="w-full pt-40 md:pt-80 lg:pt-20 lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
           <img
             src={UnderLineWhite}
             alt="underline"
