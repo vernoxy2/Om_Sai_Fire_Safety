@@ -136,9 +136,15 @@ const Footer = () => {
           <ul className="space-y-2 text-lg md:text-xl uppercase">
             {Services.map((item) => (
               <li key={item.id}>
-                <Link className="flex hover:text-primary-end duration-200 transition-colors" to={item.link}><span>
+                <Link
+                  className="flex hover:text-primary-end duration-200 transition-colors"
+                  to={item.link}
+                >
+                  <span>
                     <IoMdArrowDropright className="text-3xl text-primary" />
-                  </span>{item.title}</Link>
+                  </span>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>
@@ -178,19 +184,24 @@ const Footer = () => {
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-orange-500 mt-1 text-3xl" />
           <p className="text-lg md:text-xl uppercase">
-            1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. <br className="hidden 2xl:block" /> PIN - 396191
-
+            1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva
+            Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat.{" "}
+            <br className="hidden 2xl:block" /> PIN - 396191
           </p>
         </div>
 
         <div className="flex items-start gap-3 md:mx-auto">
           <FaPhoneAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl ">
-            <a href="tel:+917984550077">+91 79845 50077</a> <br  /> <a href="tel:+918849592829"> +91 88495 92829</a>
+            <a href="tel:+917984550077">+91 79845 50077</a> <br />
+            <a href="tel:+918849592829"> +91 88495 92829</a>
           </p>
         </div>
 
-        <a href="mailto:omsafiresafety77@gmail.com" className="flex items-start gap-3 cursor-pointer">
+        <a
+          href="mailto:omsafiresafety77@gmail.com"
+          className="flex items-start gap-3 cursor-pointer"
+        >
           <FaEnvelope className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl">omsafiresafety77@gmail.com</p>
         </a>

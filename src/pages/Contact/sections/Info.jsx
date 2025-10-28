@@ -38,16 +38,16 @@ const Info = () => {
             <div className="flex items-start gap-3 md:gap-6">
               <IoMdCall className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <div className="space-y-1">
-                <p className="font-semibold">+91 79845 50077</p>
-                <p className="font-semibold">+91 88495 92829</p>
+                <a href="tel:+917984550077"><p className="font-semibold">+91 79845 50077</p></a>
+                <a href="tel:+918849592829"><p className="font-semibold">+91 88495 92829</p></a>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-3 md:gap-6">
+            <a href="mailto:omsaifiresafety77@gmail.com" className="flex items-start gap-3 md:gap-6">
               <MdEmail className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold">omsaifiresafety77@gmail.com</p>
-            </div>
+            </a>
           </div>
         </div>
 
