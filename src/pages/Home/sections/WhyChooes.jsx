@@ -71,9 +71,9 @@ const WhyChoose = () => {
             <div className="text-4xl md:text-5xl text-white mb-4 transition-transform duration-300 group-hover:scale-110">
               {item.icon}
             </div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-snug">
+            <p className=" font-semibold text-white leading-snug">
               {item.title}
-            </h2>
+            </p>
           </div>
         ))}
       </div>
