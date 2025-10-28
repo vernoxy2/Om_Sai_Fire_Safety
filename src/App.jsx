@@ -18,8 +18,11 @@ import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop.JSX";
+import NotFound from "./components/NotFound";
+import RequestAssessment from "./components/RequestAssessment";
 
 const App = () => {
+  const [isopen, setIsopen] = React.useState(true);
   return (
     <BrowserRouter>
       {/* Navbar overlays on all pages */}
@@ -37,6 +40,7 @@ const App = () => {
           <Route path="/products/:tabSlug" element={<Products />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
 
@@ -53,6 +57,8 @@ const App = () => {
           <FaWhatsapp className="text-white" size={30} />
         </div>
       </a>
+      <RequestAssessment isopen={isopen} onClose={() => setIsopen(false)}/>
+      
     </BrowserRouter>
   );
 };
