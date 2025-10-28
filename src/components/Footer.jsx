@@ -194,7 +194,9 @@ const Footer = () => {
           <FaPhoneAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl ">
             <a href="tel:+917984550077">+91 79845 50077</a> <br />
-            <a href="tel:+918849592829"> +91 88495 92829</a>
+            <a href="tel:+918849592829"> +91 88495 92829</a> <br />
+            <a href="tel:+919827800077"> +91 98278 00077</a>
+            
           </p>
         </div>
 

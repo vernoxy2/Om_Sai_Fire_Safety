@@ -40,6 +40,7 @@ const Info = () => {
               <div className="space-y-1">
                 <a href="tel:+917984550077"><p className="font-semibold">+91 79845 50077</p></a>
                 <a href="tel:+918849592829"><p className="font-semibold">+91 88495 92829</p></a>
+                <a href="tel:+919827800077"><p className="font-semibold">+91 98278 00077</p></a>
               </div>
             </div>
 
