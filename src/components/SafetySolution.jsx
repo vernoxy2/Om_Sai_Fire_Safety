@@ -40,7 +40,7 @@ const SafetySolution = () => {
             alt="underline"
             className="absolute bottom-5 right-0 w-1/2 opacity-70"
           />
-          <div className="w-full lg:w-7/12 ml-auto px-6 lg:pr-20 space-y-6">
+          <div className="w-full lg:w-7/12 ml-auto px-6 lg:pr-20 space-y-4 md:space-y-4 lg:space-y-6 ">
             <p className="text-lg md:text-2xl lg:text-3xl leading-relaxed">
               Every space has unique needs — whether it’s a{" "}
               <span className="font-semibold">
