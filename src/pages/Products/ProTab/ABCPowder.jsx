@@ -101,7 +101,7 @@ const ABCPowder = () => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="relflex flex-col  items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
+              className="relflex flex-col items-center relative hover:-translate-y-3 transition duration-500 rounded-xl border-[1px] border-gray-200/50 h-full"
             >
               {/* If multiple images -> use Swiper */}
               {item.Img.length > 1 ? (
@@ -113,14 +113,14 @@ const ABCPowder = () => {
                     duration: 4000,
                   }}
                   loop={true}
-                  className="bg-white/10 w-full rounded-t-xl flex flex-col h-96 "
+                  className="bg-white/10 w-full rounded-t-xl flex flex-col h-[350px] "
                 >
                   {item.Img.map((img, i) => (
                     <SwiperSlide key={i}>
                       <img
                         src={img}
                         alt={`${item.title} ${i + 1}`}
-                        className=" object-contain mx-auto "
+                        className=" mt-6  object-contain mx-auto "
                       />
                     </SwiperSlide>
                   ))}
@@ -129,7 +129,7 @@ const ABCPowder = () => {
                 <img
                   src={item.Img[0]}
                   alt={item.title}
-                  className="h-[50%] object-contain mx-auto"
+                  className=" object-contain mx-auto"
                 />
               )}
 

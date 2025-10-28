@@ -57,8 +57,7 @@ const App = () => {
           <FaWhatsapp className="text-white" size={30} />
         </div>
       </a>
-      <RequestAssessment isopen={isopen} onClose={() => setIsopen(false)}/>
-      
+      <RequestAssessment isopen={isopen} onClose={() => setIsopen(false)} />
     </BrowserRouter>
   );
 };

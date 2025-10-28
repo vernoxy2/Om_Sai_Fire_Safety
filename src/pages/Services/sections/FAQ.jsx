@@ -55,11 +55,12 @@ const FAQ = () => {
     <section style={style} className="py-12">
       <div className="container flex flex-col lg:flex-row gap-8">
         {/* Left Side: FAQ Intro + Card */}
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col justify-start items-start gap-8">
           <div className="space-y-5">
             <PrimaryTitle
               gradientText={"Frequently Asked "}
               normalText={"Questions"}
+              className=" "
             ></PrimaryTitle>
             <p className=" max-w-md">
               Find clear answers to common fire safety queries, products,
