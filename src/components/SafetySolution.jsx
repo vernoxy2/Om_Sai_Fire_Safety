@@ -16,7 +16,7 @@ const SafetySolution = () => {
     <section style={Style}>
       <div className="container relative">
         {/* Left Image with Title Overlay */}
-        <div className="relative z-10 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-5/12">
+        <div className="relative z-10 -mb-28 md:-mb-12 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-[94%] mx-auto lg:w-5/12 rounded-2xl">
           {/* Image */}
           <img
             src={SafetySolutionImg}
@@ -25,16 +25,16 @@ const SafetySolution = () => {
           />
 
           {/* Overlay Title */}
-          <div className="absolute bottom-0 bg-black/40 p-3 md:px-6">
-            <h1 className="text-4xl md:text-6xl lg:text-[88px] leading-tight md:leading-[88px]">
-              <GradientText>get the right Fire </GradientText>
+          <div className="absolute bottom-0 bg-black/40 p-3 md:px-6 rounded-b-2xl w-full">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl 2xl:text-[88px] leading-tight ">
+              <GradientText>get the right Fire </GradientText> <br className="lg:hidden"/>
               safety solution
             </h1>
           </div>
         </div>
 
         {/* Right Content Box */}
-        <div className="w-full lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
+        <div className="w-full pt-28 md:pt-20 lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
           <img
             src={UnderLineWhite}
             alt="underline"

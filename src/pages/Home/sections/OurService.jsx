@@ -113,7 +113,7 @@ const OurService = () => {
             />
             {/* Overlay */}
             <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/95 via-transparent hover:via-primary/60 hover:from-primary to-transparent transition z-0 duration-300 hover:backdrop-blur-[1px]">
-              <div className="absolute bottom-0 p-6  text-white z-10">
+              <div className="absolute bottom-0 p-5  text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${
                     index === 0 ? "xl:text-7xl" : ""
@@ -124,7 +124,7 @@ const OurService = () => {
                 <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-1">
                   <p
                     className={`text-xl md:text-2xl ${
-                      index === 0 ? "xl:text-3xl leading-2" : ""
+                      index === 0 ? "xl:text-3xl leading-tight" : "leading-3"
                     }`}
                   >
                     {item.description}
