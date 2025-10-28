@@ -1,7 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+// import react router
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+// import Icons
+import { FaWhatsapp } from "react-icons/fa";
+// import pages
 import Navbar from "./components/Navbar";
-
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
@@ -17,7 +25,7 @@ const App = () => {
       {/* Navbar overlays on all pages */}
       <Navbar />
 
-      <div className=" font-alumni"> 
+      <div className=" font-alumni">
         {/* pt-16 pushes content down so it doesn’t hide behind fixed navbar */}
         <ScrollToTop />
         <Routes>
@@ -33,6 +41,18 @@ const App = () => {
       </div>
 
       <Footer />
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/919827800077?text=Hello%20I%20would%20like%20to%20know%20more"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50"
+      >
+        <div className="h-14 w-14 rounded-full bg-primary-start bg-gradient-to-l from-primary-end/70 to-primary-start shadow-lg flex items-center justify-center hover:scale-90 duration-300 transition-transform">
+          <FaWhatsapp className="text-white" size={30} />
+        </div>
+      </a>
     </BrowserRouter>
   );
 };
