@@ -186,14 +186,14 @@ const Footer = () => {
         <div className="flex items-start gap-3 md:mx-auto">
           <FaPhoneAlt className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl ">
-            +91 79845 50077 <br  /> +91 88495 92829
+            <a href="tel:+917984550077">+91 79845 50077</a> <br  /> <a href="tel:+918849592829"> +91 88495 92829</a>
           </p>
         </div>
 
-        <div className="flex items-start gap-3">
+        <a href="mailto:omsafiresafety77@gmail.com" className="flex items-start gap-3 cursor-pointer">
           <FaEnvelope className="text-orange-500 mt-1" />
           <p className="text-lg md:text-xl">omsafiresafety77@gmail.com</p>
-        </div>
+        </a>
       </div>
     </section>
   );

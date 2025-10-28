@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import BgLeftDown from "../../../assets/BgLeftDown.webp";
-import PrimaryButton from "../../../components/PrimaryButton";
 import { IoMdArrowDropdown } from "react-icons/io";
 import PrimaryTitle from "../../../components/PrimaryTitle";
 
