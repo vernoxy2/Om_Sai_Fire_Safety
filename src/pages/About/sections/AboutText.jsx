@@ -23,10 +23,10 @@ const AboutText = () => {
         <div className="text-right space-y-6 container lg:px-0">
           <div className="lg:flex justify-end">
             <PrimaryTitle
-            className="text-right"
+            className=""
             gradientText="About"
             normalText="Us"
-            imgClassName="-scale-x-100 ml-auto"
+            imgClassName="-scale-x-100 "
           />
           </div>
 
