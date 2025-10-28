@@ -73,7 +73,14 @@ const FAQ = () => {
             <p className=" mb-4 w-10/12">
               Have questions? Send us an email, we’re here to help
             </p>
-            <PrimaryButton className="text-3xl">Send Email</PrimaryButton>
+            <PrimaryButton
+              className="text-3xl"
+              onClick={() => {
+                window.location.href = "mailto:omsaifiresafety77@gmail.com";
+              }}
+            >
+              Send Email
+            </PrimaryButton>
           </div>
         </div>
 
@@ -96,9 +103,7 @@ const FAQ = () => {
                 />
               </button>
               {openIndex === idx && (
-                <p className="mt-2 text-white ">
-                  {faq.answer}
-                </p>
+                <p className="mt-2 text-white ">{faq.answer}</p>
               )}
             </div>
           ))}
