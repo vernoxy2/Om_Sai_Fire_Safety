@@ -5,12 +5,10 @@ import { IoMdClose } from "react-icons/io";
 
 const InputField = ({ label }) => (
   <div className="w-full space-y-2">
-    <label className="text-3xl">
-      <GradientText>{label}</GradientText>
-    </label>
     <input
       type="text"
-      className="w-full px-4 py-3 rounded-md border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary text-black"
+      placeholder={label}
+      className="w-full px-3 py-2 rounded-md border-2 font-alumni border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary text-black placeholder-black/60 drop-shadow-md"
     />
   </div>
 );
@@ -25,31 +23,37 @@ const RequestAssessment = ({ isopen, onClose }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-2xl w-[90%] lg:w-[65%] max-w-5xl overflow-auto"
+        className="bg-white rounded-2xl w-10/12 md:w-7/12 lg:w-4/12 max-w-5xl overflow-auto"
       >
         {/* Header */}
-        <div className="relative bg-gradient-to-l from-primary-start to-primary-end py-3 lg:py-7 text-center rounded-t-xl">
-          <h1 className="font-bold text-2xl md:text-3xl lg:text-5xl">
-            Request Your Complimentary <br /> Fire Safety Assessment
+        <div className="relative bg-primary py-3 lg:py-4 text-center rounded-t-xl">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
+            Request Your Complimentary <br />{" "}
+            <span className="font-normal">Fire Safety Assessment</span>
           </h1>
-          <button onClick={onClose} className="absolute right-3 top-3 text-xl md:text-2xl">
+          <button
+            onClick={onClose}
+            className="absolute right-3 top-3 text-xl md:text-2xl"
+          >
             <IoMdClose />
           </button>
         </div>
 
         {/* Body */}
-        <div className="p-5 lg:p-10 md:flex gap-4 space-y-3 lg:space-y-0">
-          <div className="space-y-4 lg:space-y-8 md:w-[45%] text-gray-700">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl">
-              <GradientText>Ensure your workplace meets all fire safety standards.</GradientText>
+        <div className="p-5 lg:p-7  space-y-3 lg:space-y-0">
+          {/* Content */}
+          <div className="  text-gray-700">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#696969] font-bold text-center">
+              Ensure workplace meets fire safety
             </h1>
-            <p className="text-gray-600">
-              Our certified specialists provide a no-obligation on-site evaluation to identify
-              potential risks and compliance gaps.
-            </p>
+            <h1 className="text-gray-600 text-center text-base md:text-lg lg:text-xl md:w-[75%] mx-auto">
+              Our certified specialists provide a no-obligation on-site
+              evaluation to identify potential risks and compliance gaps.
+            </h1>
           </div>
 
-          <div className="flex flex-col md:w-[55%] space-y-8">
+          {/* Form */}
+          <div className="flex flex-col space-y-8">
             <form className="w-full space-y-4">
               <div className="md:flex gap-6">
                 <InputField label="Name" />
