@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // hamburger & close icons
 import LogoName from "../assets/LogoName.svg";
 
@@ -27,9 +27,9 @@ const Navbar = () => {
     <nav className=" top-0 left-0 w-full z-50 bg-transparent font-alumni sticky">
       <div className=" mx-auto pl-0 flex items-center justify-between  py-3 px-6 lg:ps-8 bg-white/95">
         {/* Logo */}
-        <div className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 w-1/2 ">
+        <Link to="/" className=" px-4 md:px-10 lg:px-12 pr-2 md:pr-6 w-1/2 ">
           <img src={LogoName} alt="Logo" className="" />
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex justify-between w-full  text-2xl ">
