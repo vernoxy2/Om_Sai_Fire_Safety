@@ -16,7 +16,7 @@ const slides = [
     bg: Hero1,
     title: (
       <>
-        <GradientText>Protecting </GradientText>Lives.
+        <GradientText>Protecting </GradientText>Lives
       </>
     ),
     subtitle: "Securing Property",
@@ -33,7 +33,7 @@ const slides = [
       </>
     ),
     subtitle: "Our Priority",
-    desc: "Complete Fire Protec on – From Ex nguishers to Full Systems",
+    desc: "Complete Fire Protection – From Extinguishers to Full Systems",
     buttonText: "Explore Our Services",
     buttonLink: "/services",
   },
@@ -42,11 +42,11 @@ const slides = [
     bg: Hero3,
     title: (
       <>
-        <GradientText>Be </GradientText>Prepared.
+        <GradientText>Be </GradientText>Prepared
       </>
     ),
     subtitle: "Be Protected",
-    desc: "Cer fied Fire Safety Equipment & Reliable Services",
+    desc: "Certified Fire Safety Equipment & Reliable Services",
     buttonText: "Contact Us Today",
     buttonLink: "/contact",
   },
@@ -55,7 +55,7 @@ const slides = [
     bg: Hero4,
     title: (
       <>
-        <GradientText>Stay Safe </GradientText>with.
+        <GradientText>Stay Safe </GradientText>with
       </>
     ),
     subtitle: "Om Sai Fire Safety",
@@ -69,7 +69,7 @@ const slides = [
     bg: Hero2,
     title: (
       <>
-        <GradientText>Advanced </GradientText>Training.
+        <GradientText>Advanced </GradientText>Training
       </>
     ),
     subtitle: "Empowering People",

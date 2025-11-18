@@ -25,7 +25,7 @@ const data = [
     id: 3,
     img: Img3,
     title: "Maintenance",
-    desc: "Regular Maintenance & ComplianceRoutine checks ensure hydrant systems stay reliable, safe, and code-compliant. Fire Alarm & Detection Smoke detectors, panels, and alarms for quick fire response.",
+    desc: "Regular Maintenance & Compliance Routine checks ensure hydrant systems stay reliable, safe, and code-compliant. Fire Alarm & Detection Smoke detectors, panels, and alarms for quick fire response.",
   },
 ];
 

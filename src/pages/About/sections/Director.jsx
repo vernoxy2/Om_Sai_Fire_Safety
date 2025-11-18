@@ -20,16 +20,16 @@ const Director = () => {
           <GradientText>Our </GradientText> Director
         </h1>
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 container">
+        <div className=" container md:w-[90%] xl:w-[70%] mx-auto ">
           {/* Text */}
-          <div className=" flex flex-col gap-y-6 justify-center items-start">
+          <div className=" flex flex-col gap-y-6 justify-center items-center">
             <PrimaryTitle 
               gradientText={"Mr. Miroz"}
               normalText={"Dawoodani"}
               spanText="Founder & Director, Om Sai Fire Safety Solutions"
-              className="justify-start"
+              className="justify-center"
             ></PrimaryTitle>
-            <p className="text-left">
+            <p className="text-center">
               With over Decade of expertise in the fire safety industry,{" "}
               <spa className="font-semibold">Mr. Miroz Dawoodani</spa> has been
               the cornerstone of Om Sai Fire Safety Solutions’{" "}
@@ -37,7 +37,7 @@ const Director = () => {
               leadership is defined by a deep commitment to quality, innovation,
               and customer trust.
             </p>
-            <p className="text-left">
+            <p className="text-center">
               Through his vision,{" "}
               <span className="font-semibold">
                 the company has established itself
@@ -49,12 +49,12 @@ const Director = () => {
               ensuring every solution contributes to a safer and{" "}
               <span className="font-semibold">more secure environment.</span>
             </p>
-            <BaseLine className="mr-auto"/>
+            <BaseLine className="mx-auto"/>
           </div>
           {/* Image */}
-          <div className="h-[90%]">
+          {/* <div className="h-[90%]">
             <img src={DirectorImg} alt="Director" className="h-full object-cover" />
-          </div>
+          </div> */}
         </div>
       </div>
   );

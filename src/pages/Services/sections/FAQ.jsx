@@ -64,7 +64,7 @@ const FAQ = () => {
             ></PrimaryTitle>
             <p className=" max-w-md">
               Find clear answers to common fire safety queries, products,
-              services, and compliance at Om Sai fire safety Solution
+              services, and compliance at Om Sai fire safety Solutions.
             </p>
           </div>
           <div className=" px-5 py-5 lg:max-w-md border-l-[3px] border-Border bg-gradient-to-r from-primary-start/60 to-transparent">

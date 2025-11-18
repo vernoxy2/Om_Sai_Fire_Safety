@@ -17,7 +17,7 @@ const Data = [
     subtitle: "MANUAL CALL POINT",
     category: ["abs", "ms"],
     description:
-      "Compatibility with all conventional fire control panel Alarm sest key facilities Glass protected by thin film Wall mounted.LED blinking facility aptionell",
+      "Compatibility with all conventional fire control panel Alarm sest key facilities Glass protected by thin film Wall mounted.LED blinking facility optional",
     poweri: "24 v dc",
     Current_Consumption: "na/30ma (Normal/Fire)",
     Housing: "abs",
@@ -46,7 +46,7 @@ const Data = [
     subtitle: "SMOKE HEAT MULTI",
     category: ["abs", "ms"],
     features:
-      "Dual LED for 360 degree visibility 2wire based detectorAdvance algorithms provides advanced detection Easy installationLow maintenance High immunity against unwanted alarmsStable optical smoke sensing chamber, No adjustment or replacement required",
+      "Dual LED for 360 degree visibility 2wire based detector Advance algorithms provides advanced detection Easy installationLow maintenance High immunity against unwanted alarms Stable optical smoke sensing chamber, No adjustment or replacement required",
     power: "100V AC (with LMT) or 12/24 V AC",
     poweroi: "90 db",
     Weight: "340 gm",
@@ -62,7 +62,7 @@ const Data = [
     subtitle: "TECHNICAL SPECIFICATIONS",
     category: ["2 zone", "4 zone", "etc"],
     features:
-      "Operating Voltage AC 220v 50Hz ±10%, DC 24v 1 AMPOperating Temperature 0°C to 50°COperating Humidity 95% (non-condensing).Hooter Output -1 A (24v DC)EOL 4k7 ohm, 1 per zoneWeight-4.5 Kg Construction 1.8 mm CRCA sheet duly power coatedDimension H 272mm W 346mm D 96mmColour Caramel White/Red",
+      (<div className="leading-6">Operating Voltage AC 220v 50Hz ±10%, DC 24v 1 AMP <br />Operating Temperature 0°C to 50°C <br />Operating Humidity 95% (non-condensing) <br />Hooter Output -1 A (24v DC) <br />EOL 4k7 ohm, 1 per zone <br />Weight-4.5 Kg <br />Construction 1.8 mm CRCA sheet duly power coated <br />Dimension H 272mm W 346mm D 96mm <br />Colour Caramel White/Red</div>),
   },
 ];
 

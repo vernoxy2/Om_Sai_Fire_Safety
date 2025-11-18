@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MissionBg from "../../../assets/HomePageAssets/Services/ServicesBg.webp";
-import Vission from "../Mission-Vision/Vission";
+import Vision from "../Mission-Vision/Vission";
 import Mission from "../Mission-Vision/Mission";
 import Values from "../Mission-Vision/Values";
 
@@ -12,7 +12,7 @@ const style = {
 };
 
 // ✅ Store component references instead of JSX
-const slides = [Mission, Vission, Values];
+const slides = [Mission, Vision, Values];
 
 const MissionVission = () => {
   const [current, setCurrent] = useState(0);

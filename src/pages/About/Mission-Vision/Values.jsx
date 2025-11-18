@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryTitle from "../../../components/PrimaryTitle";
 import ValuesImg from "../../../assets/AboutPageAssets/MissionVision/ValuesImg.webp";
-import { desc } from "framer-motion/client";
 import GradientText from "../../../components/GradientText";
 import { IoMdArrowDropright } from "react-icons/io";
 
@@ -20,7 +19,7 @@ const ValuwsList = [
   },
   {
     values: "Commitment",
-    desc: "Safeguarding lives andproperty is our highest priority.",
+    desc: "Safeguarding lives and property is our highest priority.",
   },
 ];
 

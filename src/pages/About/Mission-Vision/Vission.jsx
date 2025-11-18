@@ -11,7 +11,7 @@ const Vission = () => {
       <div className='space-y-12'>
         <PrimaryTitle
           gradientText={"Our"}
-          normalText={"Vission"}
+          normalText={"Vision"}
           titleClassName='text-center'
         ></PrimaryTitle>
         <p className='text-center px-8'>To be recognized as a leading fire safety company in India, trusted for excellence in fire safeguard, prevention, and protection services.</p>

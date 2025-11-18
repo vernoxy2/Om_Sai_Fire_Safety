@@ -46,7 +46,7 @@ const SafetySolution = () => {
               <span className="font-semibold">
                 home, office, factory, or commercial complex.
               </span>{" "}
-              At Om Sai Fire Safety Solution,{" "}
+              At Om Sai Fire Safety Solutions,{" "}
               <span className="font-semibold">
                 we deliver customized protection
               </span>{" "}

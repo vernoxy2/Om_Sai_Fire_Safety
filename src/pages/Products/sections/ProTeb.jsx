@@ -11,8 +11,8 @@ import HVWS from '../ProTab/HVWS';
 // Static tab configuration
 const TABS = [
     { title: <>abc powder <br className="hidden lg:block" /> extinguishers</>, slug: 'abc-powder', component: <ABCPowder /> },
-    { title: <>fire hydrant systems & <br className="hidden lg:block" /> Hous reels</>, slug: 'hydrant-and-hose-reels', component: <HousReels /> },
-    { title: <>smock & heat <br className="hidden lg:block" /> Detectors</>, slug: 'detectors', component: <Detectors /> },
+    { title: <>fire hydrant systems & <br className="hidden lg:block" /> Hose reels</>, slug: 'hydrant-and-hose-reels', component: <HousReels /> },
+    { title: <>smoke  & heat <br className="hidden lg:block" /> Detectors</>, slug: 'detectors', component: <Detectors /> },
     { title: <>fire <br className="hidden lg:block" /> doors</>, slug: 'fire-doors', component: <FireDoors /> },
     { title: <>HVWS <br className="hidden lg:block" /> systems</>, slug: 'hvws-systems', component: <HVWS /> },
     { title: <>safety signages & <br className="hidden lg:block" /> Accessories</>, slug: 'safety-accessories', component: <Accessories /> },
