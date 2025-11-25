@@ -55,30 +55,55 @@ const Info = () => {
   };
 
   // submit handler
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate()) {
-      alert("Form submitted successfully!");
-      console.log("Form Data: ", formData);
+    const validationErrors = validate();
+    if (validationErrors && Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
-      // reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        message: "",
+    console.log("Form Data:", formData);
+
+    // Append access key
+    const formDataWithKey = new FormData();
+    for (const key in formData) {
+      formDataWithKey.append(key, formData[key]);
+    }
+    formDataWithKey.append(
+      "access_key",
+      "bcf20587-57b5-47c3-9dc7-83fb8bfd0892"
+    );
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataWithKey,
       });
 
-      setErrors({});
+      const data = await response.json();
+
+      if (data.success) {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+        e.target.reset();
+        setErrors({});
+      } else {
+        console.error("Error submitting form:", data.message);
+      }
+    } catch (error) {
+      console.error("Network or server error:", error);
     }
   };
 
   return (
     <section style={style}>
       <div className="container grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x-[2px] divide-primary">
-        
         {/* LEFT COLUMN */}
         <div className="py-8 px-4 md:p-12 flex flex-col items-start gap-12">
           <h1 className="text-4xl md:text-6xl 2xl:text-7xl font-bold">
@@ -91,7 +116,8 @@ const Info = () => {
               <FaMapMarkerAlt className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold leading-relaxed">
                 1st Floor, E 104-105 M Cube Business Hub, Opp. Vapi Taluka Seva
-                Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. PIN - 396191
+                Sadan, N.H. No. 8, Balitha, Vapi, Dist Valsad, Gujarat. PIN -
+                396191
               </p>
             </div>
 
@@ -99,14 +125,23 @@ const Info = () => {
             <div className="flex items-start gap-3 md:gap-6">
               <IoMdCall className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <div className="space-y-1">
-                <a href="tel:+917984550077"><p className="font-semibold">+91 79845 50077</p></a>
-                <a href="tel:+918849592829"><p className="font-semibold">+91 88495 92829</p></a>
-                <a href="tel:+919827800077"><p className="font-semibold">+91 98278 00077</p></a>
+                <a href="tel:+917984550077">
+                  <p className="font-semibold">+91 79845 50077</p>
+                </a>
+                <a href="tel:+918849592829">
+                  <p className="font-semibold">+91 88495 92829</p>
+                </a>
+                <a href="tel:+919827800077">
+                  <p className="font-semibold">+91 98278 00077</p>
+                </a>
               </div>
             </div>
 
             {/* Email */}
-            <a href="mailto:omsaifiresafety77@gmail.com" className="flex items-start gap-3 md:gap-6">
+            <a
+              href="mailto:omsaifiresafety77@gmail.com"
+              className="flex items-start gap-3 md:gap-6"
+            >
               <MdEmail className="text-4xl md:text-5xl text-primary flex-shrink-0" />
               <p className="font-semibold">omsaifiresafety77@gmail.com</p>
             </a>
@@ -121,10 +156,11 @@ const Info = () => {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
               {/* First Name */}
               <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white text-2xl">First Name</label>
+                <label className="font-semibold text-white text-2xl">
+                  First Name
+                </label>
                 <input
                   name="firstName"
                   type="text"
@@ -135,12 +171,16 @@ const Info = () => {
                     errors.firstName ? "border-red-500" : "border-primary"
                   }`}
                 />
-                {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+                {errors.firstName && (
+                  <p className="text-red-500 text-sm">{errors.firstName}</p>
+                )}
               </div>
 
               {/* Last Name */}
               <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white text-2xl">Last Name</label>
+                <label className="font-semibold text-white text-2xl">
+                  Last Name
+                </label>
                 <input
                   name="lastName"
                   type="text"
@@ -151,12 +191,16 @@ const Info = () => {
                     errors.lastName ? "border-red-500" : "border-primary"
                   }`}
                 />
-                {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+                {errors.lastName && (
+                  <p className="text-red-500 text-sm">{errors.lastName}</p>
+                )}
               </div>
 
               {/* Phone */}
               <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white text-2xl">Phone Number</label>
+                <label className="font-semibold text-white text-2xl">
+                  Phone Number
+                </label>
                 <input
                   name="phone"
                   type="tel"
@@ -167,12 +211,16 @@ const Info = () => {
                     errors.phone ? "border-red-500" : "border-primary"
                   }`}
                 />
-                {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+                {errors.phone && (
+                  <p className="text-red-500 text-sm">{errors.phone}</p>
+                )}
               </div>
 
               {/* Email */}
               <div className="flex flex-col gap-2">
-                <label className="font-semibold text-white text-2xl">Email Address</label>
+                <label className="font-semibold text-white text-2xl">
+                  Email Address
+                </label>
                 <input
                   name="email"
                   type="email"
@@ -183,12 +231,16 @@ const Info = () => {
                     errors.email ? "border-red-500" : "border-primary"
                   }`}
                 />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-2 md:col-span-2">
-                <label className="font-semibold text-white text-2xl">Message</label>
+                <label className="font-semibold text-white text-2xl">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -199,7 +251,9 @@ const Info = () => {
                     errors.message ? "border-red-500" : "border-primary"
                   }`}
                 />
-                {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+                {errors.message && (
+                  <p className="text-red-500 text-sm">{errors.message}</p>
+                )}
               </div>
             </div>
 
