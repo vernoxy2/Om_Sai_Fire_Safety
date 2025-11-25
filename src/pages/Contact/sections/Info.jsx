@@ -64,18 +64,22 @@ const Info = () => {
       return;
     }
 
-    console.log("Form Data:", formData);
-
-    // Append access key
-    const formDataWithKey = new FormData();
-    for (const key in formData) {
-      formDataWithKey.append(key, formData[key]);
-    }
-    formDataWithKey.append(
-      "access_key",
-      "bcf20587-57b5-47c3-9dc7-83fb8bfd0892"
-    );
     try {
+      const formDataWithKey = new FormData();
+
+      // Combine first and last names into a single 'name' field
+      formDataWithKey.append(
+        "name",
+        `${formData.firstName} ${formData.lastName}`
+      );
+      formDataWithKey.append("email", formData.email);
+      if (formData.phone) formDataWithKey.append("phone", formData.phone);
+      formDataWithKey.append("message", formData.message);
+      formDataWithKey.append(
+        "access_key",
+        "bcf20587-57b5-47c3-9dc7-83fb8bfd0892"
+      );
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formDataWithKey,
@@ -93,6 +97,7 @@ const Info = () => {
         });
         e.target.reset();
         setErrors({});
+        console.log("Form submitted successfully!");
       } else {
         console.error("Error submitting form:", data.message);
       }
