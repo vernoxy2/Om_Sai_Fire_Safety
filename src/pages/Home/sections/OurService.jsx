@@ -105,12 +105,20 @@ const OurService = () => {
             className={`relative h-full w-full rounded-xl overflow-hidden shadow-lg group bg-white
             ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
           >
-            {/* Background Image */}
-            <img
-              src={item.image}
-              alt={item.title}
-              className="h-48 md:h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 relative "
-            />
+            {/* Background Image wrapper keeps equal height on iOS/Android */}
+            <div
+              className={`relative w-full ${
+                index === 0
+                  ? "pt-[65%] md:pt-[45%] xl:pt-[40%]"
+                  : "pt-[62%] md:pt-[56%] xl:pt-[48%]"
+              }`}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
             {/* Overlay */}
             <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/95 via-transparent hover:via-primary/60 hover:from-primary to-transparent transition z-0 duration-300 md:hover:backdrop-blur-[1px]">
               <div className="absolute bottom-0 p-5  text-white z-10">
