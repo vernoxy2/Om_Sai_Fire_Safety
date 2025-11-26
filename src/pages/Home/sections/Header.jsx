@@ -86,7 +86,7 @@ const Header = () => {
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       speed={1500}
       loop
-      className="w-full h-[500px] xl:h-[90vh]"
+      className="w-full h-[220px] md:h-[400px] lg:h-[520px] xl:h-[90vh]"
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
@@ -95,7 +95,7 @@ const Header = () => {
             style={{ backgroundImage: `url(${slide.bg})` }}
           >
             <div className="container text-start">
-              <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-4 md:p-7 border-l-[3px] border-Border  mr-auto spay md:space-y-5">
+              <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-4 md:p-7 border-l-[3px] border-Border  mr-auto space-y-1 md:space-y-5">
                 <div>
                   <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-semibold">
                     {slide.title}
@@ -104,7 +104,7 @@ const Header = () => {
                     {slide.subtitle}
                   </h1>
                 </div>
-                <p className="text-xl md:text-3xl lg:text-4xl pt-3 lg:max-w-sm">
+                <p className="text-xl md:text-3xl lg:text-4xl md:pt-3 lg:max-w-sm">
                   {slide.desc}
                 </p>
                 <Link
