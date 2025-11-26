@@ -112,7 +112,7 @@ const OurService = () => {
               className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 relative "
             />
             {/* Overlay */}
-            <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/95 via-transparent hover:via-primary/60 hover:from-primary to-transparent transition z-0 duration-300 md:hover:backdrop-blur-[1px]">
+            {/* <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/95 via-transparent hover:via-primary/60 hover:from-primary to-transparent transition z-0 duration-300 md:hover:backdrop-blur-[1px]">
               <div className="absolute bottom-0 p-5  text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${
@@ -139,7 +139,7 @@ const OurService = () => {
                   </PrimaryButton>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
