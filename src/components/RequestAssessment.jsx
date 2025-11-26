@@ -66,17 +66,51 @@ const RequestAssessment = ({ isopen, onClose }) => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = validate();
 
+    // Validate form data
+    const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    console.log("Form Data:", formData);
-    setSubmitted(true);
+    // Append access key
+    const formDataWithKey = new FormData();
+    for (const key in formData) {
+      formDataWithKey.append(key, formData[key]);
+    }
+    formDataWithKey.append(
+      "access_key",
+      "bcf20587-57b5-47c3-9dc7-83fb8bfd0892"
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataWithKey,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          company: "",
+          phone: "",
+          email: "",
+        });
+        e.target.reset();
+      } else {
+        console.error("Error submitting form:", data.message);
+        setSubmitted(false);
+      }
+    } catch (error) {
+      console.error("Network or server error:", error);
+      setSubmitted(false);
+    }
   };
 
   const handleClose = () => {
