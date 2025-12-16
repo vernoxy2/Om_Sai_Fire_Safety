@@ -23,7 +23,7 @@ const AllServices = [
   {
     id: 2,
     title: "Fire Extinguisher Services",
-    description: "Installation, refilling, and periodic serv     icing.",
+    description: "Installation, refilling, and periodic servicing.",
     image: FireExtinguisherServices,
     link: "/services/fire-extinguisher-services",
   },
@@ -98,30 +98,30 @@ const OurService = () => {
       </div>
 
       {/* Cards Section */}
-      <div className=" container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
+      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
         {AllServices.map((item, index) => (
           <div
             key={item.id}
-            className={`relative h-full w-full rounded-xl overflow-hidden shadow-lg group bg-white
+            className={`relative rounded-xl overflow-hidden shadow-lg group bg-white flex flex-col
             ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
+            style={{
+              minHeight: index === 0 
+                ? 'clamp(280px, 65vw, 400px)' 
+                : 'clamp(240px, 62vw, 320px)'
+            }}
           >
-            {/* Background Image wrapper keeps equal height on iOS/Android */}
-            <div
-              className={`relative w-full ${
-                index === 0
-                  ? "pt-[65%] md:pt-[45%] xl:pt-[40%]"
-                  : "pt-[62%] md:pt-[56%] xl:pt-[48%]"
-              }`}
-            >
+            {/* Image Container - absolute positioning */}
+            <div className="absolute inset-0 w-full h-full">
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
+            
             {/* Overlay */}
             <div className="absolute inset-0 group-hover:border-b-4 border-transparent group-hover:border-Border bg-gradient-to-t from-primary/95 via-transparent hover:via-primary/60 hover:from-primary to-transparent transition z-0 duration-300 md:hover:backdrop-blur-[1px]">
-              <div className="absolute bottom-0 p-5  text-white z-10">
+              <div className="absolute bottom-0 p-5 text-white z-10">
                 <h1
                   className={`text-2xl md:text-3xl font-bold ${
                     index === 0 ? "xl:text-7xl" : ""
@@ -132,14 +132,14 @@ const OurService = () => {
                 <div className="hidden group-hover:block duration-300 animate-fadeInUp space-y-3">
                   <p
                     className={`text-xl md:text-2xl ${
-                      index === 0 ? "xl:text-3xl leading-tight" : "leading-5 md:leading-2"
+                      index === 0 ? "xl:text-3xl leading-tight" : "leading-5 md:leading-tight"
                     }`}
                   >
                     {item.description}
                   </p>
                   <PrimaryButton
                     to={item.link}
-                    className={` lg:text-base ${
+                    className={`lg:text-base ${
                       index === 0 ? "xl:text-3xl" : ""
                     }`}
                   >
