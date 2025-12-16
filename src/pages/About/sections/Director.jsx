@@ -24,7 +24,7 @@ const Director = () => {
           {/* Text */}
           <div className=" flex flex-col gap-y-6 justify-center items-center">
             <PrimaryTitle 
-              gradientText={"Mr. Miroz"}
+              gradientText={"Mr. Meeroz"}
               normalText={"Dawoodani"}
               spanText="Founder & Director, Om Sai Fire Safety Solutions"
               className="justify-center"
