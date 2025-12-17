@@ -29,21 +29,16 @@ export default {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" }, // move half the width (since we duplicated items)
-        },
-        scrollReverse: {
-          "0%": { transform: "translateX(-100%)" }, // start from -50%
-          "100%": { transform: "translateX(0)" }, // move to 0
+          "100%": { transform: "translateX(-50%)" },
         },
         fadeInUp: {
-        '0%': { opacity: 0, transform: 'translateY(20px)' },
-        '100%': { opacity: 1, transform: 'translateY(0)' },
-      },
+          "0%": { opacity: 0, transform: "translateY(20px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
       animation: {
-        scroll: "scroll 20s linear infinite", // normal scroll
-        scrollReverse: "scrollReverse 20s linear infinite", // reverse scroll
-        fadeInUp: 'fadeInUp 0.5s ease-in-out forwards',
+        scroll: "scroll 40s linear infinite", 
+        fadeInUp: "fadeInUp 0.5s ease-in-out forwards",
       },
     },
   },
