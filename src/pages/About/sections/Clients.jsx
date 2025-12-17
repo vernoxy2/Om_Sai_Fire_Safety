@@ -9,7 +9,7 @@ const clientsGroup1 = [
   "K. K Cinema Silvassa", "Haveli Entertainments Pvt Ltd", "Shreeji Developers",
   "Rashi Enterprise", "Alpla India Pvt. Ltd", "Intech Healthcar Intech Healthcar",
   "Vivan Chemical", "Chhatra Preeti Estate Pvt Ltd", "Bhanu Venture Dhanoli",
-  "Hemani Intermediates Private Limited"
+  "Hemani Intermediates Private Limited","Jhaveri Spices Pvt Ltd","Unitec Fibers Ltd"
 ];
 
 const clientsGroup2 = [
@@ -17,7 +17,7 @@ const clientsGroup2 = [
   "Chhatra Preeti Estate Pvt Ltd.", "MAST MASALA", "Kunal Printing & Packaging Pvt Ltd",
   "Jiten Agro Land & Farm Pvt Ltd", "New Pack Chemical Industries", "Pacific Cyber Technology Pvt Ltd",
   "Spinvision India Llp", "Aniket Metal Pvt Ltd.", "Sun Infra", "Nobtech Enterprise",
-  "Hotel aditi Landmark"
+  "Hotel aditi Landmark","Midmark India Pvt Ltd","Rishika Industries Limited", "Sun Resort By Treat Resort"
 ];
 
 const ClientList = ({ data, reverse }) => (
