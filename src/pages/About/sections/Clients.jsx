@@ -47,7 +47,7 @@ const clientsGroup2 = [
 
 const ClientList = ({ data, reverse }) => (
   <div
-    className="flex animate-scroll w-fit"
+    className="flex animate-scroll hover:[animation-play-state:paused] w-fit"
     style={{ animationDirection: reverse ? "reverse" : "normal" }}
   >
     {[...data, ...data].map((item, index) => (
@@ -78,6 +78,27 @@ const Clients = () => (
       <ClientList data={clientsGroup1} />
       <ClientList data={clientsGroup2} reverse />
     </div>
+
+    {/* Marquee Animation */}
+    <style jsx>{`
+      @keyframes scroll-marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-scroll-marquee {
+        animation: scroll-marquee 50s linear infinite;
+        width: fit-content;
+      }
+
+      .animate-scroll-marquee:hover {
+        animation-play-state: paused;
+      }
+    `}</style>
   </section>
 );
 
