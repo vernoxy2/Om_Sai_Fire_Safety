@@ -5,9 +5,12 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-  window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-}, [pathname]);
-// Run on route change
+    // Check if window is available (client-side only)
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+    }
+  }, [pathname]);
+  // Run on route change
 
   return null;
 };

@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import GradientText from "./GradientText";
 import HeadLine from "../assets/HeadLine.svg";
 
@@ -14,8 +14,9 @@ const PrimaryTitle = ({
   const titleRef = useRef(null);
   const [textWidth, setTextWidth] = useState(0);
 
-  useLayoutEffect(() => {
-    if (titleRef.current) {
+  useEffect(() => {
+    // Check if we're on the client side and ref is available
+    if (typeof window !== "undefined" && titleRef.current) {
       setTextWidth(titleRef.current.offsetWidth);
     }
   }, [gradientText, normalText]);

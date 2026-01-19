@@ -1,8 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-
+import ClientOnly from "../../../components/ClientOnly";
 import GradientText from "../../../components/GradientText";
 import Hero1 from "../../../assets/HomePageAssets/HeroImg/Hero1.webp";
 import Hero2 from "../../../assets/HomePageAssets/HeroImg/Hero2.webp";
@@ -79,7 +76,56 @@ const slides = [
   },
 ];
 
-const Header = () => {
+// Swiper wrapper component that only renders on client
+const SwiperCarousel = ({ slides }) => {
+  const [SwiperComponents, setSwiperComponents] = React.useState(null);
+
+  React.useEffect(() => {
+    // Dynamically import Swiper only on client side
+    if (typeof window !== "undefined") {
+      Promise.all([
+        import("swiper/react"),
+        import("swiper/modules"),
+      ]).then(([swiperReact, swiperModules]) => {
+        setSwiperComponents({
+          Swiper: swiperReact.Swiper,
+          SwiperSlide: swiperReact.SwiperSlide,
+          Autoplay: swiperModules.Autoplay,
+        });
+      });
+    }
+  }, []);
+
+  if (!SwiperComponents) {
+    return (
+      <div className="w-full h-[280px] md:h-[400px] lg:h-[520px] xl:h-[90vh] flex items-center justify-center bg-gray-200">
+        <div className="container text-start">
+          <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-4 md:p-7 border-l-[3px] border-Border mr-auto space-y-1 md:space-y-5">
+            <div>
+              <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-semibold">
+                {slides[0].title}
+              </h1>
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-light">
+                {slides[0].subtitle}
+              </h1>
+            </div>
+            <p className="text-lg md:text-3xl lg:text-4xl md:pt-3 w-full lg:max-w-sm">
+              {slides[0].desc}
+            </p>
+            <Link
+              to={slides[0].buttonLink}
+              className="inline-block uppercase px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"
+            >
+              {slides[0].buttonText}
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const { Swiper, SwiperSlide, Autoplay } = SwiperComponents;
+
   return (
     <Swiper
       modules={[Autoplay]}
@@ -119,6 +165,40 @@ const Header = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+  );
+};
+
+const Header = () => {
+  const fallbackContent = (
+    <div className="w-full h-[280px] md:h-[400px] lg:h-[520px] xl:h-[90vh] flex items-center justify-center bg-gray-200">
+      <div className="container text-start">
+        <div className="w-11/12 lg:w-1/2 bg-gradient-to-r from-primary-start/60 to-transparent p-4 md:p-7 border-l-[3px] border-Border mr-auto space-y-1 md:space-y-5">
+          <div>
+            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-semibold">
+              {slides[0].title}
+            </h1>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-light">
+              {slides[0].subtitle}
+            </h1>
+          </div>
+          <p className="text-lg md:text-3xl lg:text-4xl md:pt-3 w-full lg:max-w-sm">
+            {slides[0].desc}
+          </p>
+          <Link
+            to={slides[0].buttonLink}
+            className="inline-block uppercase px-4 py-2 mt-4 font-semibold text-xl md:text-2xl lg:text-3xl text-white bg-gradient-to-t from-[#D9D9D9]/40 to-[#BFBFBF]/40 rounded-sm hover:scale-95 duration-200 ease-in-out"
+          >
+            {slides[0].buttonText}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <ClientOnly fallback={fallbackContent}>
+      <SwiperCarousel slides={slides} />
+    </ClientOnly>
   );
 };
 
