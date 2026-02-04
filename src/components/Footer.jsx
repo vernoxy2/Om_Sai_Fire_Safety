@@ -75,7 +75,7 @@ const Footer = () => {
   }, []);
   return (
     <section
-      className="text-white bg-black font-alumni bg-cover bg-no-repeat bg-center"
+      className="text-white bg-black font-alumni bg-cover bg-no-repeat bg-center pb-8"
       style={{ backgroundImage: `url(${Bg})` }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 py-10 ">
@@ -196,7 +196,6 @@ const Footer = () => {
             <a href="tel:+919827800077"> +91 98278 00077</a> <br />
             <a href="tel:+917984550077">+91 79845 50077</a> <br />
             <a href="tel:+918849592829"> +91 88495 92829</a> <br />
-            
           </p>
         </div>
 
@@ -208,6 +207,10 @@ const Footer = () => {
           <p className="text-lg md:text-xl">omsafiresafety77@gmail.com</p>
         </a>
       </div>
+
+      <p className="text-center pt-4 sm:pt-5 md:pt-6 text-white  mt-auto text-sm md:text-base">
+        © {new Date().getFullYear()} Developed by @Vernoxy
+      </p>
     </section>
   );
 };
