@@ -4,6 +4,7 @@ import TextImg from "../../../assets/AboutPageAssets/AboutTextImg.webp";
 import PrimaryTitle from "../../../components/PrimaryTitle";
 import Director from "./Director";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const Style = {
   backgroundImage: `url(${TextBg})`,
@@ -17,7 +18,7 @@ const AboutText = () => {
         <div className="container pl-0 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Image */}
           <div>
-            <img src={TextImg} alt="About Om Sai Fire Safety" className="" />
+            <LazyImage src={TextImg} alt="About Om Sai Fire Safety" className="" />
           </div>
 
           {/* Right Text */}

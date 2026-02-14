@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import GradientText from "./GradientText";
 import HeadLine from "../assets/HeadLine.svg";
+import LazyImage from "./LazyImage";
 
 const PrimaryTitle = ({
   preImg = HeadLine,
@@ -28,7 +29,7 @@ const PrimaryTitle = ({
       {(gradientText || normalText) && (
         <>
           {preImg && (
-            <img
+            <LazyImage
               src={preImg}
               alt="headline"
               style={{ width: `${textWidth}px` }}

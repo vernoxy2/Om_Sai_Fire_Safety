@@ -7,6 +7,7 @@ import RightImg from "../../../assets/ServicesPageAssets/TebView/Alarm/Right.web
 import LeftImg from "../../../assets/ServicesPageAssets/TebView/Alarm/Left.webp";
 import GradientText from "../../../components/GradientText";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const data = [
   {
@@ -68,7 +69,7 @@ const FireAlarmDetection = () => {
                 className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden"
               >
                 {/* Image */}
-                <img
+                <LazyImage
                   src={item.img}
                   alt=""
                   className="w-full h-full object-cover rounded-xl"
@@ -92,7 +93,7 @@ const FireAlarmDetection = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img
+          <LazyImage
             src={RightImg}
             alt=""
             className="w-full h-full object-scale lg:object-cover xl:rounded-xl min-h-[200px]  lg:h-auto"
@@ -118,7 +119,7 @@ const FireAlarmDetection = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img
+          <LazyImage
             src={LeftImg}
             alt=""
             className="w-full h-full object-scale xl:object-cover xl:rounded-xl min-h-[200px] lg:h-auto"

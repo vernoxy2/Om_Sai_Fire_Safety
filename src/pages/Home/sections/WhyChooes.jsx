@@ -5,6 +5,7 @@ import { LuSettings } from "react-icons/lu";
 import { FaHeadset, FaTags } from "react-icons/fa";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { MdPerson2 } from "react-icons/md";
+import LazyImage from "../../../components/LazyImage";
 
 const Data = [
   {
@@ -39,7 +40,7 @@ const WhyChoose = () => {
     <section className="relative bg-black overflow-hidden py-20 md:py-32">
       {/* Background */}
       <div className="absolute inset-0 -z-0 opacity-60">
-        <img
+        <LazyImage
           src={ChooseBg}
           alt="Background"
           className="w-full h-full object-cover md:object-contain"

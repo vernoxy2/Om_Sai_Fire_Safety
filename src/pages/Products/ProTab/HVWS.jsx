@@ -6,6 +6,7 @@ import HeadLine from "../../../assets/HeadLine.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { RiCloseFill } from "react-icons/ri";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const HVWSData = [
   {
@@ -100,7 +101,7 @@ const HVWS = () => {
             <div className="flex flex-col  items-center ">
               {/* Image */}
               <div className=" flex flex-col md:h-60 p-4 ">
-                <img
+                <LazyImage
                   src={show.img}
                   alt={show.title}
                   className="m-auto h-full object-contain "

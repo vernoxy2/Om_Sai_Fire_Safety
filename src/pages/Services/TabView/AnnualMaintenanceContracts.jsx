@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryTitle from "../../../components/PrimaryTitle";
 import AMCImg from "../../../assets/ServicesPageAssets/TebView/AMC/AMCImg.webp";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const AnnualMaintenanceContracts = () => {
   return (
@@ -28,7 +29,7 @@ const AnnualMaintenanceContracts = () => {
       </div>
       {/* Main Image */}
       <div className="container px-0">
-        <img src={AMCImg} alt="" className="w-full" />
+        <LazyImage src={AMCImg} alt="" className="w-full" />
       </div>
     </section>
     </div>

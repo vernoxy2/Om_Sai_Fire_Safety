@@ -11,6 +11,7 @@ import FireSafetyAudits from "../../../assets/HomePageAssets/Services/FireSafety
 import AnnualMaintenanceContracts from "../../../assets/HomePageAssets/Services/AnnualMaintenanceContracts.webp";
 import PrimaryButton from "../../../components/PrimaryButton";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const AllServices = [
   {
@@ -106,7 +107,7 @@ const OurService = () => {
             ${index === 0 ? "xl:col-span-2 xl:row-span-2" : ""}`}
           >
             {/* Background Image */}
-            <img
+            <LazyImage
               src={item.image}
               alt={item.title}
               className=" w-full object-contain group-hover:scale-105 transition-transform duration-500 relative "

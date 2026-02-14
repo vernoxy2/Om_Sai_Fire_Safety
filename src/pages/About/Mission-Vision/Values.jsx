@@ -3,6 +3,7 @@ import PrimaryTitle from "../../../components/PrimaryTitle";
 import ValuesImg from "../../../assets/AboutPageAssets/MissionVision/ValuesImg.webp";
 import GradientText from "../../../components/GradientText";
 import { IoMdArrowDropright } from "react-icons/io";
+import LazyImage from "../../../components/LazyImage";
 
 const ValuwsList = [
   {
@@ -27,7 +28,7 @@ const Values = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
       <div>
-        <img src={ValuesImg} alt="" className="mx-auto" />
+        <LazyImage src={ValuesImg} alt="" className="mx-auto" />
       </div>
       <div>
         <PrimaryTitle

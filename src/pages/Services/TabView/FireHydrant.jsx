@@ -7,6 +7,7 @@ import RightImg from "../../../assets/ServicesPageAssets/TebView/Hydrant/Right.w
 import LeftImg from "../../../assets/ServicesPageAssets/TebView/Hydrant/Left.webp";
 import GradientText from "../../../components/GradientText";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const data = [
   {
@@ -71,7 +72,7 @@ const FireHydrant = () => {
                 className="relative overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-5"
               >
                 {/* Image */}
-                <img
+                <LazyImage
                   src={item.img}
                   alt={item.title || "Gallery Image"}
                   className="w-full h-full object-cover rounded-xl"
@@ -95,7 +96,7 @@ const FireHydrant = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img
+          <LazyImage
             src={RightImg}
             alt=""
             className="w-full h-full object-cover xl::rounded-xl min-h-[200px] lg:h-auto"
@@ -118,7 +119,7 @@ const FireHydrant = () => {
 
         {/* Image With Text */}
         <div className="container px-0 mt-24 relative">
-          <img
+          <LazyImage
             src={LeftImg}
             alt=""
             className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"

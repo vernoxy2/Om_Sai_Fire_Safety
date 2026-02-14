@@ -3,6 +3,7 @@ import GradientText from "../../../components/GradientText";
 import Img from "../../../assets/HomePageAssets/WhoWeAre.png"
 import Bb from "../../../assets/HomePageAssets/WhoWeAreBg.webp"
 import PrimaryTitle from "../../../components/PrimaryTitle";
+import LazyImage from "../../../components/LazyImage";
 
 const WhoWeAre = () => {
   return (
@@ -26,7 +27,7 @@ const WhoWeAre = () => {
           </p>
         </div>
         <div className="w-[80%] my-auto mx-auto">
-          <img src={Img} alt="" className="w-full"/>
+          <LazyImage src={Img} alt="" className="w-full"/>
         </div>
       </div>
     </section>

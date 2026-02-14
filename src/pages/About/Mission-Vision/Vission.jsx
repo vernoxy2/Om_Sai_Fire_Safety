@@ -1,12 +1,13 @@
 import React from 'react'
 import VisionImg from "../../../assets/AboutPageAssets/MissionVision/VisionImg.webp";
 import PrimaryTitle from '../../../components/PrimaryTitle';
+import LazyImage from '../../../components/LazyImage';
 
 const Vission = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
       <div>
-        <img src={VisionImg } alt="" className="mx-auto" />
+        <LazyImage src={VisionImg } alt="" className="mx-auto" />
       </div>
       <div className='space-y-12'>
         <PrimaryTitle

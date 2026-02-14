@@ -11,6 +11,7 @@ import IndustriesWeServe from "./IndustriesWeServe";
 import PrimaryButton from "../../../components/PrimaryButton";
 import { Link } from "react-router-dom";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const Style = {
   backgroundImage: `url(${ProductsBg})`,
@@ -112,7 +113,7 @@ const OurProducts = () => {
           >
             {/* Product Image */}
             <div className="overflow-hidden rounded-lg">
-              <img
+              <LazyImage
                 src={product.image}
                 alt={product.title}
                 className="w-full transform transition-transform duration-500 ease-in-out group-hover:scale-105"

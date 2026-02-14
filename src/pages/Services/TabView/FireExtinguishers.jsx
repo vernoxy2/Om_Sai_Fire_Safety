@@ -6,6 +6,7 @@ import Img3 from "../../../assets/ServicesPageAssets/TebView/FE/Img3.webp";
 import RightImg from "../../../assets/ServicesPageAssets/TebView/FE/Right.webp";
 import GradientText from "../../../components/GradientText";
 import BaseLine from '../../../components/BaseLine';
+import LazyImage from '../../../components/LazyImage';
 
 const data = [
   {
@@ -60,7 +61,7 @@ const FireExtinguishers = () => {
               className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden"
             >
               {/* Image */}
-              <img
+              <LazyImage
                 src={item.img}
                 alt=""
                 className="w-full h-full object-cover rounded-xl"
@@ -84,7 +85,7 @@ const FireExtinguishers = () => {
 
       {/* Image With Text */}
       <div className="container px-0 mt-24 relative ">
-        <img
+        <LazyImage
           src={RightImg}
           alt=""
           className="w-full h-full object-cover xl:rounded-xl min-h-[200px] lg:h-auto"

@@ -1,6 +1,7 @@
 import React from "react";
 import BestProImg from "../../../assets/BestProImg.webp";
 import PrimaryTitle from "../../../components/PrimaryTitle";
+import LazyImage from "../../../components/LazyImage";
 
 function BestPro() {
   return (
@@ -18,7 +19,7 @@ function BestPro() {
           </p>
         </div>
         <div>
-          <img src={BestProImg} alt="" className="w-full" />
+          <LazyImage src={BestProImg} alt="" className="w-full" />
         </div>
       </div>
     </div>

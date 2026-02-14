@@ -6,6 +6,7 @@ import Img3 from "../../../assets/ServicesPageAssets/TebView/Sprinkler/Img3.webp
 import RightImg from "../../../assets/ServicesPageAssets/TebView/FE/Right.webp";
 import GradientText from "../../../components/GradientText";
 import BaseLine from "../../../components/BaseLine";
+import LazyImage from "../../../components/LazyImage";
 
 const data = [
   {
@@ -60,7 +61,7 @@ const AutomaticSprinkler = () => {
                 className="relative hover:-translate-y-5 rounded-xl duration-500 transition overflow-hidden"
               >
                 {/* Image */}
-                <img
+                <LazyImage
                   src={item.img}
                   alt=""
                   className="w-full h-full object-cover rounded-xl"

@@ -4,6 +4,7 @@ import UnderLineWhite from "../assets/UnderLineWhite.svg";
 import PrimaryButton from "./PrimaryButton";
 import SafetySolutionImg from "../assets/SafetySolutionImg.webp";
 import GradientText from "./GradientText";
+import LazyImage from "./LazyImage";
 
 const Style = {
   backgroundImage: `url(${Bg})`,
@@ -18,7 +19,7 @@ const SafetySolution = () => {
         {/* Left Image with Title Overlay */}
         <div className="relative z-10 -mb-44 md:-mb-72 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-[94%] mx-auto lg:w-5/12 rounded-2xl">
           {/* Image */}
-          <img
+          <LazyImage
             src={SafetySolutionImg}
             alt="Fire Safety"
             className="w-full mx-auto h-auto object-cover"
@@ -35,7 +36,7 @@ const SafetySolution = () => {
 
         {/* Right Content Box */}
         <div className="w-full pt-40 md:pt-80 lg:pt-20 lg:w-10/12 ml-auto mt-8 md:mt-0 py-10 md:py-14 bg-gradient-to-b from-primary-start to-primary rounded-xl relative">
-          <img
+          <LazyImage
             src={UnderLineWhite}
             alt="underline"
             className="absolute bottom-5 right-0 w-1/2 opacity-70"

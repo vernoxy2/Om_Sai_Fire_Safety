@@ -13,6 +13,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import GradientText from "../../../components/GradientText";
 import UnderLine from "../../../assets/UnderLine.svg";
 import UnderLineWhite from "../../../assets/UnderLineWhite.svg";
+import LazyImage from "../../../components/LazyImage";
 
 const IndustriesList = [
   {
@@ -136,12 +137,12 @@ const IndustriesWeServe = () => {
             </div>
             {/* underline swap on hover */}
             <div className="absolute bottom-0 right-0">
-              <img
+              <LazyImage
               src={UnderLine}
               alt=""
               className="ml-auto mb-4 my-auto block group-hover:hidden duration-200"
             />
-            <img
+            <LazyImage
               src={UnderLineWhite}
               alt=""
               className="ml-auto mb-4 my-auto hidden group-hover:block duration-200"
