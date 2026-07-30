@@ -1,7 +1,6 @@
 import React from "react";
 // import react router
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   BrowserRouter,
@@ -16,6 +15,7 @@ import Services from "./pages/Services/Services";
 import Products from "./pages/Products/Products";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+import Sitemap from "./pages/Sitemap/Sitemap";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop.JSX";
 import NotFound from "./components/NotFound";
@@ -40,6 +40,7 @@ const App = () => {
           <Route path="/products/:tabSlug" element={<Products />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

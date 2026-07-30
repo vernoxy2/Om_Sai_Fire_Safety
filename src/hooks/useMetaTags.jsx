@@ -1,97 +1,101 @@
 import { useEffect } from 'react';
 
+const DEFAULT_DOMAIN = 'https://omsaifiresafteysolutions.com';
+const DEFAULT_IMAGE = `${DEFAULT_DOMAIN}/logo.svg`;
+const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
 export const useMetaTags = ({
   title,
   description,
   keywords,
-  image = '../../public/logo.svg',
+  image,
   url,
   type = 'website',
-  robots = 'index, follow' // Default value for SEO
+  robots = DEFAULT_ROBOTS
 }) => {
   useEffect(() => {
-    // Store original values to restore on unmount
+    // Store original title to restore if needed
     const originalTitle = document.title;
-    const originalDescription = document.querySelector('meta[name="description"]')?.content;
-    const originalRobots = document.querySelector('meta[name="robots"]')?.content;
+
+    // Helper to format absolute URL
+    const getAbsoluteUrl = (pathOrUrl) => {
+      if (!pathOrUrl) return DEFAULT_DOMAIN;
+      if (pathOrUrl.startsWith('http://') || pathOrUrl.startsWith('https://')) {
+        return pathOrUrl;
+      }
+      return `${DEFAULT_DOMAIN}${pathOrUrl.startsWith('/') ? '' : '/'}${pathOrUrl}`;
+    };
+
+    // Helper to format absolute image URL
+    const getImageUrl = (imgPath) => {
+      if (!imgPath || imgPath.includes('public/logo.svg')) return DEFAULT_IMAGE;
+      if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {
+        return imgPath;
+      }
+      return `${DEFAULT_DOMAIN}${imgPath.startsWith('/') ? '' : '/'}${imgPath}`;
+    };
+
+    const finalUrl = getAbsoluteUrl(url || (typeof window !== 'undefined' ? window.location.pathname : ''));
+    const finalImage = getImageUrl(image);
 
     // Update title
     if (title) {
       document.title = title;
     }
 
-    // Helper to set meta tag
-    const setMetaTag = (selector, content) => {
+    // Helper to update or create meta tags
+    const setMetaTag = (attrName, attrValue, content) => {
       if (!content) return;
-      
-      let element = document.querySelector(selector);
+      let element = document.querySelector(`meta[${attrName}="${attrValue}"]`);
       if (element) {
         element.setAttribute('content', content);
       } else {
         element = document.createElement('meta');
-        // Parse selector properly
-        if (selector.includes('property=')) {
-          const propertyMatch = selector.match(/property="([^"]+)"/);
-          if (propertyMatch) {
-            element.setAttribute('property', propertyMatch[1]);
-          }
-        } else if (selector.includes('name=')) {
-          const nameMatch = selector.match(/name="([^"]+)"/);
-          if (nameMatch) {
-            element.setAttribute('name', nameMatch[1]);
-          }
-        }
+        element.setAttribute(attrName, attrValue);
         element.setAttribute('content', content);
         document.head.appendChild(element);
       }
     };
 
-    // Update all meta tags
-    setMetaTag('meta[name="description"]', description);
-    setMetaTag('meta[name="keywords"]', keywords);
-    setMetaTag('meta[name="robots"]', robots); // ✅ Fixed: was 'keywords' before
-    
-    // Open Graph
-    setMetaTag('meta[property="og:title"]', title);
-    setMetaTag('meta[property="og:description"]', description);
-    setMetaTag('meta[property="og:image"]', image);
-    setMetaTag('meta[property="og:url"]', url);
-    setMetaTag('meta[property="og:type"]', type);
-    
-    // Twitter
-    setMetaTag('meta[name="twitter:title"]', title);
-    setMetaTag('meta[name="twitter:description"]', description);
-    setMetaTag('meta[name="twitter:image"]', image);
-    setMetaTag('meta[name="twitter:card"]', 'summary_large_image');
-    
-    // Canonical URL
-    if (url) {
+    // Standard Meta Tags
+    setMetaTag('name', 'title', title);
+    setMetaTag('name', 'description', description);
+    setMetaTag('name', 'keywords', keywords);
+    setMetaTag('name', 'robots', robots);
+    setMetaTag('name', 'author', 'Om Sai Fire Safety');
+
+    // Open Graph Tags
+    setMetaTag('property', 'og:title', title);
+    setMetaTag('property', 'og:description', description);
+    setMetaTag('property', 'og:image', finalImage);
+    setMetaTag('property', 'og:url', finalUrl);
+    setMetaTag('property', 'og:type', type);
+    setMetaTag('property', 'og:site_name', 'Om Sai Fire Safety');
+
+    // Twitter Card Tags
+    setMetaTag('name', 'twitter:card', 'summary_large_image');
+    setMetaTag('name', 'twitter:title', title);
+    setMetaTag('name', 'twitter:description', description);
+    setMetaTag('name', 'twitter:image', finalImage);
+    setMetaTag('name', 'twitter:url', finalUrl);
+
+    // Canonical Link
+    if (finalUrl) {
       let canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
-        canonical.setAttribute('href', url);
+        canonical.setAttribute('href', finalUrl);
       } else {
         canonical = document.createElement('link');
         canonical.setAttribute('rel', 'canonical');
-        canonical.setAttribute('href', url);
+        canonical.setAttribute('href', finalUrl);
         document.head.appendChild(canonical);
       }
     }
 
-    // Cleanup function
     return () => {
       document.title = originalTitle;
-      if (originalDescription) {
-        const descMeta = document.querySelector('meta[name="description"]');
-        if (descMeta) {
-          descMeta.setAttribute('content', originalDescription);
-        }
-      }
-      if (originalRobots) {
-        const robotsMeta = document.querySelector('meta[name="robots"]');
-        if (robotsMeta) {
-          robotsMeta.setAttribute('content', originalRobots);
-        }
-      }
     };
   }, [title, description, keywords, image, url, type, robots]);
 };
+
+export default useMetaTags;

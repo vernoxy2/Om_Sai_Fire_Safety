@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omsaifiresafteysolutions.com/sitemap.xml

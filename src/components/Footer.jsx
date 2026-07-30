@@ -11,8 +11,9 @@ const Links = [
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "About Us", link: "/about" },
   { id: 3, title: "Services", link: "/services" },
-  { id: 4, title: "Product", link: "/products" },
-  // { id: 5, title: "Project", link: "/projects" },
+  { id: 4, title: "Products", link: "/products" },
+  { id: 5, title: "Projects", link: "/projects" },
+  { id: 6, title: "Sitemap", link: "/sitemap" },
 ];
 
 // Services links
@@ -209,7 +210,7 @@ const Footer = () => {
       </div>
 
       <p className="text-center pt-4 sm:pt-5 md:pt-6 text-white  mt-auto text-sm md:text-base">
-        © {new Date().getFullYear()} Developed by <a href="https://www.vernoxy.com/" target="_blank">@Vernoxy</a>
+        © {new Date().getFullYear()} Developed by <a href="https://www.vernoxy.com/" target="_blank" rel="noopener noreferrer">@Vernoxy</a>
       </p>
     </section>
   );
