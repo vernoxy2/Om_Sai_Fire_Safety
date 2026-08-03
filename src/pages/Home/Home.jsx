@@ -11,11 +11,12 @@ import { useMetaTags } from "../../hooks/useMetaTags";
 
 const Home = () => {
   useMetaTags({
-    title:'Om Sai Fire Safety – Complete Fire Safety Solutions in India',
-    description:'Om Sai Fire Safety provides certified fire safety equipment including fire extinguishers, alarm systems, safety shoes, helmets, hydrant valves, and branch pipes for homes, offices, and industries.',
-    keywords:'fire safety, fire extinguishers, fire alarm system, safety equipment, Om Sai Fire Safety, industrial fire safety, fire protection',
-    url:'https://www.omsaifiresafteysolutions.com/'
-  })
+    title: 'Om Sai Fire Safety – Fire Extinguishers, Alarm Systems & Safety Equipment Supplier',
+    description: 'Om Sai Fire Safety Solutions provides certified fire extinguishers, fire alarm systems, hydrant valves, safety shoes, helmets & industrial fire safety services in Gujarat & India.',
+    keywords: 'Om Sai Fire Safety, fire safety equipment, fire extinguisher supplier, fire alarm system, fire hydrant valve, safety shoes, safety helmets, industrial fire safety, fire protection services',
+    url: 'https://omsaifiresafteysolutions.com/'
+  });
+
   return (
     <div className="">
       <Headers />

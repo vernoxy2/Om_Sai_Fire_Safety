@@ -6,13 +6,12 @@ import { useMetaTags } from "../../hooks/useMetaTags";
 
 const Contact = () => {
   useMetaTags({
-    title: "Contact Om Sai Fire Safety – Get Fire Safety Solutions in India",
-    description:
-      "Get in touch with Om Sai Fire Safety for fire safety equipment, services, installation, and training. Protect your home, office, or industry with certified solutions.",
-    keywords:
-      "contact Om Sai Fire Safety, fire safety solutions, fire extinguisher supplier, fire alarm system, safety equipment inquiry",
-    url: "https://www.omsaifiresafteysolutions.com/contact",
+    title: "Contact Om Sai Fire Safety – Get Fire Protection & Safety Quotes",
+    description: "Contact Om Sai Fire Safety in Vapi, Gujarat for certified fire extinguishers, alarm systems, AMC contracts, hydrants, and safety gear. Request a free quote today.",
+    keywords: "contact Om Sai Fire Safety, fire safety solutions contact, fire extinguisher supplier Vapi, fire safety inquiry, fire protection quotes",
+    url: "https://omsaifiresafteysolutions.com/contact",
   });
+
   return (
     <div>
       {/* Contact Us Page */}
